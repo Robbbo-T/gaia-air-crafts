@@ -1,11 +1,13 @@
-# GAIA AIR – Comprehensive Aerospace Digital Framework (COAFI Repository)
+# GAIA AIR Crafts – Comprehensive Robotics and Aerospace Framework Twin Systems (COAFI Repository)
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY-SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)  
 [![COAFI Master Index](https://img.shields.io/badge/COAFI%20Index-AToC.md-blue)](./AToC.md)  
 [![Framework Version](https://img.shields.io/badge/Framework%20Version-1.1-blue.svg)]()  
 [![SPLCOGEN Portal](https://img.shields.io/badge/Portal-GAIA%20AIR%20SPLCOGEN-brightgreen)](https://gaia-air-splcogen.vercel.app/)
 
-The **GAIA AIR** project is a comprehensive initiative of the GAIA DS (Sustainable Development) division aimed at designing and documenting an entire ecosystem of intelligent, sustainable aircraft—ranging from short‑ and medium‑range atmospheric transports to reusable spacecraft for Low Earth Orbit access.
+The **GAIA AIR Crafts** initiative extends GAIA DS’s sustainable-development vision by uniting **advanced robotics** with **aerospace systems** under a single, twin‑framework. It documents and orchestrates intelligent, autonomous Ground, Air, and Spacecraft—leveraging AI, quantum computing, blockchain, and digital twin technology—to deliver fully traceable, secure, and regenerative lifecycle management.
+
+---
 
 **Key objectives:**
 
