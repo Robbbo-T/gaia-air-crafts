@@ -220,34 +220,32 @@ $$W_p(Dgm_k(K(t)), Dgm_k(K(t+\Delta t))) \leq C \cdot \|\hat{\rho}(t) - \hat{\rh
 
 where $W_p$ is the Wasserstein distance between diagrams. Learning can aim to stabilize useful topological features.
 
+---
 # Planning and Decision-Making in Robotics Braining Theory (RBT)
 
 ## Overview
 
-Planning and decision-making in Robotics Braining Theory (RBT) are implemented over heuris
-topological structures. This framework enables the simulation and execution of actions in 
-environments using a quantum-inference engine and a dynamic memory map.
+Planning and decision-making in Robotics Braining Theory (RBT) are implemented over quantum heuristic states and dynamic topological structures. This framework enables robots to simulate and select actions in highly uncertain, multi-modal environments using a quantum-inference engine and a dynamic memory map.
 
 ---
 
 ## Cognitive Planning Framework
 
-RBT models planning as a sequence of subspace projections and topological path constructio
-cognitive structure.
+RBT models planning as a sequence of **subspace projections** and **topological path constructions** within a hierarchical cognitive structure.
 
 ### Hilbert Space Decomposition
 
 The cognitive state space \( \mathcal{H} \) is decomposed as:
 
-\[
-\mathcal{H} = \mathcal{H}_{\text{goal}} \otimes \mathcal{H}_{\text{tactic}} \otimes \mathc
-\]
+```math
+\mathcal{H} = \mathcal{H}_{\text{goal}} \otimes \mathcal{H}_{\text{tactic}} \otimes \mathcal{H}_{\text{sensorimotor}}
+```
 
 Each subspace supports operations at different levels of abstraction:
 
 - \( \mathcal{H}_{\text{goal}} \): Long-term planning objectives  
 - \( \mathcal{H}_{\text{tactic}} \): Mid-level strategies and policies  
-- \( \mathcal{H}_{\text{sensorimotor}} \): Real-time interactions and feedback  
+- \( \mathcal{H}_{\text{sensorimotor}} \): Real-time interactions and feedback
 
 ---
 
@@ -255,17 +253,17 @@ Each subspace supports operations at different levels of abstraction:
 
 Intentions are selected through projection operators:
 
-\[
+```math
 \hat{P}_{\text{intent}}(t) = \sum_{i \in \mathcal{I}(t)} |h_i\rangle \langle h_i|
-\]
+```
 
-Where \( \mathcal{I}(t) \) denotes the set of heuristics activated by contextual constrain
+Where \( \mathcal{I}(t) \) denotes the set of heuristics activated by topological resonance, reward signals, and contextual constraints.
 
 ---
 
 ## Topological Path Planning
 
-The simplicial complex \( \mathcal{K}(t) \) encodes relationships among heuristics using h
+The simplicial complex \( \mathcal{K}(t) \) encodes relationships among heuristics using homological features:
 
 - **Path Construction**: Paths are defined by adjacent simplices with high persistence  
 - **Goal Convergence**: Paths must show increasing correlation to desired outcomes  
@@ -275,13 +273,13 @@ The simplicial complex \( \mathcal{K}(t) \) encodes relationships among heuristi
 
 ### Planning Operator
 
-The planning operator is defined as:
+The planning operator is defined by:
 
-\[
-\hat{U}_{\text{plan}}(t) = \exp\left( -i \int_{t}^{t+\Delta t} \hat{H}_{\text{plan}}(\tau)
-\]
+```math
+\hat{U}_{\text{plan}}(t) = \exp\left( -i \int_{t}^{t+\Delta t} \hat{H}_{\text{plan}}(\tau) \, d\tau \right)
+```
 
-Where \( \hat{H}_{\text{plan}} \) incorporates task alignment, uncertainty management, and
+Where \( \hat{H}_{\text{plan}}(t) \) incorporates task alignment, uncertainty management, and topological feedback.
 
 ---
 
@@ -291,44 +289,48 @@ Where \( \hat{H}_{\text{plan}} \) incorporates task alignment, uncertainty manag
 
 When a decision is required, the quantum state collapses into a specific action:
 
-\[
+```math
 |\psi(t^+)\rangle = \frac{\hat{P}_a |\psi(t)\rangle}{\|\hat{P}_a |\psi(t)\rangle\|}
-\]
+```
 
-Where \( \hat{P}_a \) is the projection operator associated with the chosen action.
+Where \( \hat{P}_a \) is a projection operator linked to action \( a \), influenced by:
+
+- Topological evidence in \( \mathcal{K}(t) \)  
+- Reward-based motivation  
+- Plan continuity and temporal constraints
 
 ---
 
 ### Utility Distribution
 
-The quantum utility for an action is:
+Quantum utility for an action is modeled by:
 
-\[
-U(a, t) = \langle \psi(t) | \hat{P}_a \hat{H}_{\text{reward}}(t) \hat{P}_a | \psi(t) \rang
-\]
+```math
+U(a, t) = \langle \psi(t) | \hat{P}_a \hat{H}_{\text{reward}}(t) \hat{P}_a | \psi(t) \rangle
+```
 
-Decision strategies:
+Decision rules include:
 
-- Maximum expected utility: \( \arg\max_a U(a, t) \)  
-- Stochastic sampling: \( P(a|t) \propto U(a,t)^{\alpha} \)
+- **Deterministic**: \( \arg\max_a U(a, t) \)  
+- **Stochastic**: \( P(a|t) \propto U(a,t)^{\alpha} \)
 
 ---
 
 ## Temporal Planning Horizons
 
-RBT maintains entangled states across time:
+RBT maintains an entangled memory of states:
 
-\[
+```math
 |\Psi\rangle = \sum_{t=0}^{T} \lambda_t |\psi(t)\rangle
-\]
+```
 
-Weights decay based on entropy:
+Where the weights decay according to entropy:
 
-\[
+```math
 \lambda_t = \frac{e^{-\beta H(\psi(t))}}{Z}
-\]
+```
 
-Where \( Z \) is a normalization constant and \( H(\psi(t)) \) is the quantum entropy.
+\( Z \) is a normalization constant, and \( H(\psi(t)) \) is the entropy of the cognitive state.
 
 ---
 
@@ -336,25 +338,25 @@ Where \( Z \) is a normalization constant and \( H(\psi(t)) \) is the quantum en
 
 ### Tensor Product Policy Networks
 
-Policies are modeled as:
+Planning policies use tensor product representations:
 
-\[
-\pi(h_i, g_j) = \text{Tr}\left[ \rho(t) \cdot (|h_i\rangle\langle h_i| \otimes |g_j\rangle
-\]
+```math
+\pi(h_i, g_j) = \text{Tr} \left[ \rho(t) \cdot (|h_i\rangle\langle h_i| \otimes |g_j\rangle\langle g_j|) \right]
+```
 
-Where \( h_i \) is a heuristic and \( g_j \) is a goal representation.
+Where \( h_i \) is a heuristic and \( g_j \) is a goal.
 
 ---
 
 ### Dynamic Goal Rebinding
 
-Goals update via:
+Goals evolve through internal transitions:
 
-\[
+```math
 |g(t+1)\rangle = \hat{U}_{\text{goal}}(t) |g(t)\rangle
-\]
+```
 
-Where \( \hat{U}_{\text{goal}} \) reflects environmental feedback and reward shifts.
+Where \( \hat{U}_{\text{goal}}(t) \) adjusts based on external feedback and reward shift.
 
 ---
 
@@ -362,7 +364,7 @@ Where \( \hat{U}_{\text{goal}} \) reflects environmental feedback and reward shi
 
 - **Stochastic Planning**: Prevents local optima  
 - **Memory-Driven Adaptation**: Reinforces successful paths  
-- **Goal Drift Handling**: Entropy-guided realignment  
+- **Goal Drift Handling**: Realignment with long-term objectives via entropy weighting  
 
 ---
 
@@ -379,7 +381,7 @@ Where \( \hat{U}_{\text{goal}} \) reflects environmental feedback and reward shi
 - GP-RAME-91-MOD-004-PLAN-A: Planning Operators Specification  
 - GP-RAME-91-MOD-005-POLICY-A: Hierarchical Policy Maps  
 - GP-COM-AI-0300-01-008-SDD-A: i-Aher0 Goal Arbitration Engine  
-
+---
 
 # Implementation Architecture and Considerations
 
