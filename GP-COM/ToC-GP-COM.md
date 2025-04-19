@@ -1,200 +1,172 @@
 
-# COAFI - Core Operating Architecture Framework Index
+# COAFI - Core Operating Matrix (GP-COM)
 
-**Version:** 1.0  
+**(🚨 DISCLAIMER - GenAI Proposal Status 🚨)**
+**(Generated Structures and Contents require Official Authority Check for tool Compliance and Certification.)**
+
+**Version:** 1.0
 **Date:** 2025-04-19
+**Author:** GAIA AIR COM Team *(Assuming GAIA AIR COM Team for Author)*
+**Status:** Draft
+
+[Return to AToC.md](../AToC.md)
+[Return to COAFI.MD Main Document](../COAFI.md)
+
+---
 
 ## Introduction
 
-This document serves as the central index for **GP-COM (Part 3 – Core Operating Matrix)** documentation. GP-COM outlines the architecture, design, specifications, and procedures for a complex integrated system involving advanced AI, quantum computing, cybersecurity, blockchain, and core application logic.
+This document serves as the central index for GP-COM (Part 3 – Core Operating Matrix) documentation. GP-COM outlines the architecture, design, specifications, and procedures for a complex integrated system involving advanced AI, quantum computing, cybersecurity, blockchain, and core application logic.
 
 Use this file to navigate the Core Operating Matrix documentation structure.
 
+---
+
 ## Document Naming Convention
 
-The documentation follows a standardized naming convention:
+The documentation follows a standardized naming convention based on the COAFI framework:
 
-```
-GP-COM-[System]-[Proj#]-[Chap#]-[Seq#]-[InfoCode]-[Rev].md
-```
+`GP-COM-[SystemCode]-[SeqCode]-[SubjectCode]-[InfoCode]-[Rev].[ext]`
 
 Where:
 
-- `GP-COM`: Project Identifier (Core Operating Matrix)  
-- `[System]`: 3‑letter code for the specific subsystem/chapter (e.g., `AI_01`, `QAO_02`)  
-- `[Proj#]`: Project or phase number (`0300`)  
-- `[Chap#]`: Chapter number corresponding to the subsystem (e.g., `01`, `02`)  
-- `[Seq#]`: Sequential document number within the chapter (e.g., `001`, `002`)  
-- `[InfoCode]`: Document type indicator (OV, SDD, SPEC, ICD, CAL, PROC, REQ, TEST)  
-- `[Rev]`: Revision identifier (e.g., `A`)  
-- `.md`: Markdown file extension  
+*   `GP-COM`: Project Identifier (Core Operating Matrix)
+*   `[SystemCode]`: 3-letter code for the specific subsystem/chapter (e.g., `AI_01`, `QAO_02`, `SEC_03`)
+*   `[SeqCode]`: Sequence number representing the chapter (e.g., `01`, `02`, `03`) - *Note: This numbering differs slightly from the folder names but maps directly.*
+*   `[SubjectCode]`: 3-digit sequential document number within the chapter (e.g., `001`, `002`, `003`)
+*   `[InfoCode]`: Document type indicator (OV, SDD, SPEC, ICD, CAL, PROC, REQ, TEST, etc. - see INFOCODE-INDEX)
+*   `[Rev]`: Revision identifier (e.g., `A`, `B`, `A1`)
+*   `.ext`: Markdown file extension (`.md`)
 
-**Common Info Codes:**
+Common Info Codes:
 
-- `OV` – Overview  
-- `SDD` – System Design Description  
-- `SPEC` – Specification  
-- `ICD` – Interface Control Document  
-- `CAL` – Calculation / Analysis  
-- `PROC` – Procedure  
-- `REQ` – Requirements  
-- `TEST` – Test Plan / Procedure  
+*   OV – Overview
+*   SDD – System Design Description
+*   SPEC – Specification
+*   ICD – Interface Control Document
+*   CAL – Calculation / Analysis
+*   PROC – Procedure
+*   REQ – Requirements
+*   TEST – Test Plan / Procedure
+*   *(For a complete list, see the INFOCODE-INDEX in AToC.md)*
 
 ---
 
 ## Core Operating Matrix Chapters
 
-Below are the main chapters comprising GP‑COM Part 3. Expand each section to see available document types and direct links.
+*(Click the section titles below to expand/collapse the detailed document listings.)*
+
+*   [Chapter 01: GAIA AI Core (i-Aher0) – AI\_01](#chapter-01-gaia-ai-core-i-aher0--ai_01)
+*   [Chapter 02: Quantum-Augmented Orchestration – QAO\_02](#chapter-02-quantum-augmented-orchestration--qao_02)
+*   [Chapter 03: Cybersecurity Framework – SEC\_03](#chapter-03-cybersecurity-framework--sec_03)
+*   [Chapter 04: Blockchain Infrastructure – BC\_04](#chapter-04-blockchain-infrastructure--bc_04)
+*   [Chapter 05: BITT Application Layer – BITT\_05](#chapter-05-bitt-application-layer--bitt_05)
+*   [Chapter 06: AMPEL Core Systems – AMPELCORE\_06](#chapter-06-ampel-core-systems--ampelcore_06)
+*   [Chapter 07: Common Network Infrastructure – NET\_07](#chapter-07-common-network-infrastructure--net_07)
 
 ---
 
-### Chapter 01: GAIA AI Core (i-Aher0) – `AI_01`
-
-**Directory:** [GP-COM/AI_01/](./GP-COM/AI_01/)  
-**Description:** Core AI engine including models, training pipelines, ethical constraints, and APIs.  
 <details>
-  <summary>Document Types (Info Codes)</summary>
-  <ul>
-    <li>[OV – Overview](GP-COM/AI_01/GP-COM-AI-0300-01-001-OV-A.md)</li>
-    <li>[SDD – System Design Description](GP-COM/AI_01/GP-COM-AI-0300-01-002-SDD-A.md)</li>
-    <li>[SPEC – Specification (Core Models)](GP-COM/AI_01/GP-COM-AI-0300-01-003-SPEC-A.md)</li>
-    <li>[ICD – Interface Control Document (API)](GP-COM/AI_01/GP-COM-AI-0300-01-004-ICD-A.md)</li>
-    <li>[CAL – Calculation/Analysis (Performance)](GP-COM/AI_01/GP-COM-AI-0300-01-005-CAL-A.md)</li>
-    <li>[PROC – Procedure (Training Pipeline)](GP-COM/AI_01/GP-COM-AI-0300-01-006-PROC-A.md)</li>
-    <li>[REQ – Requirements (Ethical Constraints)](GP-COM/AI_01/GP-COM-AI-0300-01-007-REQ-A.md)</li>
-    <li>[TEST – Test Plan/Procedure](GP-COM/AI_01/GP-COM-AI-0300-01-008-TEST-A.md)</li>
-  </ul>
+<summary>### Chapter 01: GAIA AI Core (i-Aher0) – AI_01</summary>
+
+*Directory: `./GP-COM/AI_01/`*
+*Description: Core AI engine including models, training pipelines, ethical constraints, and APIs.*
+
+*   [GP-COM-AI_01-0300-001-OV-A.md](./AI_01/GP-COM-AI_01-0300-001-OV-A.md): 01-001: AI Core Architecture Overview - *(OV)*
+*   [GP-COM-AI_01-0300-002-SDD-A.md](./AI_01/GP-COM-AI_01-0300-002-SDD-A.md): 01-002: System Design Description - *(SDD)*
+*   [GP-COM-AI_01-0300-003-SPEC-A.md](./AI_01/GP-COM-AI_01-0300-003-SPEC-A.md): 01-003: Core AI Model Specification - *(SPEC)*
+*   [GP-COM-AI_01-0300-004-ICD-A.md](./AI_01/GP-COM-AI_01-0300-004-ICD-A.md): 01-004: API and Integration ICD - *(ICD)*
+*   [GP-COM-AI_01-0300-005-PLAN-A.md](./AI_01/GP-COM-AI_01-0300-005-PLAN-A.md): 01-005: Model Training and Validation Plan - *(PLAN)*
+
 </details>
 
----
-
-### Chapter 02: Quantum‑Augmented Orchestration – `QAO_02`
-
-**Directory:** [GP-COM/QAO_02/](./GP-COM/QAO_02/)  
-**Description:** Integration and orchestration of quantum resources, algorithms, and hardware interfaces.  
 <details>
-  <summary>Document Types (Info Codes)</summary>
-  <ul>
-    <li>[OV – Overview](GP-COM/QAO_02/GP-COM-QAO-0300-02-001-OV-A.md)</li>
-    <li>[SDD – System Design Description](GP-COM/QAO_02/GP-COM-QAO-0300-02-002-SDD-A.md)</li>
-    <li>[SPEC – Specification (QPU Interface)](GP-COM/QAO_02/GP-COM-QAO-0300-02-003-SPEC-A.md)</li>
-    <li>[ICD – Interface Control Document](GP-COM/QAO_02/GP-COM-QAO-0300-02-004-ICD-A.md)</li>
-    <li>[CAL – Calculation/Analysis (Quantum Algorithms)](GP-COM/QAO_02/GP-COM-QAO-0300-02-005-CAL-A.md)</li>
-    <li>[PROC – Procedure (Resource Allocation)](GP-COM/QAO_02/GP-COM-QAO-0300-02-006-PROC-A.md)</li>
-    <li>[REQ – Requirements (Hardware)](GP-COM/QAO_02/GP-COM-QAO-0300-02-007-REQ-A.md)</li>
-    <li>[TEST – Test Plan/Procedure](GP-COM/QAO_02/GP-COM-QAO-0300-02-008-TEST-A.md)</li>
-  </ul>
+<summary>### Chapter 02: Quantum-Augmented Orchestration – QAO_02</summary>
+
+*Directory: `./GP-COM/QAO_02/`*
+*Description: Integration and orchestration of quantum resources, algorithms, and hardware interfaces.*
+
+*   [GP-COM-QAO_02-0300-001-OV-A.md](./QAO_02/GP-COM-QAO_02-0300-001-OV-A.md): 02-001: QAO System Architecture Overview - *(OV)*
+*   [GP-COM-QAO_02-0300-002-SDD-A.md](./QAO_02/GP-COM-QAO_02-0300-002-SDD-A.md): 02-002: System Design Description - *(SDD)*
+*   [GP-COM-QAO_02-0300-003-SPEC-A.md](./QAO_02/GP-COM-QAO_02-0300-003-SPEC-A.md): 02-003: QAO Algorithm Specification - *(SPEC)*
+*   [GP-COM-QAO_02-0300-004-ICD-A.md](./QAO_02/GP-COM-QAO_02-0300-004-ICD-A.md): 02-004: QAO Interface Control Document - *(ICD)*
+
 </details>
 
----
-
-### Chapter 03: Cybersecurity Framework – `SEC_03`
-
-**Directory:** [GP-COM/SEC_03/](./GP-COM/SEC_03/)  
-**Description:** Security architecture, controls, incident response, QKD network, and AI‑driven IDPS.  
 <details>
-  <summary>Document Types (Info Codes)</summary>
-  <ul>
-    <li>[OV – Overview](GP-COM/SEC_03/GP-COM-SEC-0300-03-001-OV-A.md)</li>
-    <li>[SDD – System Design Description](GP-COM/SEC_03/GP-COM-SEC-0300-03-002-SDD-A.md)</li>
-    <li>[SPEC – Specification (Security Controls)](GP-COM/SEC_03/GP-COM-SEC-0300-03-003-SPEC-A.md)</li>
-    <li>[PROC – Procedure (Incident Response)](GP-COM/SEC_03/GP-COM-SEC-0300-03-004-PROC-A.md)</li>
-    <li>[REQ – Requirements (Policy)](GP-COM/SEC_03/GP-COM-SEC-0300-03-005-REQ-A.md)</li>
-    <li>[ICD – Interface Control Document (QKD)](GP-COM/SEC_03/GP-COM-SEC-0300-03-006-ICD-A.md)</li>
-    <li>[SDD – AI‑IDPS System Design](GP-COM/SEC_03/GP-COM-SEC-0300-03-007-SDD-A.md)</li>
-    <li>[TEST – Penetration Test Plan](GP-COM/SEC_03/GP-COM-SEC-0300-03-008-TEST-A.md)</li>
-  </ul>
+<summary>### Chapter 03: Cybersecurity Framework – SEC_03</summary>
+
+*Directory: `./GP-COM/SEC_03/`*
+*Description: Security architecture, controls, incident response, QKD network, and AI-driven IDPS.*
+
+*   [GP-COM-SEC_03-0300-001-OV-A.md](./SEC_03/GP-COM-SEC_03-0300-001-OV-A.md): 03-001: Cybersecurity Framework Overview - *(OV)*
+*   [GP-COM-SEC_03-0300-002-PLAN-A.md](./SEC_03/GP-COM-SEC_03-0300-002-PLAN-A.md): 03-002: Security Policy and Plan - *(PLAN)*
+*   [GP-COM-SEC_03-0300-003-SDD-A.md](./SEC_03/GP-COM-SEC_03-0300-003-SDD-A.md): 03-003: AI-Driven IDPS Description - *(SDD)*
+*   [GP-COM-SEC_03-0300-004-SPEC-A.md](./SEC_03/GP-COM-SEC_03-0300-004-SPEC-A.md): 03-004: QKD Network Specification - *(SPEC)*
+
 </details>
 
----
-
-### Chapter 04: Blockchain Infrastructure – `BC_04`
-
-**Directory:** [GP-COM/BC_04/](./GP-COM/BC_04/)  
-**Description:** Distributed ledger design, consensus, smart contracts, node management.  
 <details>
-  <summary>Document Types (Info Codes)</summary>
-  <ul>
-    <li>[OV – Overview](GP-COM/BC_04/GP-COM-BC-0300-04-001-OV-A.md)</li>
-    <li>[SDD – Architecture Design](GP-COM/BC_04/GP-COM-BC-0300-04-002-SDD-A.md)</li>
-    <li>[SPEC – Consensus Mechanism](GP-COM/BC_04/GP-COM-BC-0300-04-003-SPEC-A.md)</li>
-    <li>[ICD – API Interface](GP-COM/BC_04/GP-COM-BC-0300-04-004-ICD-A.md)</li>
-    <li>[SDD – Smart Contracts](GP-COM/BC_04/GP-COM-BC-0300-04-005-SDD-A.md)</li>
-    <li>[PROC – Node Management](GP-COM/BC_04/GP-COM-BC-0300-04-006-PROC-A.md)</li>
-    <li>[REQ – Security Requirements](GP-COM/BC_04/GP-COM-BC-0300-04-007-REQ-A.md)</li>
-    <li>[TEST – Test Plan](GP-COM/BC_04/GP-COM-BC-0300-04-008-TEST-A.md)</li>
-  </ul>
+<summary>### Chapter 04: Blockchain Infrastructure – BC_04</summary>
+
+*Directory: `./GP-COM/BC_04/`*
+*Description: Distributed ledger design, consensus, smart contracts, node management.*
+
+*   [GP-COM-BC_04-0300-001-OV-A.md](./BC_04/GP-COM-BC_04-0300-001-OV-A.md): 04-001: Blockchain Infrastructure Overview - *(OV)*
+*   [GP-COM-BC_04-0300-002-SDD-A.md](./BC_04/GP-COM-BC_04-0300-002-SDD-A.md): 04-002: Distributed Ledger Design - *(SDD)*
+*   [GP-COM-BC_04-0300-003-SPEC-A.md](./BC_04/GP-COM-BC_04-0300-003-SPEC-A.md): 04-003: Consensus Mechanism Specification - *(SPEC)*
+*   [GP-COM-BC_04-0300-004-SPEC-A.md](./BC_04/GP-COM-BC_04-0300-004-SPEC-A.md): 04-004: Smart Contract Specification - *(SPEC)*
+
 </details>
 
----
-
-### Chapter 05: BITT Application Layer – `BITT_05`
-
-**Directory:** [GP-COM/BITT_05/](./GP-COM/BITT_05/)  
-**Description:** Blockchain‑Integrated Traceability & Transparency layer: immutable logging, provenance.  
 <details>
-  <summary>Document Types (Info Codes)</summary>
-  <ul>
-    <li>[OV – Overview](GP-COM/BITT_05/GP-COM-BITT-0300-05-001-OV-A.md)</li>
-    <li>[SDD – Design Description](GP-COM/BITT_05/GP-COM-BITT-0300-05-002-SDD-A.md)</li>
-    <li>[SPEC – Immutable Logging](GP-COM/BITT_05/GP-COM-BITT-0300-05-003-SPEC-A.md)</li>
-    <li>[ICD – Interface Control](GP-COM/BITT_05/GP-COM-BITT-0300-05-004-ICD-A.md)</li>
-    <li>[PROC – Traceability Procedure](GP-COM/BITT_05/GP-COM-BITT-0300-05-005-PROC-A.md)</li>
-    <li>[SDD – Provenance System](GP-COM/BITT_05/GP-COM-BITT-0300-05-006-SDD-A.md)</li>
-    <li>[REQ – Compliance Requirements](GP-COM/BITT_05/GP-COM-BITT-0300-05-007-REQ-A.md)</li>
-    <li>[TEST – Test Plan](GP-COM/BITT_05/GP-COM-BITT-0300-05-008-TEST-A.md)</li>
-  </ul>
+<summary>### Chapter 05: BITT Application Layer – BITT_05</summary>
+
+*Directory: `./GP-COM/BITT_05/`*
+*Description: Blockchain-Integrated Traceability & Transparency layer: immutable logging, provenance.*
+
+*   [GP-COM-BITT_05-0300-001-OV-A.md](./BITT_05/GP-COM-BITT_05-0300-001-OV-A.md): 05-001: BITT Application Layer Overview - *(OV)*
+*   [GP-COM-BITT_05-0300-002-SDD-A.md](./BITT_05/GP-COM-BITT_05-0300-002-SDD-A.md): 05-002: Immutable Logging System Description - *(SDD)*
+*   [GP-COM-BITT_05-0300-003-SPEC-A.md](./BITT_05/GP-COM-BITT_05-0300-003-SPEC-A.md): 05-003: Provenance Tracking Specification - *(SPEC)*
+
 </details>
 
----
-
-### Chapter 06: AMPEL Core Systems – `AMPELCORE_06`
-
-**Directory:** [GP-COM/AMPELCORE_06/](./GP-COM/AMPELCORE_06/)  
-**Description:** Advanced Materials Processing, Engineering & Lifecycle systems, including DB schema and AI‑SHM logic.  
 <details>
-  <summary>Document Types (Info Codes)</summary>
-  <ul>
-    <li>[OV – Overview](GP-COM/AMPELCORE_06/GP-COM-AMPELCORE-0300-06-001-OV-A.md)</li>
-    <li>[SDD – Materials DB Design](GP-COM/AMPELCORE_06/GP-COM-AMPELCORE-0300-06-002-SDD-A.md)</li>
-    <li>[SPEC – Database Schema](GP-COM/AMPELCORE_06/GP-COM-AMPELCORE-0300-06-003-SPEC-A.md)</li>
-    <li>[SDD – AI‑SHM Logic](GP-COM/AMPELCORE_06/GP-COM-AMPELCORE-0300-06-004-SDD-A.md)</li>
-    <li>[SDD – Digital Twin Platform](GP-COM/AMPELCORE_06/GP-COM-AMPELCORE-0300-06-005-SDD-A.md)</li>
-    <li>[ICD – API Interface](GP-COM/AMPELCORE_06/GP-COM-AMPELCORE-0300-06-006-ICD-A.md)</li>
-    <li>[CAL – Materials Simulation](GP-COM/AMPELCORE_06/GP-COM-AMPELCORE-0300-06-007-CAL-A.md)</li>
-    <li>[PROC – Data Management](GP-COM/AMPELCORE_06/GP-COM-AMPELCORE-0300-06-008-PROC-A.md)</li>
-    <li>[TEST – Test Plan](GP-COM/AMPELCORE_06/GP-COM-AMPELCORE-0300-06-009-TEST-A.md)</li>
-  </ul>
+<summary>### Chapter 06: AMPEL Core Systems – AMPELCORE_06</summary>
+
+*Directory: `./GP-COM/AMPELCORE_06/`*
+*Description: Advanced Materials Processing, Engineering & Lifecycle systems, including DB schema and AI-SHM logic.*
+
+*   [GP-COM-AMPELCORE_06-0300-001-OV-A.md](./AMPELCORE_06/GP-COM-AMPELCORE_06-0300-001-OV-A.md): 06-001: AMPEL Core Systems Overview - *(OV)*
+*   [GP-COM-AMPELCORE_06-0300-002-SDD-A.md](./AMPELCORE_06/GP-COM-AMPELCORE_06-0300-002-SDD-A.md): 06-002: AI-SHM Logic Description - *(SDD)*
+*   [GP-COM-AMPELCORE_06-0300-003-SPEC-A.md](./AMPELCORE_06/GP-COM-AMPELCORE_06-0300-003-SPEC-A.md): 06-003: Materials Database Schema Specification - *(SPEC)*
+
 </details>
 
----
-
-### Chapter 07: Common Network Infrastructure – `NET_07`
-
-**Directory:** [GP-COM/NET_07/](./GP-COM/NET_07/)  
-**Description:** Underlying network architecture, protocols, QoS, SDN/NFV, and management.  
 <details>
-  <summary>Document Types (Info Codes)</summary>
-  <ul>
-    <li>[OV – Overview](GP-COM/NET_07/GP-COM-NET-0300-07-001-OV-A.md)</li>
-    <li>[SDD – Architecture Design](GP-COM/NET_07/GP-COM-NET-0300-07-002-SDD-A.md)</li>
-    <li>[SPEC – Protocol Stack](GP-COM/NET_07/GP-COM-NET-0300-07-003-SPEC-A.md)</li>
-    <li>[SDD – QoS Management](GP-COM/NET_07/GP-COM-NET-0300-07-004-SDD-A.md)</li>
-    <li>[SDD – SDN Implementation](GP-COM/NET_07/GP-COM-NET-0300-07-005-SDD-A.md)</li>
-    <li>[SDD – NFV Implementation](GP-COM/NET_07/GP-COM-NET-0300-07-006-SDD-A.md)</li>
-    <li>[PROC – Network Management](GP-COM/NET_07/GP-COM-NET-0300-07-007-PROC-A.md)</li>
-    <li>[REQ – Performance Requirements](GP-COM/NET_07/GP-COM-NET-0300-07-008-REQ-A.md)</li>
-    <li>[TEST – Test Plan](GP-COM/NET_07/GP-COM-NET-0300-07-009-TEST-A.md)</li>
-  </ul>
+<summary>### Chapter 07: Common Network Infrastructure – NET_07</summary>
+
+*Directory: `./GP-COM/NET_07/`*
+*Description: Underlying network architecture, protocols, QoS, SDN/NFV, and management.*
+
+*   [GP-COM-NET_07-0300-001-OV-A.md](./NET_07/GP-COM-NET_07-0300-001-OV-A.md): 07-001: Network Infrastructure Overview - *(OV)*
+*   [GP-COM-NET_07-0300-002-SDD-A.md](./NET_07/GP-COM-NET_07-0300-002-SDD-A.md): 07-002: Network Architecture and Protocols - *(SDD, SPEC)*
+*   [GP-COM-NET_07-0300-003-SPEC-A.md](./NET_07/GP-COM-NET_07-0300-003-SPEC-A.md): 07-003: Quality of Service (QoS) Specification - *(SPEC)*
+
 </details>
 
 ---
 
 ## How to Use This Documentation
 
-1. Identify the subsystem or chapter relevant to your needs.  
-2. Navigate to the chapter’s directory via the provided link.  
-3. Expand the `<details>` section to access specific document types.  
-4. Refer to the **Document Naming Convention** for decoding file names.
+Identify the subsystem or chapter relevant to your needs.
+Click on the section title to expand the detailed document listing.
+Click on the document filename link to navigate to the specific document.
+Refer to the Document Naming Convention for decoding file names and the INFOCODE-INDEX in AToC.md for understanding document types.
 
+*(Appendices for Part 3 follow the standard structure)*
+
+---
+
+*(End of ToC-GP-COM.md)*
 ```
