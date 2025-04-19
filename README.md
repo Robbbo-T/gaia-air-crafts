@@ -137,7 +137,44 @@ Key frameworks in Part 0 include:
 
 ---
 
-## Standard InfoCodes
+## Standard InfoCodes with example of aplicability
+
+| Info Code | Example Document Code             | Example Title                                   |
+|-----------|-----------------------------------|-------------------------------------------------|
+| OV        | GP‑AM‑AMPEL‑0100‑00‑001‑OV‑A       | Airframe Intro & General Overview               |
+| SPEC      | GP‑AM‑AMPEL‑0100‑51‑010‑SPEC‑A     | Primary Structural Material Specification       |
+| REQ       | GP‑AM‑AMPEL‑0100‑04‑002‑REQ‑A      | Airworthiness Requirements                      |
+| SDD       | GP‑AM‑AMPEL‑0100‑22‑002‑SDD‑A      | Auto Flight System Design Description           |
+| DD        | GP‑AM‑AMPEL‑0100‑00‑004‑DD‑A       | Airframe Philosophy Design Document             |
+| DWG       | GP‑AM‑AMPEL‑0100‑06‑003‑DWG‑A      | Dimensions & Areas Drawings                     |
+| CAL       | GP‑AM‑AMPEL‑0100‑08‑003‑CAL‑A      | Center of Gravity Calculation Report            |
+| RPT       | GP‑AM‑AMPEL‑0100‑03‑004‑RPT‑A      | Flight Test Performance Report                  |
+| TEST      | GP‑AM‑AMPEL‑0100‑20‑004‑TEST‑A     | Airframe NDT Test Plan                          |
+| RES       | GP‑FD‑01‑005‑RES‑A                 | Quantum Thruster Proof Research Document        |
+| MAN       | GP‑AM‑AMPEL‑0100‑02‑002‑MAN‑A      | Flight Operations Manual                        |
+| PROC      | GP‑AM‑AMPEL‑0100‑05‑002‑PROC‑A     | Scheduled Maintenance Procedure                 |
+| CAT       | GP‑AM‑AMPEL‑0100‑05‑003‑CAT‑A      | Life Limits Catalog                             |
+| GLO       | GP‑AM‑AMPEL‑0100‑00‑015‑GLO‑A      | Airframe Terminology Glossary                   |
+| PLAN      | GP‑AM‑AMPEL‑0100‑00‑003‑PLAN‑A     | Airframe Certification Plan                     |
+| ICD       | GP‑AM‑AMPEL‑0100‑24‑005‑ICD‑A      | External Power Interface Control Document       |
+| LIST      | GP‑AM‑AMPEL‑0100‑11‑004‑LIST‑A     | Placard Inventory List                          |
+| FIG       | GP‑AM‑AMPEL‑0100‑21‑004‑FIG‑A      | Air Distribution System Diagram                 |
+| CONOPS    | GP‑AM‑AMPEL‑0100‑00‑016‑CONOPS‑A   | Concept of Operations for AMPEL                 |
+| WBS       | GP‑AM‑AMPEL‑0100‑00‑017‑WBS‑A      | AMPEL Project Work Breakdown Structure          |
+| JSON      | GP‑AM‑AMPEL‑0100‑00‑018‑JSON‑A     | Configuration Schema (JSON)                     |
+| BOM       | GP‑AM‑AMPEL‑0100‑28‑006‑BOM‑A      | Fuel System Bill of Materials                   |
+| SWD       | GP‑AM‑AMPEL‑0100‑22‑005‑SWD‑A      | Autopilot Software Documentation                |
+| ADMIN     | GP‑AM‑AMPEL‑0100‑00‑006‑ADMIN‑A    | Administrative Overview                         |
+| REF       | GP‑AM‑AMPEL‑0100‑00‑007‑REF‑A      | Reference Standards Document                    |
+| IDX       | GP‑AM‑AMPEL‑0100‑00‑000‑IDX‑A      | Chapter 00 Index                                |
+| MPD       | GP‑AM‑AMPEL‑0100‑05‑007‑MPD‑A      | Maintenance Planning Document                   |
+| WDM       | GP‑AM‑AMPEL‑0100‑92‑001‑WDM‑A      | Wiring Diagram Manual                           |
+| CERT      | GP‑AM‑AMPEL‑0100‑04‑004‑CERT‑A     | Airworthiness Certification Statement           |
+| PRES      | GP‑AM‑AMPEL‑0100‑00‑020‑PRES‑A     | AMPEL Project Kickoff Presentation              |
+| BASE      | GP‑AM‑AMPEL‑0100‑00‑021‑BASE‑A     | Baseline Airframe Design Document               |
+| SCRIPT    | GP‑AM‑AMPEL‑0100‑22‑006‑SCRIPT‑A   | Autopilot Control Script                        |
+| NB        | GP‑AM‑AMPEL‑0100‑03‑005‑NB‑A       | Performance Analysis Jupyter Notebook           |
+
 
 <details>
 <summary>Click to view InfoCodes list</summary>
