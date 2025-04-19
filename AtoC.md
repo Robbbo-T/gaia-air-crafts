@@ -72,7 +72,7 @@ All documents follow:
 ```
 
 For a fully annotated example, see  
-[COAFI Filename Grammar](GP‑FD/docs/ToC‑GP‑FD.md#coafi-filename-grammar-canonical-example).
+[GP-FD/docs/ToC-GP-FD.md](GP-FD/docs/ToC-GP-FD.md)
 
 ---
 
