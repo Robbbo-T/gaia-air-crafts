@@ -41,21 +41,6 @@ The cognitive state of a robot at time $t$ is defined as a quantum state $|\psi(
     $$
     where $\hat{H}_{\text{int}}$ captures internal dynamics and heuristic interactions, $\hat{H}_{\text{ext}}(t)$ models external environmental influence (sensor input), and $\hat{H}_{\text{mem}}(t)$ represents memory consolidation processes influencing the topological structure. *(Note: $\hbar$ is typically set to 1 in simulations, acting as a scaling factor).*
 
-```
-
-**Key improvements incorporated from the diff and standard practices:**
-
-*   Uses standard Markdown numbered lists (`1.`, `2.`) and bullet points (`*`).
-*   Applies bolding (`**...**`) for emphasis.
-*   Correctly uses inline math mode (`$...$`) for symbols like $t$, $\mathcal{H}$, and kets like $|\psi(t)\rangle$.
-*   Correctly escapes underscores within `\text{...}` inside math mode (e.g., `|h_{\text{move\_fwd}}\rangle`).
-*   Uses display math mode (`$$...$$`) for the important standalone equations (Schrödinger and Hamiltonian definition).
-*   Uses the common `\hat{H}_{\text{cog}}(t)` notation for the Hamiltonian.
-*   Removes the redundant text blocks and error messages.
-*   Clarifies the basis notation using set braces `\{ |h_i\rangle \}` in the heading.
-
-This version should render correctly and clearly on GitHub.
-
 ### 2.2 Topological State Structure
 
 Simultaneously, we define a **simplicial complex** $\mathcal{K}(t) = (V(t), S(t))$ that represents the robot's internal associative map or cognitive structure at time $t$.
