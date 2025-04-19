@@ -1,26 +1,26 @@
 {
   "name": "gaia-air-crafts",
-  "version": "1.1.0",
   "private": true,
+  "version": "1.0.0",
   "workspaces": [
-    "GP-AM",
-    "GP-FD",
-    "GP-AS",
-    "GP-COM",
-    "GP-SUPL",
-    "GP-PM",
-    "twins/*",
-    "apps/doc-viewer"
+    "GP-FD/docs",
+    "GP-AM/docs",
+    "GP-AS/docs",
+    "GP-COM/docs",
+    "GP-GRO/docs",
+    "GP-RAME/docs",
+    "GP-SUPL/docs",
+    "apps/*",
+    "packages/*",
+    "twins"
   ],
   "scripts": {
-    "start": "yarn workspace doc-viewer dev",
-    "build": "lerna run build --stream",
-    "test": "lerna run test --stream",
-    "generate-nav": "node scripts/export-nav.js"
+    "dev": "next dev",
+    "build": "next build"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "lerna": "^4.0.0",
-    "typescript": "^5.0.0"
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
   }
 }
