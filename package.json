@@ -1,1 +1,27 @@
+{
+  "name": "gaia-air-crafts",
+  "private": true,
+  "version": "1.1.0",
+  "workspaces": [
+    "GP-*/docs",
+    "apps/*",
+    "packages/*",
+    "twins"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "validate-docs": "markdownlint '**/*.md'"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "markdownlint-cli": "^0.30.0"
+  }
+}
 
