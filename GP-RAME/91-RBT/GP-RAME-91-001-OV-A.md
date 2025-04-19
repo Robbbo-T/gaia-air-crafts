@@ -14,42 +14,40 @@ Crucially, RBT employs the mathematics of quantum mechanics as a **quantum-inspi
 
 ## 2. Mathematical Foundations of RBT
 
-## 2.1 Quantum Cognitive State Space
+### 2.1 Quantum Cognitive State Space
 
 The cognitive state of a robot at time $t$ is defined as a quantum state $|\psi(t)\rangle \in \mathcal{H}$, where $\mathcal{H}$ is a Hilbert space.
 
-### Basis Heuristics $|h_i\rangle$
+#### Basis Heuristics $\{ |h_i\rangle \}$
+The basis $\{ |h_i\rangle \}$ represents **elementary cognitive heuristics**. These heuristics are fundamental building blocks of the robot's cognitive repertoire:
 
-The basis $|h_i\rangle$ represents elementary cognitive heuristics. These heuristics are fundamental building blocks of the robot's cognitive repertoire:
+1.  **Hybrid Representation**: They combine symbolic aspects (representing discrete concepts or actions) and sub-symbolic aspects (representing continuous sensorimotor patterns or activations).
+2.  **Multi-level Structure**: Heuristics can be organized hierarchically, ranging from primitive sensorimotor patterns to mid-level strategies and high-level reasoning patterns. Examples include:
+  
+### examples
 
-1. **Hybrid Representation**: They combine symbolic aspects (representing discrete concepts or actions) and sub-symbolic aspects (representing continuous sensorimotor patterns or activations).
-2. **Multi-level Structure**: Heuristics can be organized hierarchically, ranging from primitive sensorimotor patterns
-   
-### Ejemplos de heurísticas cuántico-cognitivas
+- *Primitive:* \( |h_{\text{move\_fwd}}\rangle \), \( |h_{\text{obstacle\_near}}\rangle \)
+- *Mid-level:* \( |h_{\text{wall\_follow}}\rangle \), \( |h_{\text{grasp\_approach}}\rangle \)
+- *High-level:* \( |h_{\text{means\_end}}\rangle \)
+      
+4.  **Learned and Predefined**: The framework accommodates both innate/predefined heuristics (evolutionary priors) and learned heuristics that emerge through experience via composition, abstraction, or dimensionality reduction of activation patterns.
 
-- $|h_{\mathrm{obstacleNear}}\rangle$
-- $|h_{\mathrm{wallFollow}}\rangle$
-- $|h_{\mathrm{graspApproach}}\rangle$
-- $|h_{\mathrm{meansEnd}}\rangle$
-
-
-
-4. **Learned and Predefined**: The framework accommodates both innate/predefined heuristics (evolutionary priors) and learned heuristics that emerge through experience via composition, abstraction, or dimensionality reduction of activation patterns.
-
-
-### State Evolution
-
+#### State Evolution
 The cognitive state evolves according to the Schrödinger equation:
-
-$$i\hbar\frac{d}{dt}|\psi(t)\rangle = \hat{H}_{\text{cog}}(t)|\psi(t)\rangle$$
-
-Where $\hat{H}_{\text{cog}}(t)$ is the cognitive Hamiltonian operator that governs the dynamics of the cognitive state. This operator encodes the robot's cognitive processes, including perception, decision-making, and action selection.
+$$
+i\hbar\frac{d}{dt}|\psi(t)\rangle = \hat{H}_{\text{cog}}(t)|\psi(t)\rangle
+$$
+Where $\hat{H}_{\text{cog}}(t)$ is the cognitive Hamiltonian operator that governs the dynamics of the cognitive state. This operator encodes the robot's cognitive processes, including perception, decision-making, and action selection. It is typically composed of terms representing different influences:
+$$
+\hat{H}_{\text{cog}}(t) = \hat{H}_{\text{int}} + \hat{H}_{\text{ext}}(t) + \hat{H}_{\text{mem}}(t)
+$$
+where $\hat{H}_{\text{int}}$ captures internal dynamics, $\hat{H}_{\text{ext}}(t)$ models external influence, and $\hat{H}_{\text{mem}}(t)$ represents memory processes. *(Note: $\hbar$ is often set to 1 in simulations.)*
 
 ### 2.2 Topological State Structure
 
 Simultaneously, we define a **simplicial complex** $\mathcal{K}(t) = (V(t), S(t))$ that represents the robot's internal associative map or cognitive structure at time $t$.
--   **Vertices $V(t)$**: Correspond to heuristics $|h_i\rangle$ that have significant activation probability $|c_i(t)|^2 = |\langle h_i | \psi(t) \rangle|^2$.
--   **Simplices $S(t)$**: Represent higher-order co-activations or correlations between these active heuristics. A $k$-simplex $[v_{i_0}, ..., v_{i_k}]$ indicates a meaningful relationship among $k+1$ heuristics.
+-   **Vertices $V(t)$**: Correspond to heuristics $|h_i\rangle$ that have significant activation probability $|c_i(t)|^2 = |\langle h_i | \psi(t) \rangle|^2 > \epsilon(t)$.
+-   **Simplices $S(t)$**: Represent higher-order co-activations or correlations between these active heuristics. A $k$-simplex $[v_{i_0}, ..., v_{i_k}]$ indicates a meaningful relationship among $k+1$ heuristics, often determined by pairwise correlations exceeding a threshold $\theta(t)$.
 
 ### 2.3 Quantum-Topological Mapping
 
@@ -375,5 +373,3 @@ Robotics Braining Theory (RBT) represents a significant advancement in cognitive
 15. Wang, Z., Busemeyer, J. R., Atmanspacher, H., & Pothos, E. M. (2013). The potential of using quantum theory to build models of cognition. Topics in Cognitive Science, 5(4), 672-688. *(Added from conceptual draft)*
 
 *(Note: References from the conceptual draft like Goertzel (2014) were omitted as they seemed less directly related to the core mathematical/physical theories than the others.)*
-```
-
