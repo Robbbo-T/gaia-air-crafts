@@ -24,11 +24,11 @@ The basis $\{ |h_i\rangle \}$ represents **elementary cognitive heuristics**. Th
 1.  **Hybrid Representation**: They combine symbolic aspects (representing discrete concepts or actions) and sub-symbolic aspects (representing continuous sensorimotor patterns or activations).
 2.  **Multi-level Structure**: Heuristics can be organized hierarchically, ranging from primitive sensorimotor patterns to mid-level strategies and high-level reasoning patterns. Examples include:
   
-### examples
+### example
 
-- *Primitive:* \( |h_{\text{move\_fwd}}\rangle \), \( |h_{\text{obstacle\_near}}\rangle \)
-- *Mid-level:* \( |h_{\text{wall\_follow}}\rangle \), \( |h_{\text{grasp\_approach}}\rangle \)
-- *High-level:* \( |h_{\text{means\_end}}\rangle \)
+- *Primitive:* \(|h_{\text{move\_fwd}}\rangle\), \(|h_{\text{obstacle\_near}}\rangle\)
+- *Mid-level:* \(|h_{\text{wall\_follow}}\rangle\), \(|h_{\text{grasp\_approach}}\rangle\)
+- *High-level:* \(|h_{\text{means\_end}}\rangle\)
       
 4.  **Learned and Predefined**: The framework accommodates both innate/predefined heuristics (evolutionary priors) and learned heuristics that emerge through experience via composition, abstraction, or dimensionality reduction of activation patterns.
 
