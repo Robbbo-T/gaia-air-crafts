@@ -1,16 +1,31 @@
 {
   "name": "gaia-air-crafts",
-  "version": "1.0.0",
-  "description": "GAIA Air Crafts Project",
-  "main": "index.js",
+  "version": "1.1.0",
+  "private": true,
+  "workspaces": [
+    "GP-AM",
+    "GP-FD",
+    "GP-AS",
+    "GP-COM",
+    "GP-RAME",
+    "GP-SUPL",
+    "GP-PM",
+    "twins/*",
+    "apps/doc-viewer"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd dashboard && npm run build",
-    "start": "cd dashboard && npm start"
+    "start": "yarn workspace doc-viewer dev",
+    "build": "lerna run build --stream",
+    "test": "lerna run test --stream",
+    "generate-nav": "node scripts/export-nav.js",
+    "dashboard": "yarn workspace GP-RAME start:rbt-dashboard"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    // your federated dashboard package, pointing to your local workspace or registry
+    "@gaia-air/rbt-learning-dashboard": "workspace:*"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0",
+    "typescript": "^5.0.0"
   }
 }
