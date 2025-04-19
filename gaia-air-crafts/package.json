@@ -8,6 +8,7 @@
     "GP-AS",
     "GP-COM",
     "GP-RAME",
+    "GP-RAME/packages/*",
     "GP-SUPL",
     "GP-PM",
     "twins/*",
@@ -18,10 +19,10 @@
     "build": "lerna run build --stream",
     "test": "lerna run test --stream",
     "generate-nav": "node scripts/export-nav.js",
-    "dashboard": "yarn workspace GP-RAME start:rbt-dashboard"
+    "dashboard": "yarn workspace @gaia-air/rbt-learning-dashboard dev",
+    "build:dashboard": "yarn workspace @gaia-air/rbt-learning-dashboard build"
   },
   "dependencies": {
-    // your federated dashboard package, pointing to your local workspace or registry
     "@gaia-air/rbt-learning-dashboard": "workspace:*"
   },
   "devDependencies": {
