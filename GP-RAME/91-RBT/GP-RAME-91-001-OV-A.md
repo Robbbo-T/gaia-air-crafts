@@ -3,7 +3,7 @@ GP-RAME-91-001-OV-A.md.
 ## 0. Executive Summary
 
 Robotics Braining Theory (RBT) presenta un enfoque fundamental para modelar procesos cognitivos en agentes robóticos mediante la integración de mecánica cuántica, topología algebraica y aprendizaje estadístico. Al representar estados cognitivos como superposiciones cuánticas y proyectar su dinámica en estructuras topológicas emergentes de memoria, RBT ofrece un camino matemáticamente coherente y computacionalmente viable hacia sistemas robóticos adaptativos, resilientes y orientados a objetivos.
-
+```
 [Contenido técnico detallado con ecuaciones matemáticas, teoremas, definiciones y resultados experimentales...]
 \`\`\`
 
@@ -25,7 +25,7 @@ Este documento proporciona la base teórica completa para el RBT y debería ser 
 ¿Te gustaría que desarrolle alguno de estos documentos adicionales o que profundice en algún aspecto específico del RBT?
 \`\`\`
 
-
+````
 
 ## 1. Introduction
 
