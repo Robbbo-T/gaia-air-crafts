@@ -224,37 +224,48 @@ where $W_p$ is the Wasserstein distance between diagrams. Learning can aim to st
 
 ## 4.1 Quantum Walk-Based Planning
 
-Planning can be modeled as exploring the cognitive structure $K(t)$.
+Planning can be modeled as exploring the cognitive structure \( K(t) \).
 
 ### Definition 4.1.1: Cognitive Quantum Walk
 
-A continuous-time quantum walk (CTQW) on the 1-skeleton (graph) of $K(t)$ allows exploring heuristic connections. The state $|\phi(t)\rangle$ of the walker evolves over vertices (heuristics) according to:
+A continuous-time quantum walk (CTQW) on the 1-skeleton (graph) of \( K(t) \) allows exploring heuristic connections. The state \( |\phi(t)
+angle \) of the walker evolves over vertices (heuristics) according to:
 
-$$i\hbar \frac{d}{dt}|\phi(t)\rangle = \hat{L}_{K(t)}|\phi(t)\rangle$$
+```math
+i\hbar rac{d}{dt}|\phi(t)
+angle = \hat{L}_{K(t)}|\phi(t)
+angle
+```
 
-where $\hat{L}_{K(t)}$ is the graph Laplacian of $K(t)$'s 1-skeleton (potentially weighted or using higher-order Laplacians). This explores potential sequences of heuristic activations.
+Where \( \hat{L}_{K(t)} \) is the graph Laplacian of \( K(t) \)'s 1-skeleton (potentially weighted or using higher-order Laplacians). This explores potential sequences of heuristic activations.
 
 ### Theorem 4.1.2: Potential Quantum Speedup in Planning
 
-If implemented on quantum hardware, CTQWs can offer quadratic speedups for certain search problems (e.g., hitting time, finding marked nodes) compared to classical random walks on the same graph structure.
+If implemented on quantum hardware, CTQWs can offer quadratic speedups for certain search problems (e.g., hitting time, finding marked nodes) compared to classical random walks on the same graph structure:
 
-$$T_{quantum} \approx O(\sqrt{N}) \text{ vs } T_{classical} \approx O(N)$$
+```math
+T_{quantum} pprox O(\sqrt{N}) \quad 	ext{vs} \quad T_{classical} pprox O(N)
+```
 
-(Note: In RBT's typical classical simulation, this speedup is not realized directly, but the quantum walk dynamics still offer a distinct exploration mechanism compared to classical search.)
+> Note: In RBT's typical classical simulation, this speedup is not realized directly, but the quantum walk dynamics still offer a distinct exploration mechanism compared to classical search.
+
+---
 
 ## 4.2 Topological Navigation
 
-RBT supports navigation using topological features of an internal cognitive map $M(t)$ (another simplicial complex representing spatial understanding).
+RBT supports navigation using topological features of an internal cognitive map \( M(t) \), another simplicial complex representing spatial understanding.
 
-### Definition 4.2.1: Cognitive Map $M(t)$
+### Definition 4.2.1: Cognitive Map \( M(t) \)
 
-- **Vertices**: Landmarks, locations.
-- **Edges**: Paths, traversability.
-- **Higher-simplices**: Regions, territories.
+- **Vertices**: Landmarks, locations  
+- **Edges**: Paths, traversability  
+- **Higher-simplices**: Regions, territories  
 
 ### Proposition 4.2.2: Homology-Based Navigation
 
-Obstacles correspond to non-trivial cycles ($H_1$) or voids ($H_2$) in $M(t)$. Navigation between points can be guided by finding paths representing homology classes. Robust paths correspond to persistent homology classes in the map.
+Obstacles correspond to non-trivial cycles (\( H_1 \)) or voids (\( H_2 \)) in \( M(t) \). Navigation between points can be guided by finding paths representing homology classes. Robust paths correspond to persistent homology classes in the map.
+
+---
 
 ## 4.3 Decision-Making Under Uncertainty
 
@@ -262,17 +273,24 @@ Quantum measurement provides a natural mechanism for probabilistic decision-maki
 
 ### Definition 4.3.1: Decision as Measurement
 
-An action $a$ is chosen based on projecting the cognitive state $|\psi(t)\rangle$ onto subspaces associated with actions using projection operators $\hat{P}_a$. The probability of choosing action $a$ is:
+An action \( a \) is chosen based on projecting the cognitive state \( |\psi(t)
+angle \) onto subspaces associated with actions using projection operators \( \hat{P}_a \). The probability of choosing action \( a \) is:
 
-$$\text{Prob}(a) = \text{Tr}(\hat{\rho}(t)\hat{P}_a)$$
+```math
+	ext{Prob}(a) = 	ext{Tr}(\hat{
+ho}(t)\hat{P}_a)
+```
 
 The state collapses post-decision, influencing subsequent steps.
 
 ### Theorem 4.3.2: Uncertainty Principle for Decisions
 
-If decision criteria correspond to non-commuting operators $\hat{A}$ and $\hat{B}$ (representing incompatible questions or choices), there is an inherent trade-off in the certainty of their outcomes, reflecting cognitive interference effects:
+If decision criteria correspond to non-commuting operators \( \hat{A} \) and \( \hat{B} \) (representing incompatible questions or choices), there is an inherent trade-off in the certainty of their outcomes, reflecting cognitive interference effects:
 
-$$\sigma_A \sigma_B \geq \frac{1}{2}|\langle[\hat{A}, \hat{B}]\rangle|$$
+```math
+\sigma_A \sigma_B \geq rac{1}{2}|\langle[\hat{A}, \hat{B}]
+angle|
+```
 
 # Implementation Architecture and Considerations
 
