@@ -220,77 +220,166 @@ $$W_p(Dgm_k(K(t)), Dgm_k(K(t+\Delta t))) \leq C \cdot \|\hat{\rho}(t) - \hat{\rh
 
 where $W_p$ is the Wasserstein distance between diagrams. Learning can aim to stabilize useful topological features.
 
-# Planning and Decision-Making in RBT
+# Planning and Decision-Making in Robotics Braining Theory (RBT)
 
-## 4.1 Quantum Walk-Based Planning
+## Overview
 
-Planning can be modeled as exploring the cognitive structure \( K(t) \).
-
-### Definition 4.1.1: Cognitive Quantum Walk
-
-A continuous-time quantum walk (CTQW) on the 1-skeleton (graph) of \( K(t) \) allows exploring heuristic connections. The state \( |\phi(t)
-angle \) of the walker evolves over vertices (heuristics) according to:
-
-```math
-i\hbar rac{d}{dt}|\phi(t)
-angle = \hat{L}_{K(t)}|\phi(t)
-angle
-```
-
-Where \( \hat{L}_{K(t)} \) is the graph Laplacian of \( K(t) \)'s 1-skeleton (potentially weighted or using higher-order Laplacians). This explores potential sequences of heuristic activations.
-
-### Theorem 4.1.2: Potential Quantum Speedup in Planning
-
-If implemented on quantum hardware, CTQWs can offer quadratic speedups for certain search problems (e.g., hitting time, finding marked nodes) compared to classical random walks on the same graph structure:
-
-```math
-T_{quantum} pprox O(\sqrt{N}) \quad 	ext{vs} \quad T_{classical} pprox O(N)
-```
-
-> Note: In RBT's typical classical simulation, this speedup is not realized directly, but the quantum walk dynamics still offer a distinct exploration mechanism compared to classical search.
+Planning and decision-making in Robotics Braining Theory (RBT) are implemented over heuris
+topological structures. This framework enables the simulation and execution of actions in 
+environments using a quantum-inference engine and a dynamic memory map.
 
 ---
 
-## 4.2 Topological Navigation
+## Cognitive Planning Framework
 
-RBT supports navigation using topological features of an internal cognitive map \( M(t) \), another simplicial complex representing spatial understanding.
+RBT models planning as a sequence of subspace projections and topological path constructio
+cognitive structure.
 
-### Definition 4.2.1: Cognitive Map \( M(t) \)
+### Hilbert Space Decomposition
 
-- **Vertices**: Landmarks, locations  
-- **Edges**: Paths, traversability  
-- **Higher-simplices**: Regions, territories  
+The cognitive state space \( \mathcal{H} \) is decomposed as:
 
-### Proposition 4.2.2: Homology-Based Navigation
+\[
+\mathcal{H} = \mathcal{H}_{\text{goal}} \otimes \mathcal{H}_{\text{tactic}} \otimes \mathc
+\]
 
-Obstacles correspond to non-trivial cycles (\( H_1 \)) or voids (\( H_2 \)) in \( M(t) \). Navigation between points can be guided by finding paths representing homology classes. Robust paths correspond to persistent homology classes in the map.
+Each subspace supports operations at different levels of abstraction:
+
+- \( \mathcal{H}_{\text{goal}} \): Long-term planning objectives  
+- \( \mathcal{H}_{\text{tactic}} \): Mid-level strategies and policies  
+- \( \mathcal{H}_{\text{sensorimotor}} \): Real-time interactions and feedback  
 
 ---
 
-## 4.3 Decision-Making Under Uncertainty
+### Projection-Based Intention Selection
 
-Quantum measurement provides a natural mechanism for probabilistic decision-making.
+Intentions are selected through projection operators:
 
-### Definition 4.3.1: Decision as Measurement
+\[
+\hat{P}_{\text{intent}}(t) = \sum_{i \in \mathcal{I}(t)} |h_i\rangle \langle h_i|
+\]
 
-An action \( a \) is chosen based on projecting the cognitive state \( |\psi(t)
-angle \) onto subspaces associated with actions using projection operators \( \hat{P}_a \). The probability of choosing action \( a \) is:
+Where \( \mathcal{I}(t) \) denotes the set of heuristics activated by contextual constrain
 
-```math
-	ext{Prob}(a) = 	ext{Tr}(\hat{
-ho}(t)\hat{P}_a)
-```
+---
 
-The state collapses post-decision, influencing subsequent steps.
+## Topological Path Planning
 
-### Theorem 4.3.2: Uncertainty Principle for Decisions
+The simplicial complex \( \mathcal{K}(t) \) encodes relationships among heuristics using h
 
-If decision criteria correspond to non-commuting operators \( \hat{A} \) and \( \hat{B} \) (representing incompatible questions or choices), there is an inherent trade-off in the certainty of their outcomes, reflecting cognitive interference effects:
+- **Path Construction**: Paths are defined by adjacent simplices with high persistence  
+- **Goal Convergence**: Paths must show increasing correlation to desired outcomes  
+- **Cycle Pruning**: Persistent but non-functional loops are filtered
 
-```math
-\sigma_A \sigma_B \geq rac{1}{2}|\langle[\hat{A}, \hat{B}]
-angle|
-```
+---
+
+### Planning Operator
+
+The planning operator is defined as:
+
+\[
+\hat{U}_{\text{plan}}(t) = \exp\left( -i \int_{t}^{t+\Delta t} \hat{H}_{\text{plan}}(\tau)
+\]
+
+Where \( \hat{H}_{\text{plan}} \) incorporates task alignment, uncertainty management, and
+
+---
+
+## Decision-Making Dynamics
+
+### Decoherence-Induced Action Selection
+
+When a decision is required, the quantum state collapses into a specific action:
+
+\[
+|\psi(t^+)\rangle = \frac{\hat{P}_a |\psi(t)\rangle}{\|\hat{P}_a |\psi(t)\rangle\|}
+\]
+
+Where \( \hat{P}_a \) is the projection operator associated with the chosen action.
+
+---
+
+### Utility Distribution
+
+The quantum utility for an action is:
+
+\[
+U(a, t) = \langle \psi(t) | \hat{P}_a \hat{H}_{\text{reward}}(t) \hat{P}_a | \psi(t) \rang
+\]
+
+Decision strategies:
+
+- Maximum expected utility: \( \arg\max_a U(a, t) \)  
+- Stochastic sampling: \( P(a|t) \propto U(a,t)^{\alpha} \)
+
+---
+
+## Temporal Planning Horizons
+
+RBT maintains entangled states across time:
+
+\[
+|\Psi\rangle = \sum_{t=0}^{T} \lambda_t |\psi(t)\rangle
+\]
+
+Weights decay based on entropy:
+
+\[
+\lambda_t = \frac{e^{-\beta H(\psi(t))}}{Z}
+\]
+
+Where \( Z \) is a normalization constant and \( H(\psi(t)) \) is the quantum entropy.
+
+---
+
+## Hierarchical Control
+
+### Tensor Product Policy Networks
+
+Policies are modeled as:
+
+\[
+\pi(h_i, g_j) = \text{Tr}\left[ \rho(t) \cdot (|h_i\rangle\langle h_i| \otimes |g_j\rangle
+\]
+
+Where \( h_i \) is a heuristic and \( g_j \) is a goal representation.
+
+---
+
+### Dynamic Goal Rebinding
+
+Goals update via:
+
+\[
+|g(t+1)\rangle = \hat{U}_{\text{goal}}(t) |g(t)\rangle
+\]
+
+Where \( \hat{U}_{\text{goal}} \) reflects environmental feedback and reward shifts.
+
+---
+
+## Robustness and Flexibility
+
+- **Stochastic Planning**: Prevents local optima  
+- **Memory-Driven Adaptation**: Reinforces successful paths  
+- **Goal Drift Handling**: Entropy-guided realignment  
+
+---
+
+## Applications
+
+- Autonomous navigation with dynamic re-routing  
+- Cognitive control in robotics and human interaction  
+- Distributed task coordination in multi-agent systems  
+
+---
+
+## References
+
+- GP-RAME-91-MOD-004-PLAN-A: Planning Operators Specification  
+- GP-RAME-91-MOD-005-POLICY-A: Hierarchical Policy Maps  
+- GP-COM-AI-0300-01-008-SDD-A: i-Aher0 Goal Arbitration Engine  
+
 
 # Implementation Architecture and Considerations
 
