@@ -32,7 +32,7 @@
 ---
 
 <details>
-<summary>### Launch & Landing Facilities</summary>
+### <summary> Launch & Landing Facilities</summary>
 
 *Focus: Design, operations, and documentation for airport and spaceport infrastructure.*
 
@@ -61,7 +61,7 @@
 </details>
 
 <details>
-<summary>### Fueling & Servicing Systems</summary>
+### <summary> Fueling & Servicing Systems</summary>
 
 *Focus: Design, operations, and documentation for ground-based fuel production, storage, distribution, and vehicle servicing.*
 
@@ -78,7 +78,7 @@
 </details>
 
 <details>
-<summary>### Ground Data Network & Control Centers</summary>
+### <summary> Ground Data Network & Control Centers</summary>
 
 *Focus: Design, operations, and documentation for mission control, air traffic control interface, and ground data infrastructure.*
 
@@ -106,7 +106,7 @@
 </details>
 
 <details>
-<summary>### Ground Robotics & Automation</summary>
+### <summary> Ground Robotics & Automation</summary>
 
 *Focus: Design, operations, and documentation for ground-based robotic systems for logistics, maintenance assistance, and inspection.*
 
@@ -119,7 +119,7 @@
 </details>
 
 <details>
-<summary>### Ground Support Equipment (GSE)</summary>
+### <summary> Ground Support Equipment (GSE)</summary>
 
 *Focus: Design, operation, and documentation for standard, non-robotic ground support equipment.*
 
@@ -130,7 +130,7 @@
 </details>
 
 <details>
-<summary>### Common Components & Standards</summary>
+### <summary>Common Components & Standards</summary>
 
 *Focus: Documentation for elements shared across multiple GRO areas.*
 
