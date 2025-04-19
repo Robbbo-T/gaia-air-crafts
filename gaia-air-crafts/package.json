@@ -1,0 +1,16 @@
+{
+  "name": "gaia-air-crafts",
+  "version": "1.0.0",
+  "description": "GAIA Air Crafts Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd dashboard && npm run build",
+    "start": "cd dashboard && npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
