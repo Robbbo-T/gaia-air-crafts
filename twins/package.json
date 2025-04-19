@@ -1,0 +1,11 @@
+{
+  "name": "gaia-air-crafts-twins",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "core",
+    "ground-twin",
+    "air-twin",
+    "space-twin"
+  ]
+}
