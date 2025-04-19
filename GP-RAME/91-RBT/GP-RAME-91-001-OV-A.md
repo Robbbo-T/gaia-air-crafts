@@ -19,29 +19,42 @@ Crucially, RBT employs the mathematics of quantum mechanics as a **quantum-inspi
 
 ## 2. Mathematical Foundations of RBT
 
+
 ### 2.1 Quantum Cognitive State Space
 
 The cognitive state of a robot at time $t$ is defined as a quantum state $|\psi(t)\rangle \in \mathcal{H}$, where $\mathcal{H}$ is a Hilbert space.
 
-#### Basis Heuristics $\{ |h_i\rangle \}$
-The basis $\{ |h_i\rangle \}$ represents **elementary cognitive heuristics**. These heuristics are fundamental building blocks of the robot's cognitive repertoire:
+1.  **Basis Heuristics $\{ |h_i\rangle \}$**
+    The basis $\{ |h_i\rangle \}$ represents **elementary cognitive heuristics**. These heuristics are fundamental building blocks of the robot's cognitive repertoire:
+    *   **Hybrid Representation**: They combine symbolic aspects (representing discrete concepts or actions) and sub-symbolic aspects (representing continuous sensorimotor patterns or activations).
+    *   **Multi-level Structure**: Heuristics can be organized hierarchically, ranging from primitive sensorimotor patterns (e.g., $|h_{\text{move\_fwd}}\rangle$, $|h_{\text{obstacle\_near}}\rangle$) to mid-level strategies (e.g., $|h_{\text{wall\_follow}}\rangle$, $|h_{\text{grasp\_approach}}\rangle$) and high-level reasoning patterns (e.g., $|h_{\text{means\_end}}\rangle$).
+    *   **Learned and Predefined**: The framework accommodates both innate/predefined heuristics (evolutionary priors) and learned heuristics that emerge through experience via composition, abstraction, or dimensionality reduction of activation patterns.
 
--   **Hybrid Representation**: They combine symbolic aspects (representing discrete concepts or actions) and sub-symbolic aspects (representing continuous sensorimotor patterns or activations).
--   **Multi-level Structure**: Heuristics can be organized hierarchically, ranging from primitive sensorimotor patterns (e.g., $|h_{\text{move_fwd}}\rangle$, $|h_{\text{obstacle_near}}\rangle$) to mid-level strategies (e.g., $|h_{\text{wall_follow}}\rangle$, $|h_{\text{grasp_approach}}\rangle$) and high-level reasoning patterns (e.g., $|h_{\text{means_end}}\rangle$).
--   **Learned and Predefined**: The framework accommodates both innate/predefined heuristics (evolutionary priors) and learned heuristics that emerge through experience via composition, abstraction, or dimensionality reduction of activation patterns.
+2.  **State Evolution**
+    The evolution of the state follows a Schrödinger-like equation driven by a cognitive Hamiltonian $\hat{H}_{\text{cog}}(t)$:
+    $$
+    i\hbar \frac{d}{dt} |\psi(t)\rangle = \hat{H}_{\text{cog}}(t) |\psi(t)\rangle
+    $$
+    The Hamiltonian is composed of terms representing different influences:
+    $$
+    \hat{H}_{\text{cog}}(t) = \hat{H}_{\text{int}} + \hat{H}_{\text{ext}}(t) + \hat{H}_{\text{mem}}(t)
+    $$
+    where $\hat{H}_{\text{int}}$ captures internal dynamics and heuristic interactions, $\hat{H}_{\text{ext}}(t)$ models external environmental influence (sensor input), and $\hat{H}_{\text{mem}}(t)$ represents memory consolidation processes influencing the topological structure. *(Note: $\hbar$ is typically set to 1 in simulations, acting as a scaling factor).*
 
-#### State Evolution
-The evolution of the state follows a Schrödinger-like equation driven by a cognitive Hamiltonian $\hat{H}_{\text{cog}}(t)$:
+```
 
-$$
-i\hbar \frac{d}{dt} |\psi(t)\rangle = \hat{H}_{\text{cog}}(t) |\psi(t)\rangle
-$$
+**Key improvements incorporated from the diff and standard practices:**
 
-$$
-\hat{H}_{\text{cog}}(t) = \hat{H}_{\text{int}} + \hat{H}_{\text{ext}}(t) + \hat{H}_{\text{mem}}(t)
-$$
+*   Uses standard Markdown numbered lists (`1.`, `2.`) and bullet points (`*`).
+*   Applies bolding (`**...**`) for emphasis.
+*   Correctly uses inline math mode (`$...$`) for symbols like $t$, $\mathcal{H}$, and kets like $|\psi(t)\rangle$.
+*   Correctly escapes underscores within `\text{...}` inside math mode (e.g., `|h_{\text{move\_fwd}}\rangle`).
+*   Uses display math mode (`$$...$$`) for the important standalone equations (Schrödinger and Hamiltonian definition).
+*   Uses the common `\hat{H}_{\text{cog}}(t)` notation for the Hamiltonian.
+*   Removes the redundant text blocks and error messages.
+*   Clarifies the basis notation using set braces `\{ |h_i\rangle \}` in the heading.
 
-where $\hat{H}_{\text{int}}$ captures internal dynamics and heuristic interactions, $\hat{H}_{\text{ext}}(t)$ models external environmental influence (sensor input), and $\hat{H}_{\text{mem}}(t)$ represents memory consolidation processes influencing the topological structure. *(Note: $\hbar$ is typically set to 1 in simulations, acting as a scaling factor).*
+This version should render correctly and clearly on GitHub.
 
 ### 2.2 Topological State Structure
 
