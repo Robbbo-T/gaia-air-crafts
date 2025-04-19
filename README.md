@@ -21,7 +21,8 @@ The **GAIA AIR Crafts** initiative extends GAIA DS’s sustainable-development 
 8. [Filename Grammar](#filename-grammar)  
 9. [Contributing](#contributing)  
 10. [License](#license)  
-11. [Contact](#contact)
+11. [Contact](#contact)  
+12. [Project Structure](#project-structure)
 
 ---
 
@@ -189,3 +190,55 @@ This repository’s content is licensed under **CC BY‑SA 4.0**. See [LICENSE
 - **Program Office:** [pmo@gaia-air.com](mailto:pmo@gaia-air.com)  
 - **COAFI Documentation Lead:** [coafi-admin@gaia-air.com](mailto:coafi-admin@gaia-air.com)  
 - **Issue Tracker:** *(TBD)*
+
+---
+
+## Project Structure {#project-structure}
+
+The GAIA AIR Crafts repository is organized into the following directories:
+
+- **.github/**: Contains CI workflows, issue templates, and PR templates.
+- **.devcontainer/**: Configuration for VSCode devcontainer.
+- **apps/**: Contains application-specific code.
+  - **doc-viewer/**: Next.js AMPIDE-DocViewer application.
+    - **package.json**: Dependencies and scripts for the doc-viewer app.
+    - **src/**: Source code for the doc-viewer app.
+- **packages/**: Contains all “GP-XX” domain-specific packages.
+  - **GP-AM/**: Air Systems & Airframes.
+    - **docs/**: Documentation for GP-AM.
+    - **src/**: Library or tooling code for GP-AM.
+    - **package.json**: Domain-specific npm package for GP-AM.
+  - **GP-FD/**: Foundations.
+    - **docs/**: Documentation for GP-FD.
+    - **src/**: Library or tooling code for GP-FD.
+    - **package.json**: Domain-specific npm package for GP-FD.
+  - **GP-AS/**: Space Systems.
+    - **docs/**: Documentation for GP-AS.
+    - **package.json**: Domain-specific npm package for GP-AS.
+  - **GP-COM/**: Core Operating Matrix.
+    - **docs/**: Documentation for GP-COM.
+    - **package.json**: Domain-specific npm package for GP-COM.
+  - **GP-GRO/**: Ground & Infra.
+    - **docs/**: Documentation for GP-GRO.
+    - **package.json**: Domain-specific npm package for GP-GRO.
+  - **GP-RAME/**: Robotics & Automation.
+    - **docs/**: Documentation for GP-RAME.
+    - **packages/**: Nested workspace for robotics dashboard.
+      - **rbt-learning-dashboard/**: RBT learning dashboard package.
+        - **package.json**: Dependencies and scripts for the RBT learning dashboard.
+    - **package.json**: Domain-specific npm package for GP-RAME.
+  - **GP-SUPL/**: Supply Chain & Ethical Logistics.
+    - **docs/**: Documentation for GP-SUPL.
+    - **package.json**: Domain-specific npm package for GP-SUPL.
+  - **GP-PM/**: Program Management & Operations.
+    - **docs/**: Documentation for GP-PM.
+    - **package.json**: Domain-specific npm package for GP-PM.
+- **twins/**: Contains digital-twin codebases.
+  - **air-twin/**: Digital twin for air systems.
+    - **package.json**: Dependencies and scripts for the air-twin.
+  - **ground-twin/**: Digital twin for ground systems.
+    - **package.json**: Dependencies and scripts for the ground-twin.
+- **package.json**: Root package.json for workspaces and top-level scripts.
+- **tsconfig.json**: TypeScript configuration file.
+- **lerna.json** (or **nx.json**): Optional monorepo manager configuration.
+- **README.md**: This file, providing an overview and structure of the repository.
