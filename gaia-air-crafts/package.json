@@ -7,8 +7,6 @@
     "GP-FD",
     "GP-AS",
     "GP-COM",
-    "GP-RAME",
-    "GP-RAME/packages/*",
     "GP-SUPL",
     "GP-PM",
     "twins/*",
@@ -18,13 +16,9 @@
     "start": "yarn workspace doc-viewer dev",
     "build": "lerna run build --stream",
     "test": "lerna run test --stream",
-    "generate-nav": "node scripts/export-nav.js",
-    "dashboard": "yarn workspace @gaia-air/rbt-learning-dashboard dev",
-    "build:dashboard": "yarn workspace @gaia-air/rbt-learning-dashboard build"
+    "generate-nav": "node scripts/export-nav.js"
   },
-  "dependencies": {
-    "@gaia-air/rbt-learning-dashboard": "workspace:*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "lerna": "^4.0.0",
     "typescript": "^5.0.0"
