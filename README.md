@@ -5,14 +5,14 @@
 [![Framework Version](https://img.shields.io/badge/Framework%20Version-1.1-blue.svg)]()  
 [![SPLCOGEN Portal](https://img.shields.io/badge/Portal-GAIA%20AIR%20SPLCOGEN-brightgreen)](https://gaia-air-splcogen.vercel.app/)
 
-El proyecto **GAIA AIR** es una iniciativa integral de la división GAIA DS (Sustainable Development) cuyo propósito es diseñar y documentar todo un ecosistema de aeronaves inteligentes y sostenibles, que abarca tanto vehículos de transporte atmosférico (aviones de corto y medio alcance) como naves espaciales reutilizables para acceso a Órbita Baja Terrestre.
+The **GAIA AIR** project is a comprehensive initiative of the GAIA DS (Sustainable Development) division aimed at designing and documenting an entire ecosystem of intelligent, sustainable aircraft—ranging from short‑ and medium‑range atmospheric transports to reusable spacecraft for Low Earth Orbit access.
 
-Sus objetivos clave son:
+**Key objectives:**
 
-- **Optimizar la operación** mediante inteligencia artificial (navegación autónoma, planificación de ruta, mantenimiento predictivo).  
-- **Acelerar la toma de decisiones** energéticas y de trayectoria con algoritmos de computación cuántica.  
-- **Garantizar la trazabilidad y seguridad** de datos de diseño, vuelo y mantenimiento a través de blockchain.  
-- **Facilitar la interoperabilidad semántica** y reducir la carga cognitiva de ingenieros y operadores con especificaciones de datos “artifact‑of‑record” estandarizadas.
+- **Operational optimization** via AI (autonomous navigation, route planning, predictive maintenance).  
+- **Accelerated decision‑making** for energy and trajectory using quantum computing algorithms.  
+- **Data traceability and security**—from design to flight and maintenance—using blockchain.  
+- **Semantic interoperability** and reduced cognitive load for engineers and operators through standardized “artifact‑of‑record” data specifications.
 
 ---
 
@@ -34,46 +34,46 @@ Sus objetivos clave son:
 
 ## Overview
 
-GAIA AIR representa una **arquitectura híbrida y holística** para diseñar sistemas inteligentes, sostenibles y éticamente guiados en aire, espacio y tierra. Fusiona principios científicos fundamentales (**Heuritmática**) con tecnologías de punta para crear capacidades aeroespaciales regenerativas, responsables y transparentes.
+GAIA AIR embodies a **hybrid holistic architecture** to engineer intelligent, sustainable, and ethically guided systems for air, space, and ground operations. It blends foundational scientific principles (**Heuritmática**) with cutting‑edge technologies to deliver high‑performance, regenerative, responsible, and transparent aerospace capabilities.
 
-El marco **COAFI** (Codes and Ontology as Aerospace Foresights Indexed) es el índice maestro que estructura y enlaza toda la documentación técnica de GAIA AIR: desde especificaciones y diseños hasta planes de prueba y operaciones.
+The **COAFI** framework (Codes and Ontology as Aerospace Foresights Indexed) serves as the master index and structural backbone for all GAIA AIR technical documentation, from design specs to test plans and operational manuals.
 
-➡️ Navega el índice completo en el [COAFI Master Table of Contents (AToC.md)](./AToC.md)
+➡️ **Explore the full index:** [COAFI Master Table of Contents (AToC.md)](./AToC.md)
 
 ---
 
 ## Key GAIA AIR Pillars
 
 <details>
-<summary>Haz clic para expandir los pilares tecnológicos y filosóficos</summary>
+<summary>Click to expand the technological and philosophical pillars</summary>
 
-1. **Advanced AI (i-Aher0)**  
-   Federated, explainable AI para diagnóstico, prognóstico y optimización.  
-   [Ver GP-COM](./GP-COM/ToC-GP-COM.md)
+1. **Advanced AI (i‑Aher0)**  
+   Federated, explainable AI for diagnostics, prognostics, control, and optimization.  
+   [See GP-COM](./GP-COM/ToC-GP-COM.md)
 
 2. **Quantum Technologies (QAO, QEE/QSM)**  
-   Cómputo y propulsión cuántica.  
-   [Ver GP-FD](./GP-FD/ToC-GP-FD.md)
+   Quantum‑augmented computing, sensing, and propulsion.  
+   [See GP-FD](./GP-FD/ToC-GP-FD.md)
 
 3. **Advanced Materials (AMPEL/AMPEL+)**  
-   Materiales ligeros y resistentes con salud estructural integrada.  
-   [Ver GP-AM](./GP-AM/ToC-GP-AM.md), [GP-AS](./GP-AS/ToC-GP-AS.md)
+   Lightweight, resilient, sustainable materials with integrated health monitoring.  
+   [See GP-AM](./GP-AM/ToC-GP-AM.md), [GP-AS](./GP-AS/ToC-GP-AS.md)
 
 4. **Decentralized Trust (BITT)**  
-   Blockchain para trazabilidad y seguridad de datos.  
-   [Ver GP-COM](./GP-COM/ToC-GP-COM.md)
+   Blockchain for verifiable data provenance and supply‑chain integrity.  
+   [See GP-COM](./GP-COM/ToC-GP-COM.md)
 
 5. **Robotics & Automation (RAME)**  
-   Sistemas autónomos de ensamblaje y mantenimiento.  
-   [Ver GP-RAME](./GP-RAME/ToC-GP-RAME.md)
+   Autonomous assembly, maintenance, and operations on ground and in space.  
+   [See GP-RAME](./GP-RAME/ToC-GP-RAME.md)
 
 6. **Ethical Governance (CFSI/CEU)**  
-   Marcos constitucionales para alinear diseño con valores humanos.  
-   [Ver GP-FD](./GP-FD/ToC-GP-FD.md)
+   Constitutional frameworks to align design with human values.  
+   [See GP-FD](./GP-FD/ToC-GP-FD.md)
 
 7. **Sustainable Lifecycle (AGAD)**  
-   Principios de economía circular y finanzas regenerativas.  
-   [Ver GP-SUPL](./GP-SUPL/ToC-GP-SUPL.md)
+   Circular economy and regenerative finance principles embedded in design and operations.  
+   [See GP-SUPL](./GP-SUPL/ToC-GP-SUPL.md)
 
 </details>
 
@@ -81,43 +81,46 @@ El marco **COAFI** (Codes and Ontology as Aerospace Foresights Indexed) es el í
 
 ## COAFI Framework Purpose
 
-COAFI aborda la complejidad extrema de los sistemas aeroespaciales de nueva generación mediante:
+COAFI addresses the extreme complexity of next‑generation aerospace systems by:
 
-- **Estructurar el conocimiento** en una jerarquía estandarizada (Partes → Capítulos → Asuntos).  
-- **Garantizar trazabilidad** enlazando requisitos, decisiones de diseño, simulaciones y pruebas con principios fundamentales.  
-- **Facilitar interoperabilidad** con nomenclatura común (AGIS) y documentos de interfaz (ICD).  
-- **Habilitar automatización**: datos y documentos machine‑readable para IA (análisis, validación, generación).  
-- **Indexar perspectiva**: no solo *qué* son los sistemas, sino *por qué* y *cómo* evolucionarán.
+- **Structuring knowledge** in a standardized hierarchy (Parts → Chapters → Topics).  
+- **Ensuring traceability** by linking requirements, design decisions, simulations, tests, and operations back to core principles.  
+- **Facilitating interoperability** via consistent nomenclature (AGIS) and interface documents (ICDs).  
+- **Enabling automation**: machine‑readable data and documents for AI‑driven analysis, validation, and generation.  
+- **Indexing foresight**: organizing knowledge not only by *what* systems are, but *why* they exist and *how* they evolve.
 
 ---
 
 ## Getting Started with COAFI
 
-1. **Revisa la Visión** en Part 0 – Program Foundations ([GP-FD](./GP-FD/ToC-GP-FD.md)).  
-2. **Explora el índice** completo en [AToC.md](./AToC.md).  
-3. **Consulta los InfoCodes** en la sección INFOCODE‑INDEX de `AToC.md`.  
-4. **Familiarízate con AGIS**, la convención de nombres para todos los componentes.
+1. **Understand the Vision:** Review foundational documents in **Part 0: Program Foundations** ([GP-FD](./GP-FD/ToC-GP-FD.md)).  
+2. **Browse the Master Index:** Open [AToC.md](./AToC.md).  
+3. **Learn the InfoCodes:** Check the INFOCODE INDEX in `AToC.md`.  
+4. **Adopt the Nomenclature:** Familiarize yourself with the Aerospace General Integration System (AGIS) naming standard.
 
 ---
 
 ## Core Doctrines & Standards
 
-Accede a los marcos fundamentales en Part 0 (GP‑FD):
+Key frameworks in Part 0 include:
 
-- Constitutional Framework of System Intent (CFSI)  
-- Central Entangling Unities (CEU)  
-- As GAIA AIR Does (AGAD)  
-- Universal Robotics Ingenuity Foundation (URIF)  
-- e.G.A.I.As Paradigm  
-- Aerospace General Integration System (AGIS)  
-- COAFI Functional Framework Implementation (FFI)
+- **CFSI:** Constitutional Framework of System Intent  
+- **CEU:** Central Entangling Unities  
+- **AGAD:** As GAIA AIR Does Standard  
+- **URIF:** Universal Robotics Ingenuity Foundation  
+- **e.G.A.I.As Paradigm**  
+- **AGIS:** Aerospace General Integration System  
+- **FFI:** COAFI Functional Framework Implementation  
+- **TPSL/TPWD:** System Specification Standard
+
+*(Direct links available in [GP-FD ToC](./GP-FD/ToC-GP-FD.md).)*
 
 ---
 
 ## COAFI Parts Overview
 
 <details>
-<summary>Ver Partes y sus índices detallados</summary>
+<summary>View Parts and their detailed indices</summary>
 
 - **Part 0:** Program Foundations — [GP-FD](./GP-FD/ToC-GP-FD.md)  
 - **Part 1:** Air Systems & Airframes — [GP-AM](./GP-AM/ToC-GP-AM.md)  
@@ -135,7 +138,7 @@ Accede a los marcos fundamentales en Part 0 (GP‑FD):
 ## Standard InfoCodes
 
 <details>
-<summary>Haz clic para ver la lista de InfoCodes</summary>
+<summary>Click to view InfoCodes list</summary>
 
 - **OV** – Overview  
 - **SPEC** – Specification  
@@ -145,7 +148,7 @@ Accede a los marcos fundamentales en Part 0 (GP‑FD):
 - **DWG** – Drawing  
 - **CAL** – Calculation / Analysis  
 - **RPT** – Report  
-- **TEST** – Test Plan / Procedure  
+- **TEST** – Test Plan / Procedure / Report  
 - **MAN** – Manual  
 - **PROC** – Procedure  
 - **CAT** – Catalog / Parts List  
@@ -157,8 +160,8 @@ Accede a los marcos fundamentales en Part 0 (GP‑FD):
 - **JSON** – JSON Schema  
 - **BOM** – Bill of Materials  
 - **SWD** – Software Documentation  
-- **ADMIN** – Administrative  
-- **REF** – Reference  
+- **ADMIN** – Administrative Document  
+- **REF** – Reference Document  
 - **IDX** – Index Document  
 - **MPD** – Maintenance Planning Document  
 - **CERT** – Certification Document  
@@ -172,13 +175,13 @@ Accede a los marcos fundamentales en Part 0 (GP‑FD):
 
 ## Filename Grammar
 
-Para un ejemplo canónico y desglosado, consulta la sección **Filename Grammar** en [AToC.md](./AToC.md#coafi-filename-grammar-canonical-example).
+For a canonical example and breakdown, see the **Filename Grammar** section in [AToC.md](./AToC.md#coafi-filename-grammar-canonical-example).
 
 ---
 
 ## Contributing
 
-GAIA AIR es un proyecto abierto. Lee nuestras pautas en:
+GAIA AIR is an open initiative—All contributions welcome! Please read:
 
 - [CONTRIBUTING.md](./CONTRIBUTING.md)
 
@@ -186,7 +189,7 @@ GAIA AIR es un proyecto abierto. Lee nuestras pautas en:
 
 ## License
 
-Contenido bajo **CC BY‑SA 4.0**. Detalles en [LICENSE](./LICENSE).
+This repository’s content is licensed under **CC BY‑SA 4.0**. See [LICENSE](./LICENSE) for details.
 
 ---
 
@@ -194,6 +197,6 @@ Contenido bajo **CC BY‑SA 4.0**. Detalles en [LICENSE](./LICENSE).
 
 - **Program Office:** [pmo@gaia-air.com](mailto:pmo@gaia-air.com)  
 - **COAFI Documentation Lead:** [coafi-admin@gaia-air.com](mailto:coafi-admin@gaia-air.com)  
-- **Issue Tracker:** *(por definir)*  
+- **Issue Tracker:** *(TBD)*  
 
 
