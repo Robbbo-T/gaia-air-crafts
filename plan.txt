@@ -1,0 +1,9 @@
+1. Create a Dedicated Package for the Dashboard
+2. Configure the Dashboard Package
+3. Update the Workspace Configuration
+4. Create a Next.js Configuration
+5. Integration with Doc Viewer
+6. Update Scripts
+7. GitHub Integration
+8. Documentation
+9. Export Dashboard as a Standalone Package
