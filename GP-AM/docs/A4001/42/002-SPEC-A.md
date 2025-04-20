@@ -2655,18 +2655,21 @@ The following diagram provides a high-level overview of the internal interfaces 
 ```mermaid
 graph LR
     A["A4001 Avionics System"]:::main
-    subgraph "Subsystems"
+    subgraph Subsystems
         FCS["A4001-A\nFlight Control System"]:::sub
         Nav["A4001-B\nNavigation System"]:::sub
         Comm["A4001-C\nCommunication System"]:::sub
     end
-    subgraph "Support Systems"
+    subgraph SupportSystems["Support Systems"]
         SMU["System Management Unit"]:::sup
         PSU["Power Supply Unit"]:::sup
     end
 
-    A --> Subsystems
-    A --> "Support Systems"
+    A --> FCS
+    A --> Nav
+    A --> Comm
+    A --> SMU
+    A --> PSU
 
     FCS <--> Nav
     FCS <--> Comm
@@ -3011,53 +3014,53 @@ The following diagram shows the Line Replaceable Unit (LRU) mounting interface f
 ```mermaid
 graph LR
     LRU["A4001 LRU"]:::lru
-    subgraph "Mounting Points"
+    subgraph MountingPoints["Mounting Points"]
         Front["Front Mounting Flange"]:::type
         Side["Side Rails"]:::type
         Rear["Rear Support"]:::type
     end
-    subgraph "Cooling Interface"
+    subgraph CoolingInterface["Cooling Interface"]
         Intake["Forced Air Intake"]:::feat
         Exhaust["Exhaust Vents"]:::feat
         Plate["Conduction Cooling Plate"]:::feat
     end
-    subgraph "Connector Interface"
+    subgraph ConnectorInterface["Connector Interface"]
         PowerConn["Power Connector"]:::feat
         DataConn["Data Connectors"]:::feat
         RFConn["RF Connectors"]:::feat
         MaintPort["Maintenance Port"]:::feat
     end
-    subgraph "Handling Interface"
+    subgraph HandlingInterface["Handling Interface"]
         Handles["Handles"]:::type
         FrontHandles["Front Handles"]:::feat
     end
-    subgraph "Locking Mechanism"
+    subgraph LockingMechanism
         Lock["Locking Mechanism"]:::feat
     end
 
-    LRU --> "Mounting Points"
-    LRU --> "Cooling Interface"
-    LRU --> "Connector Interface"
-    LRU --> "Handling Interface"
-    LRU --> "Locking Mechanism"
+    LRU --> MountingPoints
+    LRU --> CoolingInterface
+    LRU --> ConnectorInterface
+    LRU --> HandlingInterface
+    LRU --> LockingMechanism
 
-    "Mounting Points" --> Front
-    "Mounting Points" --> Side
-    "Mounting Points" --> Rear
+    MountingPoints --> Front
+    MountingPoints --> Side
+    MountingPoints --> Rear
 
-    "Cooling Interface" --> Intake
-    "Cooling Interface" --> Exhaust
-    "Cooling Interface" --> Plate
+    CoolingInterface --> Intake
+    CoolingInterface --> Exhaust
+    CoolingInterface --> Plate
 
-    "Connector Interface" --> PowerConn
-    "Connector Interface" --> DataConn
-    "Connector Interface" --> RFConn
-    "Connector Interface" --> MaintPort
+    ConnectorInterface --> PowerConn
+    ConnectorInterface --> DataConn
+    ConnectorInterface --> RFConn
+    ConnectorInterface --> MaintPort
 
-    "Handling Interface" --> Handles
+    HandlingInterface --> Handles
     Handles --> FrontHandles
 
-    "Locking Mechanism" --> Lock
+    LockingMechanism --> Lock
 
     classDef lru fill:#f96,stroke:#333,stroke-width:2px;
     classDef type fill:#69f,stroke:#333,stroke-width:2px;
@@ -3073,21 +3076,21 @@ The following diagram shows the API structure for the A4001 Avionics System soft
 ```mermaid
 graph TD
     Main["A4001 Software API"]:::main
-    subgraph "Core"
+    subgraph Core
         Init["System Initialization"]:::func
         Mem["Memory Management"]:::func
         Sched["Task Scheduling"]:::func
         IPC["Inter-Process Communication"]:::func
         Err["Error Handling"]:::func
     end
-    subgraph "Subsystem APIs"
+    subgraph SubsystemAPIs["Subsystem APIs"]
         FCAPI["Flight Control API"]:::api
         NavAPI["Navigation API"]:::api
         CommAPI["Communication API"]:::api
         DiagAPI["Diagnostic API"]:::api
         SysManAPI["System Management API"]:::api
     end
-    subgraph "Function Groups"
+    subgraph FunctionGroups["Function Groups"]
         CLInt["Control Law Interface"]:::func
         ModeMan["Mode Management"]:::func
         Actrl["Actuator Control"]:::func
@@ -3110,9 +3113,9 @@ graph TD
         MaintInt["Maintenance Interface"]:::func
     end
 
-    Main --> "Core"
-    Main --> "Subsystem APIs"
-    "Subsystem APIs" --> "Function Groups"
+    Main --> Core
+    Main --> SubsystemAPIs
+    SubsystemAPIs --> FunctionGroups
 
     FCAPI --> CLInt
     FCAPI --> ModeMan
@@ -3373,6 +3376,3 @@ The A4001 Avionics System interfaces are designed to meet the functional, perfor
 5.  **Certification Compliance**: Interfaces designed to comply with relevant certification standards.
 
 The interface diagrams provided in this appendix serve as a reference for system integration, verification, and maintenance activities.
-```
-
-
