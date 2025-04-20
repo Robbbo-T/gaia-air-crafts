@@ -1,4 +1,3 @@
-
 # COAFI - Core Operating Matrix (GP-COM)
 
 **(🚨 DISCLAIMER - GenAI Proposal Status 🚨)**
@@ -63,6 +62,8 @@ Common Info Codes:
 *   [Chapter 05: BITT Application Layer – BITT\_05](#chapter-05-bitt-application-layer--bitt_05)
 *   [Chapter 06: AMPEL Core Systems – AMPELCORE\_06](#chapter-06-ampel-core-systems--ampelcore_06)
 *   [Chapter 07: Common Network Infrastructure – NET\_07](#chapter-07-common-network-infrastructure--net_07)
+*   [Chapter 08: Sistema de Energía – EN\_08](#chapter-08-sistema-de-energía--en_08)
+*   [Chapter 09: Sistema de Propulsión – PR\_09](#chapter-09-sistema-de-propulsión--pr_09)
 
 ---
 
@@ -155,6 +156,32 @@ Common Info Codes:
 
 </details>
 
+<details>
+<summary>### Chapter 08: Sistema de Energía – EN_08</summary>
+
+*Directory: `./GP-COM/EN_08/`*
+*Description: Energy system including collection, conversion, storage, and distribution.*
+
+*   [GP-COM-EN_08-0300-001-OV-A.md](./EN_08/GP-COM-EN_08-0300-001-OV-A.md): 08-001: Energy System Overview - *(OV)*
+*   [GP-COM-EN_08-0300-002-SDD-A.md](./EN_08/GP-COM-EN_08-0300-002-SDD-A.md): 08-002: System Design Description - *(SDD)*
+*   [GP-COM-EN_08-0300-003-SPEC-A.md](./EN_08/GP-COM-EN_08-0300-003-SPEC-A.md): 08-003: Energy Conversion Specification - *(SPEC)*
+*   [GP-COM-EN_08-0300-004-ICD-A.md](./EN_08/GP-COM-EN_08-0300-004-ICD-A.md): 08-004: Interface Control Document - *(ICD)*
+
+</details>
+
+<details>
+<summary>### Chapter 09: Sistema de Propulsión – PR_09</summary>
+
+*Directory: `./GP-COM/PR_09/`*
+*Description: Propulsion system including engines, thrusters, and control mechanisms.*
+
+*   [GP-COM-PR_09-0300-001-OV-A.md](./PR_09/GP-COM-PR_09-0300-001-OV-A.md): 09-001: Propulsion System Overview - *(OV)*
+*   [GP-COM-PR_09-0300-002-SDD-A.md](./PR_09/GP-COM-PR_09-0300-002-SDD-A.md): 09-002: System Design Description - *(SDD)*
+*   [GP-COM-PR_09-0300-003-SPEC-A.md](./PR_09/GP-COM-PR_09-0300-003-SPEC-A.md): 09-003: Engine Specification - *(SPEC)*
+*   [GP-COM-PR_09-0300-004-ICD-A.md](./PR_09/GP-COM-PR_09-0300-004-ICD-A.md): 09-004: Interface Control Document - *(ICD)*
+
+</details>
+
 ---
 
 ## How to Use This Documentation
@@ -169,4 +196,3 @@ Refer to the Document Naming Convention for decoding file names and the INFOCODE
 ---
 
 *(End of ToC-GP-COM.md)*
-```
