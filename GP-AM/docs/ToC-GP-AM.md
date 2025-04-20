@@ -67,12 +67,6 @@ Where (for this project):
 
 ---
 
-Okay, you got it. You want the previous comprehensive itemized list presented in Markdown, with the "S1000D Code" column transformed into a hyperlink following the pattern demonstrated in your `gaia-air-crafts` example, and including the "File Extension" column.
-
-I will process the complete list, creating the appropriate `[link text](link target)` for each row. I will use the `rDMC-` prefix for Data Modules and `ICN-` for Illustrations, as seen in your provided file path example (`rDMC-GP-AM-AP-99-00-00-00-A-040-A-D.xml`). The path structure will be `gaia-air-crafts/GP-AM/docs/Chapter-[ATA Chapter Number]/[filename]`.
-
----
-
 # Complete S1000D Documentation Item List for GP-AM AMPEL360XWLRGA (MSN1 Published Baseline)
 
 This document provides the definitive itemized list of all S1000D Data Modules (DMs) and Illustration Control Numbers (ICNs) that comprise the initial certified documentation baseline (MSN1 Published) for the GP-AM AMPEL360XWLRGA aircraft.
