@@ -92,5 +92,5 @@ La innovación debe responder a un imperativo ético de beneficio común, sin de
 
 > **Este archivo forma parte del Módulo Fundacional de Doctrina GAIA AIR**  
 > 📁 `GP‑FD` — *Foundational Doctrine*  
-> 📄 `GP‑FD‑00‑001‑OV‑B.md`  
+> 📄 `GP‑FD-00-001-OV-B.md`  
 > 🌐 Integrado con: `CFSI`, `AMEDEO`, `QAO`, `COAFI`, `AGIS`

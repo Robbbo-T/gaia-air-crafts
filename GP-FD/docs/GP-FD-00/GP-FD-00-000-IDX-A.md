@@ -17,4 +17,6 @@
 | [GP‑FD‑00‑012‑SPEC‑A.md](./GP-FD-00-012-SPEC-A.md)             | 00‑012: FFI (Framework Foundation Integr.)   | SPEC     |
 | [GP‑FD‑00‑013‑SPEC‑A.md](./GP-FD-00-013-SPEC-A.md)             | 00‑013: TPSL/TPWD (Tech. Publ. Std & Wiring) | SPEC     |
 | [GP‑FD‑00‑014‑SPEC‑A.md](./GP-FD-00-014-SPEC-A.md)             | 00‑014: Document Classification Standard     | SPEC     |
-
+| [GP‑FD‑00‑015‑SPEC‑A.md](./GP-FD-00-015-SPEC-A.md)             | 00‑015: Ontology for Product Data            | ONT      |
+| [GP‑FD‑00‑016‑SPEC‑A.md](./GP-FD-00-016-SPEC-A.md)             | 00‑016: Automated Tooling Requirements       | TOOLS    |
+| [GP‑FD‑00‑017‑SPEC‑A.md](./GP-FD-00-017-SPEC-A.md)             | 00‑017: Bill of Materials and Assemblies     | BOM-ASSY |
