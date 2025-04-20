@@ -12,7 +12,9 @@
     "dev": "next dev",
     "build": "next build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "validate-docs": "markdownlint '**/*.md'"
+    "validate-docs": "markdownlint '**/*.md'",
+    "validate-mappings": "node scripts/validate-mappings.js",
+    "convert-to-jsonld": "node scripts/convert-to-jsonld.js"
   },
   "dependencies": {
     "next": "latest",
@@ -24,4 +26,3 @@
     "markdownlint-cli": "^0.30.0"
   }
 }
-
