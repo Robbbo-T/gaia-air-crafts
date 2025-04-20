@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="DMC-GP-AM-A4-42-00-00-06A-040A-D" xsi:noNamespaceSchemaLocation="S1000D_4-2.xsd">
+  <identAndStatusSection>
+    <dmIdent>
+      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="06" disassyCode="00" disassyCodeVariant="A" infoCode="040" infoCodeVariant="A" itemLocationCode="D"/>
+      <issueInfo issueNumber="001" issueType="new" inWork="00"/>
+      <language locale="en-GB"/>
+    </dmIdent>
+    <dmStatus>
+      <security>
+        <securityClassification systemConfidentialityLevel="internal"/>
+      </security>
+      <responsiblePartnerCompany enterpriseCode="GAIAAIR"/>
+      <originator enterpriseCode="GAIAAIR"/>
+      <applic>
+        <displayText>
+          <simplePara>A4001 Avionics System - Test Overview</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="00" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="801" infoCodeVariant="A" itemLocationCode="00"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <description>
+      <levelledPara>
+        <title>1. Introduction</title>
+        <simplePara>This data module provides an overview and list of the tests required to verify the A4001 Avionics System requirements and validate the system design.</simplePara>
+        <simplePara>Each test is documented in a dedicated Test Procedure Data Module [Reference Test Procedure Template DM: <dmRef><dmRefIdent><dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="06" disassyCode="00" disassyCodeVariant="A" infoCode="050" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent><dmRefAddress><dmTitle><infoName>Test Procedures Template</infoName></dmTitle></dmRefAddress></dmRef>].</simplePara>
+        <simplePara>Test results are recorded in the central Test Results Data Module [Reference Test Results DM: <dmRef><dmRefIdent><dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="06" disassyCode="00" disassyCodeVariant="A" infoCode="060" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent><dmRefAddress><dmTitle><infoName>Test Results</infoName></dmTitle></dmRefAddress></dmRef>].</simplePara>
+      </levelledPara>
+      <levelledPara>
+        <title>2. List of Required Tests</title>
+        <simplePara>The following tests are required for the A4001 Avionics System:</simplePara>
+        <list>
+          <listItem>
+            <simplePara>VER-TST-001: Flight Control System Functional Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-01-00-00A-520A-00_001-00_EN-GB">GP-AM-A4-42-01-00-00A-520A-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-002: Navigation System Functional Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-02-00-00A-520B-00_001-00_EN-GB">GP-AM-A4-42-02-00-00A-520B-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-003: Communication System Functional Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-03-00-00A-520C-00_001-00_EN-GB">GP-AM-A4-42-03-00-00A-520C-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-004: System Integration Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520D-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520D-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-005: System Performance Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520E-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520E-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-006: Flight Control Performance Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-01-00-00A-520F-00_001-00_EN-GB">GP-AM-A4-42-01-00-00A-520F-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-007: Navigation Performance Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-02-00-00A-520G-00_001-00_EN-GB">GP-AM-A4-42-02-00-00A-520G-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-008: Communication Performance Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-03-00-00A-520H-00_001-00_EN-GB">GP-AM-A4-42-03-00-00A-520H-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-009: Temperature Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520I-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520I-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-010: Altitude Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520J-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520J-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-011: Humidity Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520K-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520K-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-012: Vibration Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520L-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520L-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-013: Shock Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520M-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520M-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-014: EMI/EMC Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520N-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520N-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-015: Power Supply Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520P-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520P-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-016: External Interface Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520Q-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520Q-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-017: Internal System Interface Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520R-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520R-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-018: Software Interface Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520S-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520S-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-019: Safety Feature Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520T-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520T-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-020: Fault Detection Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520U-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520U-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-021: Maintenance Data Recording Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520V-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520V-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+          <listItem>
+            <simplePara>VER-TST-022: Environmental Qualification Testing (Procedure: <internalRef target="DMC-GP-AM-A4-42-00-00-00A-520W-00_001-00_EN-GB">GP-AM-A4-42-00-00-00A-520W-00</internalRef>, Results: <internalRef target="DMC-GP-AM-A4-42-00-00-06A-060A-D_001-00_EN-GB">GP-AM-A4-42-00-00-06A-060A-D</internalRef>)</simplePara>
+          </listItem>
+        </list>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>
