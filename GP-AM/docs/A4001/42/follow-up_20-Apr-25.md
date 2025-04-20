@@ -78,45 +78,51 @@
 
 ## S1000D Data Modules (Generated)
 
-| Data Module Type | Data Module Code | Status | Description
-|-----|-----|-----|-----|-----
-| Publication Module | [GP-AM-A4001-00000-00AAA-00GA-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00000-00AAA-00GA-D.xml) | **Generated** | Publication Module for A4001
-| System Description | [GP-AM-A4001-00-00A-040A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-00A-040A-D.xml) | **Generated** | System Description
-| System Function | [GP-AM-A4001-00-00A-043A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-00A-043A-D.xml) | **Generated** | System Function
-| Design Overview | [GP-AM-A4001-00-02A-040A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-02A-040A-D.xml) | **Generated** | Design Overview
-| Requirements | [GP-AM-A4001-00-02A-050A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-02A-050A-D.xml) | **Generated** | Requirements
-| External Interfaces | [GP-AM-A4001-00-02A-060A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-02A-060A-D.xml) | **Generated** | External Interfaces
-| Internal Interfaces | [GP-AM-A4001-00-02A-061A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-02A-061A-D.xml) | **Generated** | Internal Interfaces
-| Interface Protocols | [GP-AM-A4001-00-02A-062A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-02A-062A-D.xml) | **Generated** | Interface Protocols
-| Data Formats | [GP-AM-A4001-00-02A-063A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-02A-063A-D.xml) | **Generated** | Data Formats
-| Flight Control System Description | [GP-AM-A4001-A0-00A-040A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-A0-00A-040A-D.xml) | **Generated** | Flight Control System
-| Navigation System Description | [GP-AM-A4001-B0-00A-040A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-B0-00A-040A-D.xml) | **Generated** | Navigation System
-| Communication System Description | [GP-AM-A4001-C0-00A-040A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-C0-00A-040A-D.xml) | **Generated** | Communication System
-| GPS Receiver Description | [GP-AM-A4001-B1-00A-040A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-B1-00A-040A-D.xml) | **Generated** | GPS Receiver
-| Inertial Navigation System Description | [GP-AM-A4001-B2-00A-040A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-B2-00A-040A-D.xml) | **Generated** | Inertial Navigation System
-| Safety Analysis Overview | [GP-AM-A4001-00-05A-040A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-05A-040A-D.xml) | **Generated** | Safety Analysis Overview
-| Failure Modes and Effects | [GP-AM-A4001-00-05A-050A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-05A-050A-D.xml) | **Generated** | Failure Modes and Effects
-| Fault Tree Analysis | [GP-AM-A4001-00-05A-060A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-05A-060A-D.xml) | **Generated** | Fault Tree Analysis
-| Test Overview | [GP-AM-A4001-00-06A-040A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-06A-040A-D.xml) | **Generated** | Test Overview
-| Test Procedures | [GP-AM-A4001-00-06A-050A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-06A-050A-D.xml) | **Generated** | Test Procedures
-| Test Results | [GP-AM-A4001-00-06A-060A-D](gaia-air-crafts/GP-AM/docs/A4001/42/dm/GP-AM-A4001-00-06A-060A-D.xml) | **Generated** | Test Results
+---
 
+### Data Modules
 
-## Illustration Control Numbers (ICNs) (Generated)
+| Data Module Type                  | Data Module Code                     | Status    | Description                         |
+|-----------------------------------|--------------------------------------|-----------|-------------------------------------|
+| Publication Module                | [GP-AM-A4001-00000-00AAA-00GA-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00000/00AAA-00GA-D.md)       | Generated | Publication Module for A4001       |
+| System Description                | [GP-AM-A4001-00-00A-040A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/00A-040A-D.md)            | Generated | System Description                 |
+| System Function                   | [GP-AM-A4001-00-00A-043A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/00A-043A-D.md)            | Generated | System Function                    |
+| Design Overview                   | [GP-AM-A4001-00-02A-040A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/02A-040A-D.md)            | Generated | Design Overview                    |
+| Requirements                      | [GP-AM-A4001-00-02A-050A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/02A-050A-D.md)            | Generated | Requirements                       |
+| External Interfaces               | [GP-AM-A4001-00-02A-060A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/02A-060A-D.md)            | Generated | External Interfaces                |
+| Internal Interfaces               | [GP-AM-A4001-00-02A-061A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/02A-061A-D.md)            | Generated | Internal Interfaces                |
+| Interface Protocols               | [GP-AM-A4001-00-02A-062A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/02A-062A-D.md)            | Generated | Interface Protocols                |
+| Data Formats                      | [GP-AM-A4001-00-02A-063A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/02A-063A-D.md)            | Generated | Data Formats                       |
+| Flight Control System Description | [GP-AM-A4001-A0-00A-040A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/A0/00A-040A-D.md)            | Generated | Flight Control System              |
+| Navigation System Description     | [GP-AM-A4001-B0-00A-040A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/B0/00A-040A-D.md)            | Generated | Navigation System                  |
+| Communication System Description  | [GP-AM-A4001-C0-00A-040A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/C0/00A-040A-D.md)            | Generated | Communication System               |
+| GPS Receiver Description          | [GP-AM-A4001-B1-00A-040A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/B1/00A-040A-D.md)            | Generated | GPS Receiver                       |
+| Inertial Navigation System Desc.  | [GP-AM-A4001-B2-00A-040A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/B2/00A-040A-D.md)            | Generated | Inertial Navigation System         |
+| Safety Analysis Overview          | [GP-AM-A4001-00-05A-040A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/05A-040A-D.md)            | Generated | Safety Analysis Overview           |
+| Failure Modes and Effects         | [GP-AM-A4001-00-05A-050A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/05A-050A-D.md)            | Generated | Failure Modes and Effects          |
+| Fault Tree Analysis               | [GP-AM-A4001-00-05A-060A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/05A-060A-D.md)            | Generated | Fault Tree Analysis                |
+| Test Overview                     | [GP-AM-A4001-00-06A-040A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/06A-040A-D.md)            | Generated | Test Overview                      |
+| Test Procedures                   | [GP-AM-A4001-00-06A-050A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/06A-050A-D.md)            | Generated | Test Procedures                    |
+| Test Results                      | [GP-AM-A4001-00-06A-060A-D](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/00/06A-060A-D.md)            | Generated | Test Results                       |
 
-| ICN Category | ICN | Status | Description
-|-----|-----|-----|-----|-----
-| System Architecture | [ICN-AMPEL-A-A4001-10001-00001-A-001-01](gaia-air-crafts/GP-AM/docs/A4001/42/icn/ICN-AMPEL-A-A4001-10001-00001-A-001-01.svg) | **Generated** | Avionics System Hierarchy
-| System Architecture | [ICN-AMPEL-A-A4001-10002-00001-A-001-01](gaia-air-crafts/GP-AM/docs/A4001/42/icn/ICN-AMPEL-A-A4001-10002-00001-A-001-01.svg) | **Generated** | System Components Breakdown
-| System Architecture | [ICN-AMPEL-A-A4001-10003-00001-A-001-01](gaia-air-crafts/GP-AM/docs/A4001/42/icn/ICN-AMPEL-A-A4001-10003-00001-A-001-01.svg) | **Generated** | Detailed Avionics System Technical Diagram
-| System Architecture | [ICN-AMPEL-A-A4001-10004-00001-A-001-01](gaia-air-crafts/GP-AM/docs/A4001/42/icn/ICN-AMPEL-A-A4001-10004-00001-A-001-01.svg) | **Generated** | Connection Types Legend
-| System Architecture | [ICN-AMPEL-A-A4001-10005-00001-A-001-01](gaia-air-crafts/GP-AM/docs/A4001/42/icn/ICN-AMPEL-A-A4001-10005-00001-A-001-01.svg) | **Generated** | Component Interface Details
-| Interface Diagrams | [ICN-AMPEL-A-A4001-20001-00001-A-001-01](gaia-air-crafts/GP-AM/docs/A4001/42/icn/ICN-AMPEL-A-A4001-20001-00001-A-001-01.svg) | **Generated** | External Interface Diagram
-| Safety Analysis | [ICN-AMPEL-A-A4001-50001-00001-A-001-01](gaia-air-crafts/GP-AM/docs/A4001/42/icn/ICN-AMPEL-A-A4001-50001-00001-A-001-01.svg) | **Generated** | Fault Tree: Loss of All Flight Control
-| Safety Analysis | [ICN-AMPEL-A-A4001-50002-00001-A-001-01](gaia-air-crafts/GP-AM/docs/A4001/42/icn/ICN-AMPEL-A-A4001-50002-00001-A-001-01.svg) | **Generated** | FHA Results
-| Safety Analysis | [ICN-AMPEL-A-A4001-50003-00001-A-001-01](gaia-air-crafts/GP-AM/docs/A4001/42/icn/ICN-AMPEL-A-A4001-50003-00001-A-001-01.svg) | **Generated** | Sample FMEA Excerpt
-| Test Diagrams | [ICN-AMPEL-A-A4001-60001-00001-A-001-01](gaia-air-crafts/GP-AM/docs/A4001/42/icn/ICN-AMPEL-A-A4001-60001-00001-A-001-01.svg) | **Generated** | FCC Failure Test Sequence
-| Test Diagrams | [ICN-AMPEL-A-A4001-60002-00001-A-001-01](gaia-air-crafts/GP-AM/docs/A4001/42/icn/ICN-AMPEL-A-A4001-60002-00001-A-001-01.svg) | **Generated** | GPS Jamming Test Sequence
+---
+
+### Illustration Control Numbers (ICNs)
+
+| ICN Category         | ICN                                           | Status    | Description                         |
+|----------------------|-----------------------------------------------|-----------|-------------------------------------|
+| System Architecture  | [ICN-AMPEL-A-A4001-10001-00001-A-001-01](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/ICNs/10001-00001-A-001-01.md)       | Generated | Avionics System Hierarchy          |
+| System Architecture  | [ICN-AMPEL-A-A4001-10002-00001-A-001-01](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/ICNs/10002-00001-A-001-01.md)       | Generated | System Components Breakdown        |
+| System Architecture  | [ICN-AMPEL-A-A4001-10003-00001-A-001-01](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/ICNs/10003-00001-A-001-01.md)       | Generated | Detailed Avionics System Diagram   |
+| System Architecture  | [ICN-AMPEL-A-A4001-10004-00001-A-001-01](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/ICNs/10004-00001-A-001-01.md)       | Generated | Connection Types Legend            |
+| System Architecture  | [ICN-AMPEL-A-A4001-10005-00001-A-001-01](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/ICNs/10005-00001-A-001-01.md)       | Generated | Component Interface Details        |
+| Interface Diagrams   | [ICN-AMPEL-A-A4001-20001-00001-A-001-01](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/ICNs/20001-00001-A-001-01.md)       | Generated | External Interface Diagram         |
+| Safety Analysis      | [ICN-AMPEL-A-A4001-50001-00001-A-001-01](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/ICNs/50001-00001-A-001-01.md)       | Generated | Fault Tree: Loss of All Flight Control |
+| Safety Analysis      | [ICN-AMPEL-A-A4001-50002-00001-A-001-01](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/ICNs/50002-00001-A-001-01.md)       | Generated | FHA Results                        |
+| Safety Analysis      | [ICN-AMPEL-A-A4001-50003-00001-A-001-01](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/ICNs/50003-00001-A-001-01.md)       | Generated | Sample FMEA Excerpt                |
+| Test Diagrams        | [ICN-AMPEL-A-A4001-60001-00001-A-001-01](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/ICNs/60001-00001-A-001-01.md)       | Generated | FCC Failure Test Sequence          |
+| Test Diagrams        | [ICN-AMPEL-A-A4001-60002-00001-A-001-01](https://github.com/Robbbo-T/gaia-air-crafts/edit/main/GP-AM/docs/A4001/ICNs/60002-00001-A-001-01.md)       | Generated | GPS Jamming Test Sequence          |
+
 
 
 ## Summary
