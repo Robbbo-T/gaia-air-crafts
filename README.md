@@ -294,3 +294,55 @@ The GAIA AIR Crafts repository is organized into the following directories:
 -   **tsconfig.json**: TypeScript configuration file.
 -   **lerna.json** (or **nx.json**): Optional monorepo manager configuration.
 -   **README.md**: This file, providing an overview and structure of the repository.
+
+  # GAIA AIR Documentation Standards (Business Rules)
+
+**(🚨 DISCLAIMER - GenAI Proposal Status 🚨)**
+**(Generated Structures and Contents require Official Authority Check for tool Compliance and Certification.)**
+
+These rules apply to all contributors creating, updating, or reviewing documentation within the GAIA AIR project following the `GP-XYZ-...` file naming convention and COAFI framework. Adherence ensures consistency, clarity, maintainability, and machine-readability for the entire documentation ecosystem.
+
+---
+
+<details>
+<summary>### A. General Structure & Hierarchy</summary>
+
+These rules govern the top-level organization and the hierarchical structure of documentation within the repository.
+
+1.  **Adherence to Top-Level Structure:** All documentation MUST fall under one of the defined top-level Parts (e.g., GP-FD, GP-GRO, GP-SUPL, GP-COM, GP-RAME, GP-AM, GP-AS, GP-PM). No documentation is to be created outside of this defined structure.
+2.  **Hierarchy Replication:** The digital directory structure within the repository (`./GP-XYZ/...`) MUST strictly mirror the logical hierarchy defined in the Table of Contents documents. Chapters, Sections, and sub-directories MUST match the defined structure.
+3.  **Standard Chapter/Section Compliance:** Within parts based on industry or project standards (like GP-AM using ATA 100 chapters, GP-AS using adapted space standards, or GP-COM using its numbered chapters), document organization MUST follow the prescribed chapter/numbering scheme and intent unless specifically exempted for project-unique elements (e.g., ATA 72-Q01 extension). Any deviation MUST be documented.
+4.  **Table of Contents (ToC) Master:** Each major Documentation Part (GP-FD, GP-GRO, GP-SUPL, GP-COM, GP-RAME, GP-AM, GP-AS, GP-PM) MUST have a designated primary Table of Contents file (e.g., `ToC-GP-FD.md`, `ToC-GP-AM.md`). These ToC files are the canonical index of all *released* or *drafted-for-release* documents within that Part.
+5.  **ToC Maintenance:** ToC files MUST be automatically generated or manually updated precisely when documents or directories are added, removed, renamed, or re-pathed. (Automated tooling for this process is strongly recommended).
+</details>
+
+<details>
+<summary>### B. File Naming Convention & Identification</summary>
+
+These rules define the standard format for naming documentation files to ensure unique identification and logical categorization.
+
+6.  **Strict Naming Adherence:** ALL Markdown document files (`.md`) MUST follow the specific standardized naming convention: `[PartCode]-[DomainCode]-[PlatformCode]-[SeqCode]-[ChapterCode]-[SubjectCode]-[InfoCode]-[Rev].[ext]`. Non-standard names are PROHIBITED for canonical documentation.
+7.  **Prefix Definitions:** The `[PartCode]` (e.g., GP) and `[DomainCode]` (e.g., FD, AM, AS, COM, GRO, SUPL, RAME, PM) MUST be selected from the approved list defined in the Document Parts Overview.
+8.  **System Identifier (`[PlatformCode]`):** Use the approved 5-letter system/platform code where applicable (e.g., AMPEL for GP-AM Air systems, AMPELPLUS for GP-AS Space Systems). For general documents not tied to a specific platform within a domain (like foundational docs or common GRO), use a general code like `GEN`. A clear list of valid System/Platform identifiers MUST be maintained.
+9.  **Phase/Sequence Number (`[SeqCode]`):** Use the assigned 4-digit Project or Phase number consistently within a defined system documentation set (e.g., `0100` for the initial GP-AM-AMPEL baseline, `0200` for the initial GP-AS-AMPELPLUS baseline, `0300` for GP-COM, `040X` for GP-GRO baselines related to specific platform implementations, `050X` for GP-SUPL baselines related to programs). A mapping of System/Platform Baselines to Phase/Sequence codes MUST be maintained.
+10. **Chapter/Section Number (`[ChapterCode]`):** Use the exact two-digit ATA or AS chapter number (e.g., `00`, `01`, `22`, `32`, `57`) or the approved domain-specific two-digit chapter number (e.g., `01`, `02`, `03` for GP-COM chapters). This MUST correspond directly to the digital directory name for the chapter. Custom chapter names like `72-Q01` MUST follow this formatting (two digits - custom code - three digits).
+11. **Sequential Document Number (`[SubjectCode]`):** Within a given `[ChapterCode]`, `[SubjectCode]` MUST be a unique 3-digit number (e.g., `001`, `002`, ..., `999`) identifying a specific document. These numbers SHOULD be assigned sequentially when new documents are created within that chapter. Gaps are permissible if documents are retired or restructured, but reusing numbers for *different* content within the *same* chapter is PROHIBITED.
+12. **Information Code (`[InfoCode]`):** Use one or more of the defined Info Codes from the [INFOCODE-INDEX](#coframework-info-code-index-infocode-index) (ADMIN, CAL, CAT, DD, DWG, FIG, ICD, LIST, MAN, OV, PLAN, PROC, REF, REQ, RPT, SDD, SP, SPEC, TEST, etc.) to indicate the primary *type* or *purpose* of the document. Using multiple InfoCodes is permitted if a document serves multiple purposes (e.g., `SDD-SPEC`). The `INFOCODE-INDEX` MUST be the canonical source for Info Code definitions.
+13. **Revision Identifier (`[Rev]`):** Use a sequential alphabetical identifier (A, B, C...) for initial versions and major revisions that represent significant changes or approved baselines (e.g., PDR, CDR). Append numerical suffixes (A1, A2, B1...) for minor revisions or corrections that do not change the document's fundamental technical content, intent, or compliance status significantly. The sequence starts with 'A'. Revision 'A' or 'A1' represents the initial *released* version, while drafts before initial release might use provisional tags outside this strict scheme or be tracked solely in version control commits until baseline approval. Clear criteria for major vs. minor revisions MUST be defined in the GP-PM Change Management Plan.
+14. **Document Code Uniqueness:** The combination `[PartCode]-[DomainCode]-[PlatformCode]-[SeqCode]-[ChapterCode]-[SubjectCode]-[InfoCode]` serves as the unique identifier for a specific *conceptual document* throughout its revision sequence. Only the `[Rev]` field should change over time for the same conceptual document at a specific location.
+15. **Metadata Consistency:** The document's full code (including revision), title, and assigned InfoCode(s) MUST be explicitly stated within the document's header or a dedicated metadata section using a standardized, parseable format (e.g., YAML frontmatter, or defined metadata keys). This must match the filename.
+</details>
+
+<details>
+<summary>### C. Document Content & Info Code Usage</summary>
+
+These rules govern the technical and conceptual content within documents based on their assigned Info Codes.
+
+16. **Purpose-Driven Content:** The content, structure, and level of detail of a document MUST align with its assigned `[InfoCode]` as defined in the [INFOCODE-INDEX](#coframework-info-code-index-infocode-index). Authors must understand and apply the standard definitions of document types (OV, SPEC, SDD, PROC, etc.).
+17. **Clarify Specific Usage of 'MD':** The Info Code "MD" (Markdown Document) should be used primarily for informal notes, wikis, or documentation not fitting a more specific InfoCode. For canonical technical documents (specifications, procedures, designs, reports), a more specific InfoCode (`SPEC`, `PROC`, `DD`, `RPT`) MUST be used, even if the file format is Markdown (`.md`). If "MD" is used to *wrap* or *link to* models or simulations, explicitly state its purpose in the document content.
+18. **AI/Quantum/Advanced Tech Content:** When documenting systems involving AI, Quantum, Blockchain, etc. (particularly under GP-COM, GP-RAME, GP-AM, GP-AS), authors must strive for clarity relevant to the intended audience (engineers, maintainers, operators, analysts). Ensure that `SDD`s adequately explain functionality and integration, `SPEC`s define testable requirements, `CAL`s explain methodologies and assumptions, and `OV`s provide context. Special attention is needed for documentation related to Explainable AI (XAI) and its implementation requirements and results (often under GP-FD-04 and relevant COM/RAME chapters).
+19. **Traceability of Concepts:** Link foundational theories (`GP-FD-01`) and doctrines (`GP-FD-00`) to requirements (`REQ`), design decisions (`DD`, `SDD`), operational/maintenance procedures (`PROC`), and validation/testing results (`TEST`, `RPT`, `CAL`) where relevant. While not enforced by file naming alone, explicitly linking content via internal markdown links (`[Link Text](link/path#anchor)`) or metadata is critical for engineering rigor and auditability.
+20. **Regulatory Compliance:** Documentation marked `REQ` or `SPEC` that supports compliance (particularly under GP-FD-02 and GP-AM/AS relevant chapters) MUST explicitly reference the standards and regulations being met (EASA, FAA, ECSS, ISO, etc.) as described in GP-FD-02 Regulatory Standards. Compliance documentation (`CERT`, `RPT`) must demonstrate adherence.
+</details>
+
+<!-- Remaining sections (D through I) truncated for brevity. Available upon continuation. -->
