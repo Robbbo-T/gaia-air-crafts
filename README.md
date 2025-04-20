@@ -117,8 +117,6 @@ Key frameworks in Part 0 include:
 
 ## COAFI Parts Overview {#coafi-parts-overview}
 
-<details>
-<summary>View Parts and their detailed indices</summary>
 
 - **Part 0:** Program Foundations — [GP-FD](./GP-FD/ToC-GP-FD.md)
 - **Part 1:** Air Systems & Airframes — [GP-AM](./GP-AM/ToC-GP-AM.md)
@@ -129,13 +127,11 @@ Key frameworks in Part 0 include:
 - **Part 6:** Robotic Assembly & Maintenance — [GP-RAME](./GP-RAME/ToC-GP-RAME.md)
 - **Part 7:** Program Management & Operations — [GP-PM](./GP-PM/ToC-GP-PM.md)
 
-Okay, let's modify the `ToC-GP-AM.md` document to reflect the S1000D approach, where each item in the Table of Contents represents a self-contained Data Module (DM) or Illustration Control Number (ICN) file needed to produce the documentation for certification.
-
-This revised ToC will list the S1000D identifiers instead of the old Markdown file names and will explain the S1000D naming convention based on our unified ontology.
 
 ---
 
 # ToC-GP-AM.md
+
 
 *Table of Contents – GP-AM Air Systems & Airframes (Part 1)*
 
@@ -203,7 +199,14 @@ Where (for this project):
 
 ---
 
+### Notable Foresight DM
+
+* `DMC-GP-AM-AP-99-00-00-00-A-040-A-D`: *Aerospace Foresights Shaping GAIA AIR Development* – Descriptive module capturing long-term technology trajectories and their design impact (See: Special Technology / ATA 99)
+
+
 ## GP-AM (Part 1 – Air Systems & Airframes) Chapters (S1000D Structure)
+
+<details>
 
 This documentation is organized into ATA 100 chapters. Within each chapter, the relevant Data Modules and Illustrations are listed.
 
