@@ -1,0 +1,399 @@
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:s1000d:brex:5.0">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <modelIdentCode>GP-AM</modelIdentCode>
+        <systemDiffCode>A4</systemDiffCode>
+        <systemCode>42</systemCode>
+        <subSystemCode>00</subSystemCode>
+        <subSubSystemCode>00</subSubSystemCode>
+        <assyCode>00</assyCode>
+        <disassyCode>00</disassyCode>
+        <disassyCodeVariant>A</disassyCodeVariant>
+        <infoCode>022</infoCode>          <!-- BREX -->
+        <infoCodeVariant>A</infoCodeVariant>
+        <itemLocationCode>00</itemLocationCode>
+      </dmIdent>
+    </dmAddress>
+    <dmStatus issueNumber="001" issueType="new" inwork="00">
+       <security>
+         <securityClassification systemConfidentialityLevel="internal"/>
+       </security>
+       <responsiblePartnerCompany enterpriseCode="GAIAAIR"/>
+       <originator enterpriseCode="GAIAAIR"/>
+       <qualityAssurance>
+         <unverified/> <!-- Initial status -->
+       </qualityAssurance>
+    </dmStatus>
+    <schemaRef href="urn:s1000d:brex:5.0"/>
+  </identAndStatusSection>
+
+  <content>
+    <rules>
+      <brexDmTitle>
+         <infoName>Business Rules Exchange</infoName>
+         <infoDesignation>GP-AM A4001 Avionics System Rules</infoDesignation>
+      </brexDmTitle>
+      <levelledPara>
+        <title>Introduction</title>
+        <simplePara>This Data Module contains the machine-readable business rules for the GP-AM A4001 Avionics System documentation project, based on S1000D Issue 4.2 and the project's defined ontology. These rules govern the structure and content of all Data Modules and Illustrations within the project scope.</simplePara>
+        <simplePara>Refer to the human-readable BREX document (GP-AM-AMPEL-0100-42-003-BREX-A.md) for detailed explanations of these rules and their mapping from original document types.</simplePara>
+      </levelledPara>
+
+      <levelledPara>
+        <title>Data Module Code (DMC) Rules</title>
+        <dmCodeRule>
+          <attributeRule attributeName="modelIdentCode">
+            <valueAllowed>GP-AM</valueAllowed>
+          </attributeRule>
+          <attributeRule attributeName="systemDiffCode">
+            <valueAllowed>A4</valueAllowed> <!-- Specific to A4001 -->
+            <valueAllowed>AP</valueAllowed> <!-- General AMPEL Platform -->
+          </attributeRule>
+          <attributeRule attributeName="systemCode">
+             <!-- Allowed ATA Chapters for this project -->
+             <valueAllowed>00</valueAllowed>
+             <valueAllowed>01</valueAllowed>
+             <valueAllowed>02</valueAllowed>
+             <valueAllowed>03</valueAllowed>
+             <valueAllowed>04</valueAllowed>
+             <valueAllowed>05</valueAllowed>
+             <valueAllowed>06</valueAllowed>
+             <valueAllowed>07</valueAllowed>
+             <valueAllowed>08</valueAllowed>
+             <valueAllowed>09</valueAllowed>
+             <valueAllowed>10</valueAllowed>
+             <valueAllowed>11</valueAllowed>
+             <valueAllowed>12</valueAllowed>
+             <valueAllowed>13</valueAllowed>
+             <valueAllowed>14</valueAllowed>
+             <valueAllowed>18</valueAllowed>
+             <valueAllowed>20</valueAllowed>
+             <valueAllowed>21</valueAllowed>
+             <valueAllowed>22</valueAllowed>
+             <valueAllowed>23</valueAllowed>
+             <valueAllowed>24</valueAllowed>
+             <valueAllowed>25</valueAllowed>
+             <valueAllowed>26</valueAllowed>
+             <valueAllowed>27</valueAllowed>
+             <valueAllowed>28</valueAllowed>
+             <valueAllowed>29</valueAllowed>
+             <valueAllowed>30</valueAllowed>
+             <valueAllowed>31</valueAllowed>
+             <valueAllowed>32</valueAllowed>
+             <valueAllowed>33</valueAllowed>
+             <valueAllowed>34</valueAllowed>
+             <valueAllowed>35</valueAllowed>
+             <valueAllowed>36</valueAllowed>
+             <valueAllowed>37</valueAllowed>
+             <valueAllowed>38</valueAllowed>
+             <valueAllowed>39</valueAllowed>
+             <valueAllowed>41</valueAllowed>
+             <valueAllowed>42</valueAllowed> <!-- A4001 specific ATA -->
+             <valueAllowed>44</valueAllowed>
+             <valueAllowed>45</valueAllowed>
+             <valueAllowed>46</valueAllowed>
+             <valueAllowed>47</valueAllowed>
+             <valueAllowed>49</valueAllowed>
+             <valueAllowed>50</valueAllowed>
+             <valueAllowed>51</valueAllowed>
+             <valueAllowed>52</valueAllowed>
+             <valueAllowed>53</valueAllowed>
+             <valueAllowed>54</valueAllowed>
+             <valueAllowed>55</valueAllowed>
+             <valueAllowed>56</valueAllowed>
+             <valueAllowed>57</valueAllowed>
+             <valueAllowed>60</valueAllowed>
+             <valueAllowed>61</valueAllowed>
+             <valueAllowed>62</valueAllowed>
+             <valueAllowed>63</valueAllowed>
+             <valueAllowed>64</valueAllowed>
+             <valueAllowed>65</valueAllowed>
+             <valueAllowed>66</valueAllowed>
+             <valueAllowed>67</valueAllowed>
+             <valueAllowed>70</valueAllowed>
+             <valueAllowed>71</valueAllowed>
+             <valueAllowed>72</valueAllowed>
+             <valueAllowed>73</valueAllowed>
+             <valueAllowed>74</valueAllowed>
+             <valueAllowed>75</valueAllowed>
+             <valueAllowed>76</valueAllowed>
+             <valueAllowed>77</valueAllowed>
+             <valueAllowed>78</valueAllowed>
+             <valueAllowed>79</valueAllowed>
+             <valueAllowed>80</valueAllowed>
+             <valueAllowed>83</valueAllowed>
+             <valueAllowed>85</valueAllowed>
+             <valueAllowed>91</valueAllowed>
+             <valueAllowed>92</valueAllowed>
+             <valueAllowed>95</valueAllowed>
+             <valueAllowed>97</valueAllowed>
+             <valueAllowed>99</valueAllowed>
+          </attributeRule>
+          <attributeRule attributeName="subSystemCode">
+             <valueAllowed>00</valueAllowed> <!-- Default / Chapter Level -->
+             <valueAllowed>Q0</valueAllowed> <!-- For ATA 72-Q01 -->
+             <!-- Add other specific subsystem codes as needed based on decomposition -->
+          </attributeRule>
+           <attributeRule attributeName="subSubSystemCode">
+             <valueAllowed>00</valueAllowed> <!-- Default / Subsystem Level -->
+             <valueAllowed>1</valueAllowed> <!-- For ATA 72-Q01-1 -->
+             <!-- Add other specific sub-subsystem codes as needed -->
+          </attributeRule>
+           <attributeRule attributeName="assyCode">
+             <valueAllowed>00</valueAllowed> <!-- General Description -->
+             <valueAllowed>01</valueAllowed> <!-- Architecture -->
+             <valueAllowed>02</valueAllowed> <!-- Interfaces -->
+             <valueAllowed>03</valueAllowed> <!-- Detailed Design -->
+             <valueAllowed>04</valueAllowed> <!-- Operational Scenarios -->
+             <valueAllowed>05</valueAllowed> <!-- Analysis -->
+             <valueAllowed>06</valueAllowed> <!-- Test -->
+             <valueAllowed>07</valueAllowed> <!-- Certification -->
+             <valueAllowed>08</valueAllowed> <!-- Installation -->
+             <valueAllowed>09</valueAllowed> <!-- Management -->
+             <valueAllowed>10</valueAllowed> <!-- Software -->
+             <valueAllowed>11</valueAllowed> <!-- Hardware -->
+             <valueAllowed>12</valueAllowed> <!-- Components/Parts List -->
+             <valueAllowed>13</valueAllowed> <!-- Standard Practices -->
+             <valueAllowed>14</valueAllowed> <!-- Maintenance Planning -->
+             <!-- Add other specific assy codes as needed -->
+          </attributeRule>
+           <attributeRule attributeName="disassyCode">
+             <valueAllowed>00</valueAllowed> <!-- Default -->
+             <!-- Add specific disassy codes as needed -->
+          </attributeRule>
+           <attributeRule attributeName="disassyCodeVariant">
+             <valueAllowed>A</valueAllowed> <!-- Default -->
+             <!-- Add specific variant characters as needed -->
+          </attributeRule>
+           <attributeRule attributeName="infoCode">
+             <!-- Fixed Info Code Mapping -->
+             <valueAllowed>001</valueAllowed> <!-- ADMIN -->
+             <valueAllowed>013</valueAllowed> <!-- CAT, LIST -->
+             <valueAllowed>014</valueAllowed> <!-- Glossary -->
+             <valueAllowed>015</valueAllowed> <!-- Acronyms -->
+             <valueAllowed>016</valueAllowed> <!-- REF -->
+             <valueAllowed>022</valueAllowed> <!-- BREX -->
+             <valueAllowed>040</valueAllowed> <!-- OV, SDD (General) -->
+             <valueAllowed>050</valueAllowed> <!-- PLAN, REQ, SP, SPEC, TEST (Plan) -->
+             <valueAllowed>060</valueAllowed> <!-- ICD, RPT (Test Results), TEST (Results) -->
+             <valueAllowed>070</valueAllowed> <!-- DD, SDD (Detailed Design) -->
+             <valueAllowed>090</valueAllowed> <!-- CAL, RPT (Analysis) -->
+             <valueAllowed>520</valueAllowed> <!-- PROC, TEST (Procedure) -->
+             <!-- Add other allowed Info Codes as needed -->
+          </attributeRule>
+           <attributeRule attributeName="infoCodeVariant">
+             <valueAllowed>A</valueAllowed>
+             <valueAllowed>B</valueAllowed>
+             <valueAllowed>C</valueAllowed>
+             <valueAllowed>D</valueAllowed>
+             <valueAllowed>E</valueAllowed>
+             <valueAllowed>F</valueAllowed>
+             <valueAllowed>G</valueAllowed>
+             <valueAllowed>H</valueAllowed>
+             <valueAllowed>I</valueAllowed>
+             <valueAllowed>J</valueAllowed>
+             <valueAllowed>K</valueAllowed>
+             <valueAllowed>L</valueAllowed>
+             <valueAllowed>M</valueAllowed>
+             <valueAllowed>N</valueAllowed>
+             <valueAllowed>O</valueAllowed>
+             <valueAllowed>P</valueAllowed>
+             <valueAllowed>Q</valueAllowed>
+             <valueAllowed>R</valueAllowed>
+             <valueAllowed>S</valueAllowed>
+             <valueAllowed>T</valueAllowed>
+             <valueAllowed>U</valueAllowed>
+             <valueAllowed>V</valueAllowed>
+             <valueAllowed>W</valueAllowed>
+             <valueAllowed>X</valueAllowed>
+             <valueAllowed>Y</valueAllowed>
+             <valueAllowed>Z</valueAllowed>
+          </attributeRule>
+           <attributeRule attributeName="itemLocationCode">
+             <valueAllowed>D</valueAllowed> <!-- Descriptive -->
+             <valueAllowed>A</valueAllowed> <!-- Procedural -->
+             <valueAllowed>L</valueAllowed> <!-- Parts List -->
+             <valueAllowed>W</valueAllowed> <!-- Wiring Data -->
+             <valueAllowed>00</valueAllowed> <!-- For BREX/DML -->
+          </attributeRule>
+        </dmCodeRule>
+      </levelledPara>
+
+      <levelledPara>
+        <title>Illustration Control Number (ICN) Rules</title>
+         <icnCodeRule>
+           <attributeRule attributeName="originatorCode">
+             <valueAllowed>GAIAAIR</valueAllowed>
+           </attributeRule>
+           <attributeRule attributeName="modelIdentCode">
+             <valueAllowed>AMPEL</valueAllowed> <!-- ICN specific model identifier -->
+           </attributeRule>
+           <attributeRule attributeName="systemDiffCode">
+             <valueAllowed>A</valueAllowed> <!-- General Aircraft -->
+             <valueAllowed>A4</valueAllowed> <!-- A4001 Specific -->
+           </attributeRule>
+            <attributeRule attributeName="systemCode">
+              <!-- Same allowed ATA Chapters as for DMs -->
+             <valueAllowed>00</valueAllowed>
+             <valueAllowed>01</valueAllowed>
+             <!-- ... list all 00-99 ATA codes ... -->
+             <valueAllowed>99</valueAllowed>
+          </attributeRule>
+          <attributeRule attributeName="subSystemCode">
+             <valueAllowed>00</valueAllowed> <!-- Default / Chapter Level -->
+             <valueAllowed>Q0</valueAllowed> <!-- For ATA 72-Q01 -->
+             <!-- Add other specific subsystem codes as needed -->
+          </attributeRule>
+           <attributeRule attributeName="subSubSystemCode">
+             <valueAllowed>00</valueAllowed> <!-- Default / Subsystem Level -->
+             <valueAllowed>1</valueAllowed> <!-- For ATA 72-Q01-1 -->
+             <!-- Add other specific sub-subsystem codes as needed -->
+          </attributeRule>
+           <attributeRule attributeName="assyCode">
+             <valueAllowed>00</valueAllowed> <!-- Default / General -->
+             <valueAllowed>01</valueAllowed> <!-- Architecture -->
+             <valueAllowed>02</valueAllowed> <!-- Interfaces -->
+             <valueAllowed>03</valueAllowed> <!-- Detailed Design -->
+             <valueAllowed>04</valueAllowed> <!-- Operational Scenarios -->
+             <valueAllowed>05</valueAllowed> <!-- Analysis -->
+             <valueAllowed>06</valueAllowed> <!-- Test -->
+             <valueAllowed>07</valueAllowed> <!-- Certification -->
+             <valueAllowed>08</valueAllowed> <!-- Installation -->
+             <valueAllowed>09</valueAllowed> <!-- Management -->
+             <valueAllowed>10</valueAllowed> <!-- Software -->
+             <valueAllowed>11</valueAllowed> <!-- Hardware -->
+             <valueAllowed>12</valueAllowed> <!-- Components/Parts List -->
+             <valueAllowed>13</valueAllowed> <!-- Standard Practices -->
+             <valueAllowed>14</valueAllowed> <!-- Maintenance Planning -->
+             <!-- Add other specific assy codes as needed -->
+          </attributeRule>
+           <attributeRule attributeName="disassyCode">
+             <valueAllowed>00</valueAllowed> <!-- Default -->
+             <!-- Add specific disassy codes as needed -->
+          </attributeRule>
+           <attributeRule attributeName="disassyCodeVariant">
+             <valueAllowed>A</valueAllowed> <!-- Default -->
+             <!-- Add specific variant characters as needed -->
+          </attributeRule>
+           <attributeRule attributeName="itemLocationCode">
+             <valueAllowed>00</valueAllowed> <!-- Default for ICNs -->
+          </attributeRule>
+           <attributeRule attributeName="graphicsCode">
+             <!-- Fixed Graphics Code Categories -->
+             <valueAllowed>10000..19999</valueAllowed> <!-- System Architecture Diagrams -->
+             <valueAllowed>20000..29999</valueAllowed> <!-- Interface Diagrams -->
+             <valueAllowed>30000..39999</valueAllowed> <!-- Component Diagrams -->
+             <valueAllowed>40000..49999</valueAllowed> <!-- Flow Charts (non-procedural) -->
+             <valueAllowed>50000..59999</valueAllowed> <!-- Safety Analysis Diagrams -->
+             <valueAllowed>60000..69999</valueAllowed> <!-- Test Diagrams -->
+             <valueAllowed>70000..79999</valueAllowed> <!-- Physical Layouts / Locations -->
+             <valueAllowed>80000..89999</valueAllowed> <!-- Schematic / Wiring Diagrams -->
+             <valueAllowed>90000..99999</valueAllowed> <!-- Assembly / Exploded Views -->
+          </attributeRule>
+           <attributeRule attributeName="sequenceNumber">
+             <valueAllowed>00001..99999</valueAllowed> <!-- Sequential within graphicsCode -->
+          </attributeRule>
+           <attributeRule attributeName="issueNumber">
+             <valueAllowed>001..999</valueAllowed> <!-- 3-digit issue number -->
+          </attributeRule>
+            <attributeRule attributeName="issueType">
+             <valueAllowed>A</valueAllowed>
+             <valueAllowed>C</valueAllowed>
+             <valueAllowed>D</valueAllowed>
+          </attributeRule>
+           <attributeRule attributeName="inWorkNumber">
+             <valueAllowed>00..99</valueAllowed> <!-- 2-digit in-work number -->
+          </attributeRule>
+         </icnCodeRule>
+      </levelledPara>
+
+       <levelledPara>
+        <title>Metadata Rules</title>
+         <simplePara>Rules applying to metadata within Data Modules and ICNs.</simplePara>
+         <structureRule affectedElementName="language">
+            <attributeRule attributeName="locale">
+               <valueAllowed>en-GB</valueAllowed>
+            </attributeRule>
+         </structureRule>
+         <structureRule affectedElementName="securityClassification">
+            <attributeRule attributeName="systemConfidentialityLevel">
+               <valueAllowed>unclassified</valueAllowed>
+               <valueAllowed>internal</valueAllowed>
+               <valueAllowed>confidential</valueAllowed>
+               <valueAllowed>secret</valueAllowed>
+            </attributeRule>
+         </structureRule>
+         <structureRule affectedElementName="qualityAssurance">
+            <structureRule affectedElementName="inWork">
+               <attributeRule attributeName="status">
+                  <valueAllowed>draft</valueAllowed>
+                  <valueAllowed>planned</valueAllowed>
+                  <valueAllowed>inWork</valueAllowed>
+                  <valueAllowed>review</valueAllowed>
+               </attributeRule>
+            </structureRule>
+             <structureRule affectedElementName="verified">
+               <attributeRule attributeName="status">
+                  <valueAllowed>approved</valueAllowed>
+                  <valueAllowed>published</valueAllowed>
+               </attributeRule>
+            </structureRule>
+         </structureRule>
+          <structureRule affectedElementName="responsiblePartnerCompany">
+             <attributeRule attributeName="enterpriseCode">
+                <valueAllowed>GAIAAIR</valueAllowed>
+                <!-- Add other partner codes as needed -->
+             </attributeRule>
+          </structureRule>
+          <structureRule affectedElementName="originator">
+             <attributeRule attributeName="enterpriseCode">
+                <valueAllowed>GAIAAIR</valueAllowed>
+                <!-- Add other originator codes as needed -->
+             </attributeRule>
+          </structureRule>
+      </levelledPara>
+
+      <levelledPara>
+        <title>Content Rules</title>
+        <simplePara>Rules applying to the structure and content within the &lt;content&gt; section of Data Modules.</simplePara>
+         <structureRule affectedElementName="simplePara">
+            <textRule>
+              <pattern value=".*"/> <!-- Allow any text content -->
+            </textRule>
+         </structureRule>
+         <structureRule affectedElementName="emphasis">
+            <textRule>
+              <pattern value=".*"/> <!-- Allow any text content -->
+            </textRule>
+         </structureRule>
+          <structureRule affectedElementName="externalRef">
+            <attributeRule attributeName="xlink:href">
+               <pattern value="http[s]?://.*"/> <!-- Example: Require valid URLs -->
+            </attributeRule>
+         </structureRule>
+         <structureRule affectedElementName="dmRef">
+             <structureRule affectedElementName="dmRefIdent">
+                 <structureRule affectedElementName="dmCode">
+                     <!-- dmCode structure validated by dmcRule -->
+                 </structureRule>
+             </structureRule>
+         </structureRule>
+          <structureRule affectedElementName="figure">
+             <structureRule affectedElementName="graphic">
+                 <attributeRule attributeName="infoEntityIdent">
+                    <pattern value="ICN-GAIAAIR-AMPEL-[A|A4]-[0-9A-Z]{2}-[0-9A-Z]{2}-[0-9A-Z]{2}-[0-9A-Z]{2}-[A-Z]-[0-9]{5}-[0-9]{5}-[0-9]{3}-[A-D]-[0-9]{2}"/> <!-- Example: Validate ICN format -->
+                 </attributeRule>
+             </structureRule>
+         </structureRule>
+      </levelledPara>
+
+    </rules>
+  </content>
+</dmodule>
+```
+
