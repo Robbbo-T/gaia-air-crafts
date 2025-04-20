@@ -616,7 +616,7 @@ The RTM is organized by requirement categories as defined in the main specificat
 
 | Requirement ID   | Requirement Summary                                       | Source         | Verification Method   | Verification Document               | Status    |
 |------------------|-----------------------------------------------------------|----------------|-----------------------|-------------------------------------|-----------|
-| A4001-FUNC-001 | Provide flight control, navigation, and communication functions | CS-25.1301     | Demonstration         | GP-AM-AMPEL-0100-42-101-TST-A       | Planned   |
+| A4001-FUNC-001 | Provide flight control, navigation, and communication functions| CS-25.1301     | Demonstration         | GP-AM-AMPEL-0100-42-101-TST-A       | Planned   |
 | A4001-FUNC-002 | Operate in all phases of flight                           | CS-25.1301     | Test                  | GP-AM-AMPEL-0100-42-102-TST-A       | Planned   |
 | A4001-FUNC-003 | Provide built-in test capability                          | CS-25.1309     | Test                  | GP-AM-AMPEL-0100-42-103-TST-A       | Planned   |
 | A4001-FUNC-004 | Provide fault detection, isolation, and recovery          | CS-25.1309     | Test                  | GP-AM-AMPEL-0100-42-104-TST-A       | Planned   |
@@ -1183,7 +1183,7 @@ graph LR
     A[A4001 Avionics System Cabinet]
     subgraph Flight Control
         B[FCC-1 \n Flight Control Computer 1]:::fcc
-        C[FCC-2 \n Flight Control Computer2]:::fcc
+        C[FCC-2 \n Flight Control Computer 2]:::fcc
         D[FCC-3 \n Flight Control Computer 3]:::fcc
     end
     subgraph Navigation
@@ -1201,10 +1201,10 @@ graph LR
         L[SDB-1 \n System Data Bus<br>Controller 1]:::support
         M[SDB-2 \n System Data Bus<br>Controller 2]:::support
     end
-    A --> Flight Control
+    A --> Flight_Control
     A --> Navigation
     A --> Communication
-    A --> Support Units
+    A --> Support_Units
 
     classDef fcc fill:#f96,stroke:#333,stroke-width:2px;
     classDef nav fill:#69f,stroke:#333,stroke-width:2px;
@@ -1299,36 +1299,36 @@ graph LR
 
 ## C.4 Subsystem Architectures
 
-### C.4.1 Flight Control System Architecture
+---
 
-The following diagram shows the architecture of the A4001-A Flight Control System:
+### C.4.1 Flight Control System Architecture (Corrected)
 
 ```mermaid
 graph LR
-    FCS[A4001-A Flight Control System \n {Triple Redundant}]:::fcs
-    subgraph Triple Redundant Channels
-        FCC1[FCC-1 \n {Channel A}]:::fcc
-        FCC2[FCC-2 \n {Channel B}]:::fcc
-        FCC3[FCC-3 \n {Channel C}]:::fcc
+    FCS["A4001-A Flight Control System - Triple Redundant"]:::fcs
+    subgraph TRC["Triple Redundant Channels"]
+        FCC1["FCC-1 - Channel A"]:::fcc
+        FCC2["FCC-2 - Channel B"]:::fcc
+        FCC3["FCC-3 - Channel C"]:::fcc
     end
     subgraph Modules
-        CLM[Control Laws Module]:::fcm
-        MM[Monitoring Module]:::fcm
-        DM[Diagnostic Module]:::fcm
-        CoM[Communication Module]:::fcm
+        CLM["Control Laws Module"]:::fcm
+        MM["Monitoring Module"]:::fcm
+        DM["Diagnostic Module"]:::fcm
+        CoM["Communication Module"]:::fcm
     end
     subgraph Interfaces
-        Act[Actuator Interfaces]:::int
-        Sens[Sensor Interfaces]:::int
-        CP[Control Panel Interfaces]:::int
+        Act["Actuator Interfaces"]:::int
+        Sens["Sensor Interfaces"]:::int
+        CP["Control Panel Interfaces"]:::int
     end
 
-    FCS --> Triple Redundant Channels
+    FCS --> TRC
     FCS --> Modules
     FCS --> Interfaces
 
-    Triple Redundant Channels --> Modules
-    Modules --> Triple Redundant Channels
+    TRC --> Modules
+    Modules --> TRC
 
     CLM --> MM
     CLM --> DM
@@ -1365,39 +1365,42 @@ graph LR
     classDef fcc fill:#69f,stroke:#333,stroke-width:2px;
     classDef fcm fill:#9f6,stroke:#333,stroke-width:1px;
     classDef int fill:#f9f,stroke:#333,stroke-width:2px;
-
-    linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51 stroke-width:2px
 ```
 
-### C.4.2 Navigation System Architecture
+---
 
-The following diagram shows the architecture of the A4001-B Navigation System:
+### C.4.2 Navigation System Architecture (Corrected)
 
 ```mermaid
 graph LR
-    NS[A4001-B Navigation System \n {Dual Redundant}]:::ns
-    subgraph Dual Redundant Channels
-        Nav1[Navigation Computer 1]:::nav
-        Nav2[Navigation Computer 2]:::nav
+    NS["A4001-B Navigation System - Dual Redundant"]:::ns
+    subgraph Channels
+        Nav1["Navigation Computer 1"]:::nav
+        Nav2["Navigation Computer 2"]:::nav
     end
     subgraph Modules
-        NM1[Navigation Module 1.1 \n Position Computation]:::nm
-        NM2[Navigation Module 1.2 \n Sensor Integration]:::nm
-        NM3[Navigation Module 1.3 \n Navigation Database]:::nm
-        NM4[Navigation Module 1.4 \n Integrity Monitoring]:::nm
+        NM1["Navigation Module 1.1 - Position Computation"]:::nm
+        NM2["Navigation Module 1.2 - Sensor Integration"]:::nm
+        NM3["Navigation Module 1.3 - Navigation Database"]:::nm
+        NM4["Navigation Module 1.4 - Integrity Monitoring"]:::nm
     end
     subgraph Sensors
-        GPS[GPS Receiver]:::sens
-        INS[Inertial Navigation System]:::sens
-        ADC[Air Data Computer]:::sens
-        RNR[Radio Navigation Receivers]:::sens
+        GPS["GPS Receiver"]:::sens
+        INS["Inertial Navigation System"]:::sens
+        ADC["Air Data Computer"]:::sens
+        RNR["Radio Navigation Receivers"]:::sens
     end
-    NS --> Dual Redundant Channels
-    NS --> Modules
-    NS --> Sensors
 
-    Dual Redundant Channels --> Modules
-    Modules --> Dual Redundant Channels
+    NS --> Nav1
+    NS --> Nav2
+    NS --> NM1
+    NS --> NM2
+    NS --> NM3
+    NS --> NM4
+    NS --> GPS
+    NS --> INS
+    NS --> ADC
+    NS --> RNR
 
     Nav1 <--> NM1
     Nav1 <--> NM2
@@ -1409,54 +1412,55 @@ graph LR
     Nav2 <--> NM3
     Nav2 <--> NM4
 
-    Sens --> NM2
-    Sens --> NM4
-
-    NM1 --> NS
-    NM4 --> NS
+    GPS --> NM2
+    INS --> NM2
+    ADC --> NM4
+    RNR --> NM4
 
     classDef ns fill:#f96,stroke:#333,stroke-width:2px;
     classDef nav fill:#69f,stroke:#333,stroke-width:2px;
     classDef nm fill:#9f6,stroke:#333,stroke-width:1px;
     classDef sens fill:#f9f,stroke:#333,stroke-width:2px;
-
-    linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37 stroke-width:2px
 ```
 
-### C.4.3 Communication System Architecture
+---
 
-The following diagram shows the architecture of the A4001-C Communication System:
+### C.4.3 Communication System Architecture (Corrected)
 
 ```mermaid
 graph LR
-    CS[A4001-C Communication System \n {Dual Redundant}]:::cs
-    subgraph Dual Redundant Channels
-        Com1[Communication Unit 1]:::com
-        Com2[Communication Unit 2]:::com
+    CS["A4001-C Communication System - Dual Redundant"]:::cs
+    subgraph Channels
+        Com1["Communication Unit 1"]:::com
+        Com2["Communication Unit 2"]:::com
     end
     subgraph Modules
-        CM1[Communication Module 1.1 \n VHF Communication]:::cm
-        CM2[Communication Module 1.2 \n HF Communication]:::cm
-        CM3[Communication Module 1.3 \n SATCOM]:::cm
-        CM4[Communication Module 1.4 \n Audio Management]:::cm
+        CM1["Communication Module 1.1 - VHF Communication"]:::cm
+        CM2["Communication Module 1.2 - HF Communication"]:::cm
+        CM3["Communication Module 1.3 - SATCOM"]:::cm
+        CM4["Communication Module 1.4 - Audio Management"]:::cm
     end
-     subgraph Radios
-        VHF[VHF Radios]:::rad
-        HF[HF Radios]:::rad
-        SATCOM[SATCOM Terminal]:::rad
-     end
-     subgraph Other Interfaces
-        Audio[Audio System]:::rad
-        DataLink[Data Link System]:::rad
-     end
+    subgraph Radios
+        VHF["VHF Radios"]:::rad
+        HF["HF Radios"]:::rad
+        SATCOM["SATCOM Terminal"]:::rad
+    end
+    subgraph Interfaces
+        Audio["Audio System"]:::rad
+        DataLink["Data Link System"]:::rad
+    end
 
-    CS --> Dual Redundant Channels
-    CS --> Modules
-    CS --> Radios
-    CS --> Other Interfaces
-
-    Dual Redundant Channels --> Modules
-    Modules --> Dual Redundant Channels
+    CS --> Com1
+    CS --> Com2
+    CS --> CM1
+    CS --> CM2
+    CS --> CM3
+    CS --> CM4
+    CS --> VHF
+    CS --> HF
+    CS --> SATCOM
+    CS --> Audio
+    CS --> DataLink
 
     Com1 <--> CM1
     Com1 <--> CM2
@@ -1478,74 +1482,84 @@ graph LR
     classDef com fill:#69f,stroke:#333,stroke-width:2px;
     classDef cm fill:#9f6,stroke:#333,stroke-width:1px;
     classDef rad fill:#f9f,stroke:#333,stroke-width:2px;
-
-     linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51 stroke-width:2px
 ```
 
-## C.5 Software Architecture
+---
 
-### C.5.1 Software Layer Architecture
-
-The following diagram illustrates the layered software architecture used in the A4001 Avionics System:
+### C.5.1 Software Layer Architecture (Corrected)
 
 ```mermaid
 graph TD
-    AppLayer[Application Layer]:::layer
-    MidLayer[Middleware Layer]:::layer
-    OSLayer[Operating System Layer]:::layer
-    DriverLayer[Driver Layer]:::layer
-    HwLayer[Hardware Layer]:::layer
+    AppLayer["Application Layer"]:::layer
+    MidLayer["Middleware Layer"]:::layer
+    OSLayer["Operating System Layer"]:::layer
+    DriverLayer["Driver Layer"]:::layer
+    HwLayer["Hardware Layer"]:::layer
 
     AppLayer --> MidLayer
     MidLayer --> OSLayer
     OSLayer --> DriverLayer
     DriverLayer --> HwLayer
 
-    subgraph Application Components
-        FCApp[Flight Control Applications]:::comp
-        NavApp[Navigation Applications]:::comp
-        CommApp[Communication Applications]:::comp
-        SysManApp[System Management Applications]:::comp
+    subgraph "Application Components"
+        FCApp["Flight Control Applications"]:::comp
+        NavApp["Navigation Applications"]:::comp
+        CommApp["Communication Applications"]:::comp
+        SysManApp["System Management Applications"]:::comp
     end
 
-    subgraph Middleware Components
-        DataDist[Data Distribution Services]:::comp
-        HealthMon[Health Monitoring Services]:::comp
-        Diag[Diagnostic Services]:::comp
-        ConfigMan[Configuration Management]:::comp
+    subgraph "Middleware Components"
+        DataDist["Data Distribution Services"]:::comp
+        HealthMon["Health Monitoring Services"]:::comp
+        Diag["Diagnostic Services"]:::comp
+        ConfigMan["Configuration Management"]:::comp
     end
 
-    subgraph Operating System Components
-        RTOS[Real-Time Operating System]:::comp
-        MemMan[Memory Management]:::comp
-        ProcSched[Process Scheduling]:::comp
-        IPC[Inter-Process Communication]:::comp
+    subgraph "Operating System Components"
+        RTOS["Real-Time Operating System"]:::comp
+        MemMan["Memory Management"]:::comp
+        ProcSched["Process Scheduling"]:::comp
+        IPC["Inter-Process Communication"]:::comp
     end
 
-    subgraph Driver Components
-        HwInt[Hardware Interface Drivers]:::comp
-        CommProt[Communication Protocol Drivers]:::comp
-        IODrivers[I/O Drivers]:::comp
-        BITDrivers[Built-In Test Drivers]:::comp
+    subgraph "Driver Components"
+        HwInt["Hardware Interface Drivers"]:::comp
+        CommProt["Communication Protocol Drivers"]:::comp
+        IODrivers["I/O Drivers"]:::comp
+        BITDrivers["Built-In Test Drivers"]:::comp
     end
 
-    subgraph Hardware Components
-        Processors[Processors]:::comp
-        Memory[Memory]:::comp
-        IOInt[I/O Interfaces]:::comp
-        CommInt[Communication Interfaces]:::comp
+    subgraph "Hardware Components"
+        Processors["Processors"]:::comp
+        Memory["Memory"]:::comp
+        IOInt["I/O Interfaces"]:::comp
+        CommInt["Communication Interfaces"]:::comp
     end
 
-    AppLayer --> Application Components
-    MidLayer --> Middleware Components
-    OSLayer --> Operating System Components
-    DriverLayer --> Driver Components
-    HwLayer --> Hardware Components
+    AppLayer --> FCApp
+    AppLayer --> NavApp
+    AppLayer --> CommApp
+    AppLayer --> SysManApp
 
-    Application Components --> Middleware Components
-    Middleware Components --> Operating System Components
-    Operating System Components --> Driver Components
-    Driver Components --> Hardware Components
+    MidLayer --> DataDist
+    MidLayer --> HealthMon
+    MidLayer --> Diag
+    MidLayer --> ConfigMan
+
+    OSLayer --> RTOS
+    OSLayer --> MemMan
+    OSLayer --> ProcSched
+    OSLayer --> IPC
+
+    DriverLayer --> HwInt
+    DriverLayer --> CommProt
+    DriverLayer --> IODrivers
+    DriverLayer --> BITDrivers
+
+    HwLayer --> Processors
+    HwLayer --> Memory
+    HwLayer --> IOInt
+    HwLayer --> CommInt
 
     classDef layer fill:#f96,stroke:#333,stroke-width:4px;
     classDef comp fill:#69f,stroke:#333,stroke-width:2px;
@@ -1810,27 +1824,27 @@ The following diagram provides an overview of the redundancy architecture in the
 
 ```mermaid
 graph LR
-    A[A4001 Avionics System]:::system
+    A["A4001 Avionics System"]:::system
     subgraph Subsystems
-        FC[Flight Control System \n {Triple Redundant}]:::triple
-        NS[Navigation System \n {Dual Redundant}]:::dual
-        CS[Communication System \n {Dual Redundant}]:::dual
-        SDB[System Data Bus \n {Dual Redundant}]:::dual
-        PSU[Power Supply \n {Dual Redundant}]:::dual
+        FC["Flight Control System\n(Triple Redundant)"]:::triple
+        NS["Navigation System\n(Dual Redundant)"]:::dual
+        CS["Communication System\n(Dual Redundant)"]:::dual
+        SDB["System Data Bus\n(Dual Redundant)"]:::dual
+        PSU["Power Supply\n(Dual Redundant)"]:::dual
     end
-     subgraph Components
-        FCC1[FCC-1 \n {Channel A}]:::comp
-        FCC2[FCC-2 \n {Channel B}]:::comp
-        FCC3[FCC-3 \n {Channel C}]:::comp
-        NAV1[NAV-1 \n {Primary}]:::comp
-        NAV2[NAV-2 \n {Secondary}]:::comp
-        COM1[COM-1 \n {Primary}]:::comp
-        COM2[COM-2 \n {Secondary}]:::comp
-        SDB1[System Data Bus 1 \n {Primary}]:::comp
-        SDB2[System Data Bus 2 \n {Secondary}]:::comp
-        PSU1[Power Supply Unit 1 \n {Primary}]:::comp
-        PSU2[Power Supply Unit 2 \n {Secondary}]:::comp
-     end
+    subgraph Components
+        FCC1["FCC-1\n(Channel A)"]:::comp
+        FCC2["FCC-2\n(Channel B)"]:::comp
+        FCC3["FCC-3\n(Channel C)"]:::comp
+        NAV1["NAV-1\n(Primary)"]:::comp
+        NAV2["NAV-2\n(Secondary)"]:::comp
+        COM1["COM-1\n(Primary)"]:::comp
+        COM2["COM-2\n(Secondary)"]:::comp
+        SDB1["System Data Bus 1\n(Primary)"]:::comp
+        SDB2["System Data Bus 2\n(Secondary)"]:::comp
+        PSU1["Power Supply Unit 1\n(Primary)"]:::comp
+        PSU2["Power Supply Unit 2\n(Secondary)"]:::comp
+    end
 
     A --> Subsystems
     Subsystems --> Components
@@ -1851,12 +1865,10 @@ graph LR
     PSU --> PSU1
     PSU --> PSU2
 
-
     classDef system fill:#f96,stroke:#333,stroke-width:2px;
     classDef triple fill:#69f,stroke:#333,stroke-width:2px;
     classDef dual fill:#9f6,stroke:#333,stroke-width:2px;
     classDef comp fill:#f9f,stroke:#333,stroke-width:1px;
-
 ```
 
 ### C.6.2 Flight Control System Redundancy
@@ -1865,31 +1877,30 @@ The following diagram illustrates the redundancy architecture of the Flight Cont
 
 ```mermaid
 graph LR
-    FCS[Flight Control System \n {Triple Redundant}]:::fcs
-    FCC1[FCC-1 \n {Channel A}]:::fcc
-    FCC2[FCC-2 \n {Channel B}]:::fcc
-    FCC3[FCC-3 \n {Channel C}]:::fcc
-    subgraph Internal Components
-        ProcA[Processor A]:::comp
-        MemA[Memory A]:::comp
-        IOA[I/O A]:::comp
-        MonA[Monitor A]:::comp
-        ProcB[Processor B]:::comp
-        MemB[Memory B]:::comp
-        IOB[I/O B]:::comp
-        MonB[Monitor B]:::comp
-        ProcC[Processor C]:::comp
-        MemC[Memory C]:::comp
-        IOC[I/O C]:::comp
-        MonC[Monitor C]:::comp
-        ACL[Actuator Control \n {Voting Logic}]:::act
+    FCS["Flight Control System\n(Triple Redundant)"]:::fcs
+    FCC1["FCC-1\n(Channel A)"]:::fcc
+    FCC2["FCC-2\n(Channel B)"]:::fcc
+    FCC3["FCC-3\n(Channel C)"]:::fcc
+    subgraph "Internal Components"
+        ProcA["Processor A"]:::comp
+        MemA["Memory A"]:::comp
+        IOA["I/O A"]:::comp
+        MonA["Monitor A"]:::comp
+        ProcB["Processor B"]:::comp
+        MemB["Memory B"]:::comp
+        IOB["I/O B"]:::comp
+        MonB["Monitor B"]:::comp
+        ProcC["Processor C"]:::comp
+        MemC["Memory C"]:::comp
+        IOC["I/O C"]:::comp
+        MonC["Monitor C"]:::comp
+        ACL["Actuator Control\n(Voting Logic)"]:::act
     end
-     subgraph External Interfaces
-        Elev[Elevator Actuators]:::act
-        Ail[Aileron Actuators]:::act
-        Rud[Rudder Actuators]:::act
-     end
-
+    subgraph "External Interfaces"
+        Elev["Elevator Actuators"]:::act
+        Ail["Aileron Actuators"]:::act
+        Rud["Rudder Actuators"]:::act
+    end
 
     FCS --> FCC1
     FCS --> FCC2
@@ -2129,30 +2140,32 @@ The following diagram illustrates the security architecture of the A4001 Avionic
 
 ```mermaid
 graph LR
-    SecurityArch[Security Architecture]:::main
-    subgraph Security Domains
-        PhySec[Physical Security]:::domain
-        DataSec[Data Security]:::domain
-        CommSec[Communication Security]:::domain
-        AccessCtrl[Access Control]:::domain
+    SecurityArch["Security Architecture"]:::main
+    subgraph "Security Domains"
+        PhySec["Physical Security"]:::domain
+        DataSec["Data Security"]:::domain
+        CommSec["Communication Security"]:::domain
+        AccessCtrl["Access Control"]:::domain
     end
-    subgraph Mechanisms
-        TP[Tamper Protection]:::mech
-        Shield[EMI/RFI Shielding]:::mech
-        Install[Secure Installation]:::mech
-        Encrypt[Data Encryption]:::mech
-        Integrity[Data Integrity]:::mech
-        Validation[Data Validation]:::mech
-        Protocols[Secure Protocols]:::mech
-        Auth[Authentication]:::mech
-        MsgFilter[Message Filtering]:::mech
-        RBAC[Role-Based Access]:::mech
-        CredMan[Credential Management]:::mech
-        Audit[Access Auditing]:::mech
+    subgraph "Mechanisms"
+        TP["Tamper Protection"]:::mech
+        Shield["EMI/RFI Shielding"]:::mech
+        Install["Secure Installation"]:::mech
+        Encrypt["Data Encryption"]:::mech
+        Integrity["Data Integrity"]:::mech
+        Validation["Data Validation"]:::mech
+        Protocols["Secure Protocols"]:::mech
+        Auth["Authentication"]:::mech
+        MsgFilter["Message Filtering"]:::mech
+        RBAC["Role-Based Access"]:::mech
+        CredMan["Credential Management"]:::mech
+        Audit["Access Auditing"]:::mech
     end
 
-    SecurityArch --> Security Domains
-    SecurityDomains --> Mechanisms
+    SecurityArch --> PhySec
+    SecurityArch --> DataSec
+    SecurityArch --> CommSec
+    SecurityArch --> AccessCtrl
 
     PhySec --> TP
     PhySec --> Shield
@@ -2181,36 +2194,38 @@ The following diagram shows the certification architecture of the A4001 Avionics
 
 ```mermaid
 graph LR
-    CertArch[Certification Architecture]:::main
-    subgraph Certification Domains
-        SoftCert[Software {DO-178C}]:::domain
-        HwCert[Hardware {DO-254}]:::domain
-        EnvCert[Environmental {DO-160G}]:::domain
-        SysCert[System {ARP4754A}]:::domain
+    CertArch["Certification Architecture"]:::main
+    subgraph "Certification Domains"
+        SoftCert["Software (DO-178C)"]:::domain
+        HwCert["Hardware (DO-254)"]:::domain
+        EnvCert["Environmental (DO-160G)"]:::domain
+        SysCert["System (ARP4754A)"]:::domain
     end
-    subgraph Aspects
-        SwLevel[Software Level A]:::aspect
-        SwProc[Software Processes]:::aspect
-        SwLife[Software Lifecycle]:::aspect
-        SwDoc[Software Documentation]:::aspect
+    subgraph "Aspects"
+        SwLevel["Software Level A"]:::aspect
+        SwProc["Software Processes"]:::aspect
+        SwLife["Software Lifecycle"]:::aspect
+        SwDoc["Software Documentation"]:::aspect
 
-        HwLevel[Hardware Level A]:::aspect
-        HwProc[Hardware Processes]:::aspect
-        HwLife[Hardware Lifecycle]:::aspect
-        HwDoc[Hardware Documentation]:::aspect
+        HwLevel["Hardware Level A"]:::aspect
+        HwProc["Hardware Processes"]:::aspect
+        HwLife["Hardware Lifecycle"]:::aspect
+        HwDoc["Hardware Documentation"]:::aspect
 
-        EnvTest[Environmental Testing]:::aspect
-        EnvQual[Environmental Qualification]:::aspect
-        EnvDoc[Environmental Documentation]:::aspect
+        EnvTest["Environmental Testing"]:::aspect
+        EnvQual["Environmental Qualification"]:::aspect
+        EnvDoc["Environmental Documentation"]:::aspect
 
-        SysSafety[System Safety]:::aspect
-        SysReq[System Requirements]:::aspect
-        SysValid[System Validation]:::aspect
-        SysDoc[System Documentation]:::aspect
+        SysSafety["System Safety"]:::aspect
+        SysReq["System Requirements"]:::aspect
+        SysValid["System Validation"]:::aspect
+        SysDoc["System Documentation"]:::aspect
     end
 
-    CertArch --> Certification Domains
-    CertificationDomains --> Aspects
+    CertArch --> SoftCert
+    CertArch --> HwCert
+    CertArch --> EnvCert
+    CertArch --> SysCert
 
     SoftCert --> SwLevel
     SoftCert --> SwProc
@@ -2242,24 +2257,24 @@ The following diagram illustrates the planned evolution of the A4001 Avionics Sy
 
 ```mermaid
 graph LR
-    V1[Version 1.0 \n {Basic Architecture}]:::ver --> V2[Version 2.0 \n {Enhanced Architecture}]:::ver
-    V2 --> V3[Version 3.0 \n {Advanced Architecture}]:::ver
+    V1["Version 1.0\n(Basic Architecture)"]:::ver --> V2["Version 2.0\n(Enhanced Architecture)"]:::ver
+    V2 --> V3["Version 3.0\n(Advanced Architecture)"]:::ver
 
-    subgraph Features
-        FC1[Flight Control]:::feat
-        Nav1[Basic Navigation]:::feat
-        Comm1[Basic Communication]:::feat
+    subgraph "Features"
+        FC1["Flight Control"]:::feat
+        Nav1["Basic Navigation"]:::feat
+        Comm1["Basic Communication"]:::feat
 
-        FC2[Enhanced Flight Control]:::feat
-        Nav2[Enhanced Navigation]:::feat
-        Comm2[Enhanced Communication]:::feat
-        DF1[Data Fusion]:::feat
+        FC2["Enhanced Flight Control"]:::feat
+        Nav2["Enhanced Navigation"]:::feat
+        Comm2["Enhanced Communication"]:::feat
+        DF1["Data Fusion"]:::feat
 
-        FC3[Advanced Flight Control]:::feat
-        Nav3[Advanced Navigation]:::feat
-        Comm3[Advanced Communication]:::feat
-        DF2[Advanced Data Fusion]:::feat
-        Auto[Autonomous Functions]:::feat
+        FC3["Advanced Flight Control"]:::feat
+        Nav3["Advanced Navigation"]:::feat
+        Comm3["Advanced Communication"]:::feat
+        DF2["Advanced Data Fusion"]:::feat
+        Auto["Autonomous Functions"]:::feat
     end
 
     V1 --> FC1
@@ -2277,7 +2292,6 @@ graph LR
     V3 --> DF2
     V3 --> Auto
 
-
     classDef ver fill:#f96,stroke:#333,stroke-width:2px;
     classDef feat fill:#69f,stroke:#333,stroke-width:1px;
 ```
@@ -2293,7 +2307,1072 @@ The A4001 Avionics System architecture is designed to meet the functional, perfo
 5.  **Scalability**: An architecture that can evolve to accommodate future enhancements and additional functionality.
 
 The architecture diagrams provided in this appendix serve as a reference for system development, integration, verification, and certification activities.
+
+### Appendix D: Interface Diagrams
+
+## D.1 Purpose
+
+This appendix provides detailed interface diagrams for the A4001 Avionics System. These diagrams illustrate the external and internal interfaces of the system, including physical connections, data flows, protocols, and signal characteristics. The interface diagrams serve as a reference for system integration, verification, and maintenance activities.
+
+## D.2 External Interface Overview
+
+The following diagram provides a high-level overview of the external interfaces between the A4001 Avionics System and other aircraft systems:
+
+```mermaid
+graph LR
+    A["A4001 Avionics System"]:::main
+    subgraph External Systems
+        B["Flight Control Actuators"]:::control
+        C["Engine Control System"]:::control
+        D["Landing Gear System"]:::control
+        E["Primary Flight Display"]:::display
+        F["Multi-Function Display"]:::display
+        G["Engine Indication and\nCrew Alerting System"]:::display
+        H["Power System"]:::support
+        I["Aircraft Sensors"]:::support
+        J["Pilot Controls"]:::support
+        K["Maintenance Computer"]:::support
+        L["External Antennas"]:::support
+    end
+
+    B <--> A
+    C <--> A
+    D <--> A
+    E <--> A
+    F <--> A
+    G <--> A
+    H <--> A
+    I --> A
+    J --> A
+    K <--> A
+    L <--> A
+
+    classDef main fill:#f96,stroke:#333,stroke-width:4px;
+    classDef control fill:#69f,stroke:#333,stroke-width:2px;
+    classDef display fill:#9f6,stroke:#333,stroke-width:2px;
+    classDef support fill:#f9f,stroke:#333,stroke-width:2px;
 ```
+
+## D.3 External Interface Details
+
+### D.3.1 Flight Control Actuator Interface
+
+The following diagram shows the interface between the A4001 Avionics System and the Flight Control Actuators:
+
+```mermaid
+graph LR
+    A[A4001 Avionics System]:::main
+    subgraph Command Signals
+        CS[Command Signals]:::signal
+        PC[Power Control]:::signal
+        MC[Mode Control]:::signal
+    end
+    subgraph Actuators
+        Elev[Elevator Actuators]:::act
+        Ail[Aileron Actuators]:::act
+        Rud[Rudder Actuators]:::act
+        Flap[Flap Actuators]:::act
+        Spoiler[Spoiler Actuators]:::act
+    end
+    subgraph Feedback
+        PF[Position Feedback]:::fb
+    end
+
+    A --> CS
+    A --> PC
+    A --> MC
+
+    CS --> Elev
+    CS --> Ail
+    CS --> Rud
+    CS --> Flap
+    CS --> Spoiler
+
+    Elev --> PF
+    Ail --> PF
+    Rud --> PF
+    Flap --> PF
+    Spoiler --> PF
+
+    PF --> A
+
+    classDef main fill:#f96,stroke:#333,stroke-width:2px;
+    classDef signal fill:#69f,stroke:#333,stroke-width:2px;
+    classDef act fill:#9f6,stroke:#333,stroke-width:2px;
+    classDef fb fill:#f9f,stroke:#333,stroke-width:2px;
+```
+
+### D.3.2 Display System Interface
+
+The following diagram shows the interface between the A4001 Avionics System and the Display Systems:
+
+```mermaid
+graph LR
+    A[A4001 Avionics System]:::main
+    subgraph Data
+        ND[Navigation Data]:::data
+        FD[Flight Data]:::data
+        AD[Alert Data]:::data
+        SS[System Status]:::data
+    end
+    subgraph Displays
+        PFD[Primary Flight Display]:::disp
+        MFD[Multi-Function Display]:::disp
+        EICAS[Engine Indication and<br>Crew Alerting System]:::disp
+    end
+    subgraph Feedback
+        CI[Control Inputs]:::fb
+    end
+
+    A --> ND
+    A --> FD
+    A --> AD
+    A --> SS
+
+    ND --> PFD
+    ND --> MFD
+    ND --> EICAS
+
+    FD --> PFD
+    FD --> MFD
+    FD --> EICAS
+
+    AD --> PFD
+    AD --> MFD
+    AD --> EICAS
+
+    SS --> PFD
+    SS --> MFD
+    SS --> EICAS
+
+    CI --> A
+
+    classDef main fill:#f96,stroke:#333,stroke-width:2px;
+    classDef data fill:#69f,stroke:#333,stroke-width:2px;
+    classDef disp fill:#9f6,stroke:#333,stroke-width:2px;
+    classDef fb fill:#f9f,stroke:#333,stroke-width:2px;
+```
+
+### D.3.3 Sensor Interface
+
+The following diagram shows the interface between the A4001 Avionics System and the Aircraft Sensors:
+
+```mermaid
+graph LR
+    I[Aircraft Sensors]:::main
+    subgraph Sensor Categories
+        AD[Air Data Sensors]:::cat
+        Att[Attitude Sensors]:::cat
+        Pos[Position Sensors]:::cat
+        Eng[Engine Sensors]:::cat
+        Sys[System Sensors]:::cat
+    end
+    subgraph Specific Sensors
+        PT[Pitot Tubes]:::sens
+        SP[Static Ports]:::sens
+        TAT[Total Air Temperature]:::sens
+        AOA[Angle of Attack]:::sens
+        Gyro[Gyroscopes]:::sens
+        Accel[Accelerometers]:::sens
+        Mag[Magnetometers]:::sens
+        GPS[GPS Receivers]:::sens
+        DME[Distance Measuring Equipment]:::sens
+        VOR[VHF Omnidirectional Range]:::sens
+        ILS[Instrument Landing System]:::sens
+        N1[N1 Speed]:::sens
+        N2[N2 Speed]:::sens
+        EGT[Exhaust Gas Temperature]:::sens
+        FF[Fuel Flow]:::sens
+        HP[Hydraulic Pressure]:::sens
+        EP[Electrical Parameters]:::sens
+        FQ[Fuel Quantity]:::sens
+        LGP[Landing Gear Position]:::sens
+    end
+    A[A4001 Avionics System]
+
+    I --> AD
+    I --> Att
+    I --> Pos
+    I --> Eng
+    I --> Sys
+
+    AD --> PT
+    AD --> SP
+    AD --> TAT
+    AD --> AOA
+
+    Att --> Gyro
+    Att --> Accel
+    Att --> Mag
+
+    Pos --> GPS
+    Pos --> DME
+    Pos --> VOR
+    Pos --> ILS
+
+    Eng --> N1
+    Eng --> N2
+    Eng --> EGT
+    Eng --> FF
+
+    Sys --> HP
+    Sys --> EP
+    Sys --> FQ
+    Sys --> LGP
+
+    AD --> A
+    Att --> A
+    Pos --> A
+    Eng --> A
+    Sys --> A
+
+
+    classDef main fill:#f96,stroke:#333,stroke-width:2px;
+    classDef cat fill:#69f,stroke:#333,stroke-width:2px;
+    classDef sens fill:#9f6,stroke:#333,stroke-width:1px;
+```
+
+### D.3.4 Control Interface
+
+The following diagram shows the interface between the A4001 Avionics System and the Pilot Controls:
+
+```mermaid
+graph LR
+    PC[Pilot Controls]:::main
+    subgraph Control Categories
+        PFC[Primary Flight Controls]:::cat
+        SFC[Secondary Flight Controls]:::cat
+        AP[Autopilot Controls]:::cat
+        Nav[Navigation Controls]:::cat
+        Comm[Communication Controls]:::cat
+    end
+    subgraph Specific Controls
+        Stick[Control Stick/Yoke]:::ctrl
+        Pedals[Rudder Pedals]:::ctrl
+        Throttle[Throttle Levers]:::ctrl
+        Flap[Flap Lever]:::ctrl
+        Spoiler[Spoiler Lever]:::ctrl
+        Trim[Trim Controls]:::ctrl
+        Mode[Mode Selector]:::ctrl
+        Alt[Altitude Selector]:::ctrl
+        Speed[Speed Selector]:::ctrl
+        Head[Heading Selector]:::ctrl
+        Freq[Frequency Selector]:::ctrl
+        Course[Course Selector]:::ctrl
+        Wpt[Waypoint Selector]:::ctrl
+        RadioSel[Radio Selector]:::ctrl
+        Volume[Volume Control]:::ctrl
+        PTT[Push-to-Talk]:::ctrl
+    end
+    A[A4001 Avionics System]
+
+    PC --> PFC
+    PC --> SFC
+    PC --> AP
+    PC --> Nav
+    PC --> Comm
+
+    PFC --> Stick
+    PFC --> Pedals
+    PFC --> Throttle
+
+    SFC --> Flap
+    SFC --> Spoiler
+    SFC --> Trim
+
+    AP --> Mode
+    AP --> Alt
+    AP --> Speed
+    AP --> Head
+
+    Nav --> Freq
+    Nav --> Course
+    Nav --> Wpt
+
+    Comm --> RadioSel
+    Comm --> Volume
+    Comm --> PTT
+
+    PFC --> A
+    SFC --> A
+    AP --> A
+    Nav --> A
+    Comm --> A
+
+    classDef main fill:#f96,stroke:#333,stroke-width:2px;
+    classDef cat fill:#69f,stroke:#333,stroke-width:2px;
+    classDef ctrl fill:#9f6,stroke:#333,stroke-width:1px;
+```
+
+### D.3.5 Power System Interface
+
+The following diagram shows the interface between the A4001 Avionics System and the Aircraft Power System:
+
+```mermaid
+graph LR
+    APS[Aircraft Power System]:::main
+    subgraph Power Categories
+        PP[Primary Power]:::cat
+        SP[Secondary Power]:::cat
+        EP[Emergency Power]:::cat
+    end
+    subgraph Specific Power Sources
+        V115[115V AC 400Hz]:::pwr
+        V28[28V DC]:::pwr
+        Batt[Battery Power]:::pwr
+        RAT[Ram Air Turbine]:::pwr
+    end
+    A[A4001 Avionics System]
+    subgraph Feedback
+        PM[Power Monitoring]:::fb
+    end
+
+    APS --> PP
+    APS --> SP
+    APS --> EP
+
+    PP --> V115
+    SP --> V28
+    EP --> Batt
+    EP --> RAT
+
+    PP --> A
+    SP --> A
+    EP --> A
+
+    A --> PM
+
+    classDef main fill:#f96,stroke:#333,stroke-width:2px;
+    classDef cat fill:#69f,stroke:#333,stroke-width:2px;
+    classDef pwr fill:#9f6,stroke:#333,stroke-width:1px;
+    classDef fb fill:#f9f,stroke:#333,stroke-width:2px;
+```
+
+## D.4 Internal Interface Overview
+
+The following diagram provides a high-level overview of the internal interfaces between the major subsystems of the A4001 Avionics System:
+
+```mermaid
+graph LR
+    A["A4001 Avionics System"]:::main
+    subgraph "Subsystems"
+        FCS["A4001-A\nFlight Control System"]:::sub
+        Nav["A4001-B\nNavigation System"]:::sub
+        Comm["A4001-C\nCommunication System"]:::sub
+    end
+    subgraph "Support Systems"
+        SMU["System Management Unit"]:::sup
+        PSU["Power Supply Unit"]:::sup
+    end
+
+    A --> Subsystems
+    A --> "Support Systems"
+
+    FCS <--> Nav
+    FCS <--> Comm
+    Nav <--> Comm
+
+    FCS <--> SMU
+    Nav <--> SMU
+    Comm <--> SMU
+
+    FCS --> PSU
+    Nav --> PSU
+    Comm --> PSU
+    SMU --> PSU
+
+    classDef main fill:#f96,stroke:#333,stroke-width:2px;
+    classDef sub fill:#69f,stroke:#333,stroke-width:2px;
+    classDef sup fill:#9f6,stroke:#333,stroke-width:2px;
+```
+
+## D.5 Internal Interface Details
+
+### D.5.1 Flight Control System to Navigation System Interface
+
+The following diagram shows the interface between the Flight Control System and the Navigation System:
+
+```mermaid
+graph LR
+    FCS[A4001-A \n Flight Control System]:::sys
+    Nav[A4001-B \n Navigation System]:::sys
+    subgraph Data Requested
+        PosReq[Position Request]:::req
+        AttReq[Attitude Request]:::req
+        VelReq[Velocity Request]:::req
+        FPReq[Flight Path Request]:::req
+    end
+    subgraph Data Provided
+        PosData[Position Data]:::data
+        AttData[Attitude Data]:::data
+        VelData[Velocity Data]:::data
+        FPData[Flight Path Data]:::data
+        NavInt[Navigation Integrity]:::data
+    end
+
+    FCS --> PosReq
+    FCS --> AttReq
+    FCS --> VelReq
+    FCS --> FPReq
+
+    PosReq --> Nav
+    AttReq --> Nav
+    VelReq --> Nav
+    FPReq --> Nav
+
+    Nav --> PosData
+    Nav --> AttData
+    Nav --> VelData
+    Nav --> FPData
+    Nav --> NavInt
+
+    PosData --> FCS
+    AttData --> FCS
+    VelData --> FCS
+    FPData --> FCS
+    NavInt --> FCS
+
+    classDef sys fill:#f96,stroke:#333,stroke-width:2px;
+    classDef req fill:#69f,stroke:#333,stroke-width:1px;
+    classDef data fill:#9f6,stroke:#333,stroke-width:1px;
+```
+
+### D.5.2 Flight Control System to Communication System Interface
+
+The following diagram shows the interface between the Flight Control System and the Communication System:
+
+```mermaid
+graph LR
+    FCS[A4001-A \n Flight Control System]:::sys
+    Comm[A4001-C \n Communication<br>System]:::sys
+    subgraph Status
+        FCSStatus[FCS Status]:::status
+        FMode[Flight Mode]:::status
+        AlertStatus[Alert Status]:::status
+    end
+    subgraph Commands
+        ModeCmds[Mode Change Commands]:::cmd
+        ParamCmds[Parameter Update Commands]:::cmd
+    end
+    subgraph Data
+        DLInfo[Datalink Information]:::cmd
+    end
+
+    FCS --> FCSStatus
+    FCS --> FMode
+    FCS --> AlertStatus
+    FCS --> ModeCmds
+    FCS --> ParamCmds
+
+    FCSStatus --> Comm
+    FMode --> Comm
+    AlertStatus --> Comm
+    ModeCmds --> Comm
+    ParamCmds --> Comm
+
+    Comm --> DLInfo
+    DLInfo --> FCS
+
+    classDef sys fill:#f96,stroke:#333,stroke-width:2px;
+    classDef status fill:#69f,stroke:#333,stroke-width:1px;
+    classDef cmd fill:#9f6,stroke:#333,stroke-width:1px;
+```
+
+### D.5.3 Navigation System to Communication System Interface
+
+The following diagram shows the interface between the Navigation System and the Communication System:
+
+```mermaid
+graph LR
+    Nav[A4001-B \n Navigation System]:::sys
+    Comm[A4001-C \n Communication<br>System]:::sys
+    subgraph NavData
+        PosData[Position Data]:::nav
+        RouteData[Route Data]:::nav
+        NavStatus[Navigation Status]:::nav
+        IntegrityStatus[Integrity Status]:::nav
+    end
+    subgraph CommData
+        FreqData[Frequency Data]:::com
+        DatalinkMsgs[Datalink Messages]:::com
+        DBUpdates[Database Updates]:::com
+    end
+
+    Nav --> PosData
+    Nav --> RouteData
+    Nav --> NavStatus
+    Nav --> IntegrityStatus
+
+    PosData --> Comm
+    RouteData --> Comm
+    NavStatus --> Comm
+    IntegrityStatus --> Comm
+
+    Comm --> FreqData
+    Comm --> DatalinkMsgs
+    Comm --> DBUpdates
+
+    FreqData --> Nav
+    DatalinkMsgs --> Nav
+    DBUpdates --> Nav
+
+    classDef sys fill:#f96,stroke:#333,stroke-width:2px;
+    classDef nav fill:#69f,stroke:#333,stroke-width:1px;
+    classDef com fill:#9f6,stroke:#333,stroke-width:1px;
+```
+
+### D.5.4 System Management Unit Interface
+
+The following diagram shows the interface between the System Management Unit and the other subsystems:
+
+```mermaid
+graph LR
+    SMU[System Management Unit]:::main
+    subgraph Monitoring
+        FCSMon[FCS Monitoring]:::mon
+        NavMon[Navigation Monitoring]:::mon
+        CommMon[Communication Monitoring]:::mon
+        PowerMon[Power Monitoring]:::mon
+    end
+    subgraph Subsystems
+        FCS[A4001-A \n Flight Control System]:::sys
+        Nav[A4001-B \n Navigation System]:::sys
+        Comm[A4001-C \n Communication<br>System]:::sys
+        PSU[Power Supply Unit]:::sys
+    end
+    subgraph Status
+        FCSStatus[FCS Status]:::status
+        NavStatus[Navigation Status]:::status
+        CommStatus[Communication Status]:::status
+        PowerStatus[Power Status]:::status
+    end
+    subgraph Interfaces
+        MaintInt[Maintenance Interface]:::out
+        DiagInt[Diagnostic Interface]:::out
+        SysLog[System Log]:::out
+    end
+
+    SMU --> Monitoring
+    Monitoring --> FCSMon
+    Monitoring --> NavMon
+    Monitoring --> CommMon
+    Monitoring --> PowerMon
+
+    FCS --> FCSStatus
+    Nav --> NavStatus
+    Comm --> CommStatus
+    PSU --> PowerStatus
+
+    FCSStatus --> SMU
+    NavStatus --> SMU
+    CommStatus --> SMU
+    PowerStatus --> SMU
+
+    SMU --> MaintInt
+    SMU --> DiagInt
+    SMU --> SysLog
+
+    classDef main fill:#f96,stroke:#333,stroke-width:2px;
+    classDef mon fill:#69f,stroke:#333,stroke-width:1px;
+    classDef sys fill:#9f6,stroke:#333,stroke-width:2px;
+    classDef status fill:#f69,stroke:#333,stroke-width:1px;
+    classDef out fill:#6f9,stroke:#333,stroke-width:2px;
+```
+
+## D.6 Interface Protocol Details
+
+### D.6.1 ARINC 429 Interface
+
+The following diagram shows the ARINC 429 interface used in the A4001 Avionics System:
+
+```mermaid
+graph LR
+    TX["Transmitter"]:::comp --> Word["32-bit Word"]:::word
+    Word --> Label["Label (8 bits)"]:::field
+    Word --> SDI["SDI (2 bits)"]:::field
+    Word --> Data["Data (19 bits)"]:::field
+    Word --> SSM["SSM (2 bits)"]:::field
+    Word --> Parity["Parity (1 bit)"]:::field
+    Word --> RX["Receiver"]:::comp
+
+    classDef comp fill:#f96,stroke:#333,stroke-width:2px;
+    classDef word fill:#69f,stroke:#333,stroke-width:2px;
+    classDef field fill:#9f6,stroke:#333,stroke-width:1px;
+```
+
+### D.6.2 AFDX Interface
+
+The following diagram shows the AFDX (Avionics Full-Duplex Switched Ethernet) interface used in the A4001 Avionics System:
+
+```mermaid
+graph LR
+    ES1[End System 1]:::es --> Switch1[AFDX Switch 1]:::sw
+    ES2[End System 2]:::es --> Switch1
+    ES3[End System 3]:::es --> Switch1
+    Switch1 --> VL1[Virtual Link 1]:::vl
+    Switch1 --> VL2[Virtual Link 2]:::vl
+    Switch1 --> VL3[Virtual Link 3]:::vl
+    Switch1 --> Switch2[AFDX Switch 2]:::sw
+    VL1 --> ES2
+    VL2 --> ES3
+    VL3 --> ES1
+    Switch2 --> VL4[Virtual Link 4]:::vl
+    Switch2 --> VL5[Virtual Link 5]:::vl
+    VL4 --> ES1
+    VL5 --> ES3
+
+
+    classDef es fill:#f96,stroke:#333,stroke-width:2px;
+    classDef sw fill:#69f,stroke:#333,stroke-width:2px;
+    classDef vl fill:#9f6,stroke:#333,stroke-width:1px;
+```
+
+### D.6.3 CAN Bus Interface
+
+The following diagram shows the CAN Bus interface used in the A4001 Avionics System:
+
+```mermaid
+graph LR
+    Bus["CAN Bus"]:::bus
+    Node1["Node 1"]:::node --> Bus
+    Node2["Node 2"]:::node --> Bus
+    Node3["Node 3"]:::node --> Bus
+    Node4["Node 4"]:::node --> Bus
+    Bus --> Frame["CAN Frame"]:::frame
+    Frame --> SOF["Start of Frame"]:::field
+    Frame --> ID["Identifier"]:::field
+    Frame --> Ctrl["Control"]:::field
+    Frame --> Data["Data (0-8 bytes)"]:::field
+    Frame --> CRC["CRC"]:::field
+    Frame --> ACK["ACK"]:::field
+    Frame --> EOF["End of Frame"]:::field
+
+    classDef bus fill:#f96,stroke:#333,stroke-width:4px;
+    classDef node fill:#69f,stroke:#333,stroke-width:2px;
+    classDef frame fill:#9f6,stroke:#333,stroke-width:2px;
+    classDef field fill:#f9f,stroke:#333,stroke-width:1px;
+```
+
+## D.7 Physical Interface Details
+
+### D.7.1 Connector Types
+
+The following diagram shows the connector types used in the A4001 Avionics System:
+
+```mermaid
+graph LR
+    A[A4001 Avionics System]:::main
+    subgraph Connector Types
+        Pwr[Power Connectors]:::type
+        Data[Data Connectors]:::type
+        RF[RF Connectors]:::type
+        Maint[Maintenance Connectors]:::type
+    end
+    subgraph Specific Connectors
+        MS3456[MS3456 - Primary Power]:::conn
+        MS3459[MS3459 - Secondary Power]:::conn
+        ARINC600[ARINC 600 - Main Data]:::conn
+        DSub[D-Sub - Discrete Signals]:::conn
+        Fiber[Fiber Optic - High Speed Data]:::conn
+        TNC[TNC - VHF/UHF]:::conn
+        SMA[SMA - GPS]:::conn
+        NType[N-Type - SATCOM]:::conn
+        RJ45[Ethernet RJ45]:::conn
+        USB[USB Type A]:::conn
+        Custom[Custom Test Port]:::conn
+    end
+
+    A --> Pwr
+    A --> Data
+    A --> RF
+    A --> Maint
+
+    Pwr --> MS3456
+    Pwr --> MS3459
+    Data --> ARINC600
+    Data --> DSub
+    Data --> Fiber
+    RF --> TNC
+    RF --> SMA
+    RF --> NType
+    Data --> RJ45
+    Maint --> USB
+    Maint --> Custom
+
+    classDef main fill:#f96,stroke:#333,stroke-width:2px;
+    classDef type fill:#69f,stroke:#333,stroke-width:2px;
+    classDef conn fill:#9f6,stroke:#333,stroke-width:1px;
+```
+
+### D.7.2 LRU Mounting Interface
+
+The following diagram shows the Line Replaceable Unit (LRU) mounting interface for the A4001 Avionics System:
+
+```mermaid
+graph LR
+    LRU["A4001 LRU"]:::lru
+    subgraph "Mounting Points"
+        Front["Front Mounting Flange"]:::type
+        Side["Side Rails"]:::type
+        Rear["Rear Support"]:::type
+    end
+    subgraph "Cooling Interface"
+        Intake["Forced Air Intake"]:::feat
+        Exhaust["Exhaust Vents"]:::feat
+        Plate["Conduction Cooling Plate"]:::feat
+    end
+    subgraph "Connector Interface"
+        PowerConn["Power Connector"]:::feat
+        DataConn["Data Connectors"]:::feat
+        RFConn["RF Connectors"]:::feat
+        MaintPort["Maintenance Port"]:::feat
+    end
+    subgraph "Handling Interface"
+        Handles["Handles"]:::type
+        FrontHandles["Front Handles"]:::feat
+    end
+    subgraph "Locking Mechanism"
+        Lock["Locking Mechanism"]:::feat
+    end
+
+    LRU --> "Mounting Points"
+    LRU --> "Cooling Interface"
+    LRU --> "Connector Interface"
+    LRU --> "Handling Interface"
+    LRU --> "Locking Mechanism"
+
+    "Mounting Points" --> Front
+    "Mounting Points" --> Side
+    "Mounting Points" --> Rear
+
+    "Cooling Interface" --> Intake
+    "Cooling Interface" --> Exhaust
+    "Cooling Interface" --> Plate
+
+    "Connector Interface" --> PowerConn
+    "Connector Interface" --> DataConn
+    "Connector Interface" --> RFConn
+    "Connector Interface" --> MaintPort
+
+    "Handling Interface" --> Handles
+    Handles --> FrontHandles
+
+    "Locking Mechanism" --> Lock
+
+    classDef lru fill:#f96,stroke:#333,stroke-width:2px;
+    classDef type fill:#69f,stroke:#333,stroke-width:2px;
+    classDef feat fill:#9f6,stroke:#333,stroke-width:1px;
+```
+
+## D.8 Software Interface Details
+
+### D.8.1 API Structure
+
+The following diagram shows the API structure for the A4001 Avionics System software:
+
+```mermaid
+graph TD
+    Main["A4001 Software API"]:::main
+    subgraph "Core"
+        Init["System Initialization"]:::func
+        Mem["Memory Management"]:::func
+        Sched["Task Scheduling"]:::func
+        IPC["Inter-Process Communication"]:::func
+        Err["Error Handling"]:::func
+    end
+    subgraph "Subsystem APIs"
+        FCAPI["Flight Control API"]:::api
+        NavAPI["Navigation API"]:::api
+        CommAPI["Communication API"]:::api
+        DiagAPI["Diagnostic API"]:::api
+        SysManAPI["System Management API"]:::api
+    end
+    subgraph "Function Groups"
+        CLInt["Control Law Interface"]:::func
+        ModeMan["Mode Management"]:::func
+        Actrl["Actuator Control"]:::func
+
+        SensorProc["Sensor Processing"]:::func
+        PosCalc["Position Calculation"]:::func
+        RouteMan["Route Management"]:::func
+        SensorFusion["Sensor Fusion"]:::func
+        DBAccess["Database Access"]:::func
+
+        RadioCtrl["Radio Control"]:::func
+        MsgFormat["Message Formatting"]:::func
+        ProtHandling["Protocol Handling"]:::func
+        AudioMan["Audio Management"]:::func
+
+        BIT["Built-In Test"]:::func
+        FaultLog["Fault Logging"]:::func
+        PerfMon["Performance Monitoring"]:::func
+
+        MaintInt["Maintenance Interface"]:::func
+    end
+
+    Main --> "Core"
+    Main --> "Subsystem APIs"
+    "Subsystem APIs" --> "Function Groups"
+
+    FCAPI --> CLInt
+    FCAPI --> ModeMan
+    FCAPI --> Actrl
+
+    NavAPI --> SensorProc
+    NavAPI --> PosCalc
+    NavAPI --> RouteMan
+    NavAPI --> SensorFusion
+    NavAPI --> DBAccess
+
+    CommAPI --> RadioCtrl
+    CommAPI --> MsgFormat
+    CommAPI --> ProtHandling
+    CommAPI --> AudioMan
+
+    DiagAPI --> BIT
+    DiagAPI --> FaultLog
+    DiagAPI --> PerfMon
+
+    SysManAPI --> MaintInt
+    SysManAPI --> BIT
+    SysManAPI --> FaultLog
+    SysManAPI --> PerfMon
+
+    classDef main fill:#f96,stroke:#333,stroke-width:2px;
+    classDef api fill:#69f,stroke:#333,stroke-width:2px;
+    classDef func fill:#9f6,stroke:#333,stroke-width:1px;
+```
+
+### D.8.2 Data Exchange Format
+
+The following diagram shows the data exchange format used in the A4001 Avionics System software:
+
+```mermaid
+graph LR
+    Msg["Message Structure"]:::msg
+    Msg --> Header["Header"]:::part
+    Msg --> Body["Body"]:::part
+    Msg --> Trailer["Trailer"]:::part
+
+    Header --> MID["Message ID (4 bytes)"]:::field
+    Header --> SID["Source ID (2 bytes)"]:::field
+    Header --> DID["Destination ID (2 bytes)"]:::field
+    Header --> ML["Message Length (2 bytes)"]:::field
+    Header --> SN["Sequence Number (2 bytes)"]:::field
+    Header --> TS["Timestamp (8 bytes)"]:::field
+    Header --> MT["Message Type (2 bytes)"]:::field
+
+    Body --> Data["Data Fields (Variable)"]:::field
+
+    Trailer --> CS["Checksum (4 bytes)"]:::field
+    Trailer --> EM["End Marker (2 bytes)"]:::field
+
+    classDef msg fill:#f96,stroke:#333,stroke-width:2px;
+    classDef part fill:#69f,stroke:#333,stroke-width:2px;
+    classDef field fill:#9f6,stroke:#333,stroke-width:1px;
+```
+
+### D.8.3 Inter-Process Communication
+
+The following diagram shows the inter-process communication mechanism used in the A4001 Avionics System software:
+
+```mermaid
+graph LR
+    IPC[Inter-Process Communication]:::main
+    subgraph Mechanisms
+        MQ[Message Queues]:::mech
+        SM[Shared Memory]:::mech
+        Sem[Semaphores]:::mech
+        Sig[Signals]:::mech
+    end
+    subgraph Processes
+        P1[Process 1]:::proc
+        P2[Process 2]:::proc
+        P3[Process 3]:::proc
+    end
+
+    IPC --> Mechanisms
+    IPC --> Processes
+
+    Processes --> MQ
+    Processes --> SM
+    Processes --> Sem
+    Processes --> Sig
+
+    classDef main fill:#f96,stroke:#333,stroke-width:2px;
+    classDef mech fill:#69f,stroke:#333,stroke-width:2px;
+    classDef proc fill:#9f6,stroke:#333,stroke-width:1px;
+```
+
+## D.9 Data Flow Diagrams
+
+### D.9.1 Flight Control System Data Flow
+
+The following diagram shows the data flow within the Flight Control System:
+
+```mermaid
+graph LR
+    SensorInputs[Sensor Inputs]:::input --> DataAcquisition[Data Acquisition]:::proc
+    ControlInputs[Control Inputs]:::input --> SignalProcessing[Signal Processing]:::proc
+    DataAcquisition --> SignalProcessing
+    SignalProcessing --> ControlLaws[Control Laws]:::proc
+    ControlLaws --> EnvelopeProtection[Envelope Protection]:::proc
+    EnvelopeProtection --> CommandGeneration[Command Generation]:::proc
+    CommandGeneration --> CommandMonitoring[Command Monitoring]:::proc
+    CommandMonitoring --> OutputProcessing[Output Processing]:::proc
+    OutputProcessing --> ActuatorCommands[Actuator Commands]:::out
+
+    classDef input fill:#f96,stroke:#333,stroke-width:2px;
+    classDef proc fill:#69f,stroke:#333,stroke-width:2px;
+    classDef out fill:#9f6,stroke:#333,stroke-width:2px;
+```
+
+### D.9.2 Navigation System Data Flow
+
+The following diagram shows the data flow within the Navigation System:
+
+```mermaid
+graph LR
+    GPSData[GPS Data]:::input --> SensorIntegration[Sensor Integration]:::proc
+    InertialData[Inertial Data]:::input --> SensorIntegration
+    RadioNavData[Radio Nav Data]:::input --> SensorIntegration
+    SensorIntegration --> DataFiltering[Data Filtering]:::proc
+    DataFiltering --> DataFusion[Data Fusion]:::proc
+    DataFusion --> PositionDetermination[Position Determination]:::proc
+    NavigationDatabase[Navigation Database]:::proc --> RouteProcessing[Route Processing]:::proc
+    RouteProcessing --> PositionDetermination
+    PositionDetermination --> IntegrityMonitoring[Integrity Monitoring]:::proc
+    IntegrityMonitoring --> OutputProcessing[Output Processing]:::proc
+    OutputProcessing --> DisplayData[Display Data]:::out
+    OutputProcessing --> FlightControlData[Flight Control Data]:::out
+
+    classDef input fill:#f96,stroke:#333,stroke-width:2px;
+    classDef proc fill:#69f,stroke:#333,stroke-width:2px;
+    classDef out fill:#9f6,stroke:#333,stroke-width:2px;
+```
+
+### D.9.3 Communication System Data Flow
+
+The following diagram shows the data flow within the Communication System:
+
+```mermaid
+graph LR
+    AudioInputs[Audio Inputs]:::input --> AudioProcessing[Audio Processing]:::proc
+    DataInputs[Data Inputs]:::input --> DataFormatting[Data Formatting]:::proc
+    AudioProcessing --> AudioMixing[Audio Mixing]:::proc
+    DataFormatting --> AudioMixing
+    AudioMixing --> AudioOutputProcessing[Audio Output Processing]:::proc
+    DataFormatting --> ProtocolProcessing[Protocol Processing]:::proc
+    ProtocolProcessing --> DataOutputProcessing[Data Output Processing]:::proc
+    AudioOutputProcessing --> SpeakerOutput[Speaker Output]:::out
+    DataOutputProcessing --> RadioTransmission[Radio Transmission]:::out
+    RadioReception[Radio Reception]:::input --> DataOutputProcessing
+    DataOutputProcessing --> AudioDecoding[Audio Decoding]:::proc
+    DataOutputProcessing --> DataDecoding[Data Decoding]:::proc
+    AudioDecoding --> AudioProcessing
+    DataDecoding --> DataFormatting
+    DataOutputProcessing --> DisplayData[Display Data]:::out
+
+    classDef input fill:#f96,stroke:#333,stroke-width:2px;
+    classDef proc fill:#69f,stroke:#333,stroke-width:2px;
+    classDef out fill:#9f6,stroke:#333,stroke-width:2px;
+```
+
+## D.10 Interface Verification
+
+### D.10.1 Interface Verification Process
+
+The following diagram shows the interface verification process for the A4001 Avionics System:
+
+```mermaid
+graph LR
+    Spec[1. INTERFACE<br>SPECIFICATION] --> UnitVer[2. UNIT-LEVEL<br>VERIFICATION]
+    UnitVer --> IntTest[3. INTEGRATION<br>TESTING]
+    IntTest --> SysVer[4. SYSTEM<br>VERIFICATION]
+    SysVer --> CertDoc[5. CERTIFICATION<br>DOCUMENTATION]
+
+    subgraph Inputs/Outputs
+        SpecIO[- ICD Documents<br>- Interface Matrix<br>- Protocol Definitions]
+        UnitVerIO[- Signal Integrity<br>- Timing<br>- Electrical Compliance]
+        IntTestIO[- Interface Protocol Compliance<br>- Data Exchange<br>- Fault Injection]
+        SysVerIO[- Aircraft Level Tests<br>- End-to-End Verification<br>- Environmental Testing]
+        CertDocIO[- Test Reports<br>- Compliance Matrix<br>- Declaration of Conformity]
+    end
+
+    Spec --> SpecIO
+    UnitVer --> UnitVerIO
+    IntTest --> IntTestIO
+    SysVer --> SysVerIO
+    CertDoc --> CertDocIO
+```
+
+### D.10.2 Interface Test Configuration
+
+The following diagram shows the interface test configuration for the A4001 Avionics System:
+
+```mermaid
+graph LR
+    A["A4001 Avionics System"]:::main
+    subgraph External Systems
+        B["Flight Control Actuators"]:::control
+        C["Engine Control System"]:::control
+        D["Landing Gear System"]:::control
+        E["Primary Flight Display"]:::display
+        F["Multi-Function Display"]:::display
+        G["Engine Indication and\nCrew Alerting System"]:::display
+        H["Power System"]:::support
+        I["Aircraft Sensors"]:::support
+        J["Pilot Controls"]:::support
+        K["Maintenance Computer"]:::support
+        L["External Antennas"]:::support
+    end
+
+    B <--> A
+    C <--> A
+    D <--> A
+    E <--> A
+    F <--> A
+    G <--> A
+    H <--> A
+    I --> A
+    J --> A
+    K <--> A
+    L <--> A
+
+    classDef main fill:#f96,stroke:#333,stroke-width:4px;
+    classDef control fill:#69f,stroke:#333,stroke-width:2px;
+    classDef display fill:#9f6,stroke:#333,stroke-width:2px;
+    classDef support fill:#f9f,stroke:#333,stroke-width:2px;
+```
+
+## D.11 Interface Control Document References
+
+The following table lists the Interface Control Documents (ICDs) that define the interfaces of the A4001 Avionics System:
+
+| ICD Number      | Title                                                | Revision   | Date       |
+|-----------------|------------------------------------------------------|------------|------------|
+| ICD-A4001-001   | A4001 Avionics System External Interface Control Document | A          | 2025-04-20 |
+| ICD-A4001-002   | A4001 Flight Control System Interface Control Document | A          | 2025-04-20 |
+| ICD-A4001-003   | A4001 Navigation System Interface Control Document   | A          | 2025-04-20 |
+| ICD-A4001-004   | A4001 Communication System Interface Control Document| A          | 2025-04-20 |
+| ICD-A4001-005   | A4001 Power Interface Control Document               | A          | 2025-04-20 |
+| ICD-A4001-006   | A4001 Maintenance Interface Control Document         | A          | 2025-04-20 |
+| ICD-A4001-007   | A4001 Software Interface Control Document            | A          | 2025-04-20 |
+| ICD-A4001-008   | A4001 Hardware Interface Control Document            | A          | 2025-04-20 |
+| ICD-A4001-009   | A4001 Protocol Interface Control Document            | A          | 2025-04-20 |
+| ICD-A4001-010   | A4001 Data Format Interface Control Document         | A          | 2025-04-20 |
+
+## D.12 Interface Summary
+
+The A4001 Avionics System interfaces are designed to meet the functional, performance, safety, reliability, and certification requirements specified in this document. The interfaces provide:
+
+1.  **Standardization**: Use of industry-standard interfaces and protocols (ARINC 429, AFDX, CAN Bus) to ensure compatibility with other aircraft systems.
+2.  **Redundancy**: Multiple communication paths and redundant interfaces to meet safety and reliability requirements.
+3.  **Modularity**: Well-defined interfaces between subsystems to facilitate development, testing, and maintenance.
+4.  **Fault Tolerance**: Interface monitoring and error detection to ensure continued safe operation in the presence of failures.
+5.  **Certification Compliance**: Interfaces designed to comply with relevant certification standards.
+
+The interface diagrams provided in this appendix serve as a reference for system integration, verification, and maintenance activities.
 ```
 
 
