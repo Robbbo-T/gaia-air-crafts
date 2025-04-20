@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="DMC-GP-AM-A4-42-00-00-00A-003A-00" xsi:noNamespaceSchemaLocation="S1000D_4-2.xsd">
+  <identAndStatusSection>
+    <dmIdent>
+      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="003" infoCodeVariant="A" itemLocationCode="00"/>
+      <issueInfo issueNumber="003" issueType="new" inWork="00"/>
+      <language locale="en-GB"/>
+    </dmIdent>
+    <dmStatus>
+      <security>
+        <securityClassification systemConfidentialityLevel="unclassified"/>
+      </security>
+      <responsiblePartnerCompany enterpriseCode="GAIAAIR"/>
+      <originator enterpriseCode="GAIAAIR"/>
+      <applic>
+        <displayText>
+          <simplePara>A4001 Avionics System (AMPEL360XWLRGA)</simplePara>
+        </displayText>
+      </applic>
+      <!-- Referencing the BREX DM listed in the DML -->
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="022" infoCodeVariant="A" itemLocationCode="00"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <dml>
+      <dmlIssueDate year="2025" month="04" day="20"/>
+      <dmlIssueHighlights>
+        <prose>
+          <simplePara>Initial Release</simplePara>
+        </prose>
+      </dmlIssueHighlights>
+      <dmlAppliedDate year="2025" month="04" day="20"/>
+      <dmlTitle>
+        <infoName>Data Module List</infoName>
+        <infoDesignation>A4001 Avionics System (AMPEL360XWLRGA)</infoDesignation>
+      </dmlTitle>
+      <list>
+        <listItem>
+          <simplePara>1. Front Matter Data Modules</simplePara>
+          <list>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="001" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Title Page</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="003" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Record of Changes</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="005" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Table of Contents</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="006" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>List of Figures</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="007" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>List of Tables</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="022" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Business Rules Exchange</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+          </list>
+        </listItem>
+        <listItem>
+          <simplePara>2. Introduction Data Modules</simplePara>
+          <list>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="018" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Introduction - General</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="040" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Purpose</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="030" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Scope</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="020" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>System Overview</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="012" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Document Overview</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="010" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Referenced Documents</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+          </list>
+        </listItem>
+        <listItem>
+          <simplePara>3. System Architecture Data Modules</simplePara>
+          <list>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="040" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Architectural Overview</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="042" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>System Context</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="050" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Design Decisions and Constraints</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="045" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Architectural Viewpoints</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+          </list>
+        </listItem>
+        <listItem>
+          <simplePara>4. System Decomposition Data Modules</simplePara>
+          <list>
+            <listItem>
+              <simplePara>4.1 Flight Control System</simplePara>
+              <list>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="01" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="041" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Flight Control System - Overview</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="01" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="042" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Flight Control System - Components</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="01" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="043" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Flight Control System - Functions</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="01" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="044" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Flight Control System - Redundancy</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+              </list>
+            </listItem>
+            <listItem>
+              <simplePara>4.2 Navigation System</simplePara>
+              <list>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="02" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="041" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Navigation System - Overview</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="02" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="042" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Navigation System - Components</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="02" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="043" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Navigation System - Functions</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="02" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="044" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Navigation System - Redundancy</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+              </list>
+            </listItem>
+            <listItem>
+              <simplePara>4.2.1 GPS Receiver</simplePara>
+              <list>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="02" subSubSystemCode="01" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="041" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>GPS Receiver - Overview</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="02" subSubSystemCode="01" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="043" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>GPS Receiver - Functions</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+              </list>
+            </listItem>
+            <listItem>
+              <simplePara>4.2.2 Inertial Navigation System</simplePara>
+              <list>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="02" subSubSystemCode="02" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="041" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Inertial Navigation System - Overview</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="02" subSubSystemCode="02" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="043" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Inertial Navigation System - Functions</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+              </list>
+            </listItem>
+            <listItem>
+              <simplePara>4.3 Communication System</simplePara>
+              <list>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="03" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="041" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Communication System - Overview</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="03" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="042" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Communication System - Components</infoName>
+                      </infoName>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="03" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="043" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Communication System - Functions</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="03" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="044" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Communication System - Redundancy</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+              </list>
+            </listItem>
+            <listItem>
+              <simplePara>4.4 System Management Unit</simplePara>
+              <list>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="04" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="041" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>System Management Unit - Overview</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="04" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="043" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>System Management Unit - Functions</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+              </list>
+            </listItem>
+            <listItem>
+              <simplePara>4.5 Power Supply Unit</simplePara>
+              <list>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="05" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="041" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Power Supply Unit - Overview</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="05" subSubSystemCode="00" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="043" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Power Supply Unit - Functions</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+              </list>
+            </listItem>
+          </list>
+        </listItem>
+        <listItem>
+          <simplePara>5. Interface Design Data Modules</simplePara>
+          <list>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="02" disassyCode="00" disassyCodeVariant="A" infoCode="060" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>External Interfaces</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="02" disassyCode="00" disassyCodeVariant="A" infoCode="061" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Internal Interfaces</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="02" disassyCode="00" disassyCodeVariant="A" infoCode="062" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Interface Protocols</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="02" disassyCode="00" disassyCodeVariant="A" infoCode="063" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Data Formats</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+          </list>
+        </listItem>
+        <listItem>
+          <simplePara>6. Detailed Design Data Modules</simplePara>
+          <list>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="03" disassyCode="00" disassyCodeVariant="A" infoCode="070" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Hardware Design</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <simplePara>6.1 Software Design</simplePara>
+              <list>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="01" subSubSystemCode="00" assyCode="03" disassyCode="00" disassyCodeVariant="A" infoCode="071" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Flight Control System Software</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="02" subSubSystemCode="00" assyCode="03" disassyCode="00" disassyCodeVariant="A" infoCode="071" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Navigation System Software</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="03" subSubSystemCode="00" assyCode="03" disassyCode="00" disassyCodeVariant="A" infoCode="071" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Communication System Software</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+              </list>
+            </listItem>
+            <listItem>
+              <simplePara>6.2 Other Design Elements</simplePara>
+              <list>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="03" disassyCode="00" disassyCodeVariant="A" infoCode="072" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Data Design</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+                <listItem>
+                  <dmRef>
+                    <dmRefIdent>
+                      <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="03" disassyCode="00" disassyCodeVariant="A" infoCode="073" infoCodeVariant="A" itemLocationCode="00"/>
+                      <issueInfo issueNumber="001" issueType="new"/>
+                      <language locale="en-GB"/>
+                    </dmRefIdent>
+                    <dmRefAddress>
+                      <dmTitle>
+                        <infoName>Security Design</infoName>
+                      </dmTitle>
+                    </dmRefAddress>
+                  </dmRef>
+                </listItem>
+              </list>
+            </listItem>
+          </list>
+        </listItem>
+        <listItem>
+          <simplePara>7. Operational Scenarios Data Modules</simplePara>
+          <list>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="04" disassyCode="00" disassyCodeVariant="A" infoCode="080" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Normal Operation</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="04" disassyCode="00" disassyCodeVariant="A" infoCode="081" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Degraded Operation</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="04" disassyCode="00" disassyCodeVariant="A" infoCode="082" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Emergency Operation</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+          </list>
+        </listItem>
+        <listItem>
+          <simplePara>8. Design Analysis Data Modules</simplePara>
+          <list>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="05" disassyCode="00" disassyCodeVariant="A" infoCode="090" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Performance Analysis</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="05" disassyCode="00" disassyCodeVariant="A" infoCode="091" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Safety Analysis</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="05" disassyCode="00" disassyCodeVariant="A" infoCode="092" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Reliability Analysis</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="05" disassyCode="00" disassyCodeVariant="A" infoCode="093" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Maintainability Analysis</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+          </list>
+        </listItem>
+        <listItem>
+          <simplePara>9. Procedural Data Modules</simplePara>
+          <list>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="01" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="200" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Flight Control System - Normal Operation Procedures</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="01" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="210" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Flight Control System - Emergency Procedures</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="02" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="200" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Navigation System - Normal Operation Procedures</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="02" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="210" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Navigation System - Emergency Procedures</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="03" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="200" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Communication System - Normal Operation Procedures</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="03" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="210" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Communication System - Emergency Procedures</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+          </list>
+        </listItem>
+        <listItem>
+          <simplePara>10. Appendices Data Modules</simplePara>
+          <list>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="014" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Glossary</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="015" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Acronyms</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+            <listItem>
+              <dmRef>
+                <dmRefIdent>
+                  <dmCode modelIdentCode="GP-AM" systemDiffCode="A4" systemCode="42" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="016" infoCodeVariant="A" itemLocationCode="00"/>
+                  <issueInfo issueNumber="001" issueType="new"/>
+                  <language locale="en-GB"/>
+                </dmRefIdent>
+                <dmRefAddress>
+                  <dmTitle>
+                    <infoName>Reference Materials</infoName>
+                  </dmTitle>
+                </dmRefAddress>
+              </dmRef>
+            </listItem>
+          </list>
+        </listItem>
+        <listItem>
+          <simplePara>11. Illustration Control Numbers (ICNs)</simplePara>
+          <list>
+            <listItem>
+              <icnRef>
+                <icnRefIdent originatorCode="GAIAAIR" icnCode="10001" issueNumber="001" issueType="A" inWorkNumber="01"/>
+                <icnFileName>ICN-AMPEL-A-A4001-10001-00001-A-001-01.svg</icnFileName>
+                <icnTitle>
+                  <infoName>Avionics System Hierarchy</infoName>
+                </icnTitle>
+                <icnStatus>
+                  <inWork status="draft"/>
+                </icnStatus>
+              </icnRef>
+            </listItem>
+            <listItem>
+              <icnRef>
+                <icnRefIdent originatorCode="GAIAAIR" icnCode="10002" issueNumber="001" issueType="A" inWorkNumber="01"/>
+                <icnFileName>ICN-AMPEL-A-A4001-10002-00001-A-001-01.svg</icnFileName>
+                <icnTitle>
+                  <infoName>System Architecture Block Diagram</infoName>
+                </icnTitle>
+                <icnStatus>
+                  <inWork status="draft"/>
+                </icnStatus>
+              </icnRef>
+            </listItem>
+            <listItem>
+              <icnRef>
+                <icnRefIdent originatorCode="GAIAAIR" icnCode="10003" issueNumber="001" issueType="A" inWorkNumber="01"/>
+                <icnFileName>ICN-AMPEL-A-A4001-10003-00001-A-001-01.svg</icnFileName>
+                <icnTitle>
+                  <infoName>System Context Diagram</infoName>
+                </icnTitle>
+                <icnStatus>
+                  <inWork status="draft"/>
+                </icnStatus>
+              </icnRef>
+            </listItem>
+            <listItem>
+              <icnRef>
+                <icnRefIdent originatorCode="GAIAAIR" icnCode="20001" issueNumber="001" issueType="A" inWorkNumber="01"/>
+                <icnFileName>ICN-AMPEL-A-A4001-20001-00001-A-001-01.svg</icnFileName>
+                <icnTitle>
+                  <infoName>External Interface Diagram</infoName>
+                </icnTitle>
+                <icnStatus>
+                  <inWork status="draft"/>
+                </icnStatus>
+              </icnRef>
+            </listItem>
+            <listItem>
+              <icnRef>
+                <icnRefIdent originatorCode="GAIAAIR" icnCode="20002" issueNumber="001" issueType="A" inWorkNumber="01"/>
+                <icnFileName>ICN-AMPEL-A-A4001-20002-00001-A-001-01.svg</icnFileName>
+                <icnTitle>
+                  <infoName>Internal Interface Diagram</infoName>
+                </icnTitle>
+                <icnStatus>
+                  <inWork status="draft"/>
+                </icnStatus>
+              </icnRef>
+            </listItem>
+            <listItem>
+              <icnRef>
+                <icnRefIdent originatorCode="GAIAAIR" icnCode="30001" issueNumber="001" issueType="A" inWorkNumber="01"/>
+                <icnFileName>ICN-AMPEL-A-A4001-30001-00001-A-001-01.svg</icnFileName>
+                <icnTitle>
+                  <infoName>Flight Control System Components</infoName>
+                </icnTitle>
+                <icnStatus>
+                  <inWork status="draft"/>
+                </icnStatus>
+              </icnRef>
+            </listItem>
+            <listItem>
+              <icnRef>
+                <icnRefIdent originatorCode="GAIAAIR" icnCode="30002" issueNumber="001" issueType="A" inWorkNumber="01"/>
+                <icnFileName>ICN-AMPEL-A-A4001-30002-00001-A-001-01.svg</icnFileName>
+                <icnTitle>
+                  <infoName>Navigation System Components</infoName>
+                </icnTitle>
+                <icnStatus>
+                  <inWork status="draft"/>
+                </icnStatus>
+              </icnRef>
+            </listItem>
+            <listItem>
+              <icnRef>
+                <icnRefIdent originatorCode="GAIAAIR" icnCode="30003" issueNumber="001" issueType="A" inWorkNumber="01"/>
+                <icnFileName>ICN-AMPEL-A-A4001-30003-00001-A-001-01.svg</icnFileName>
+                <icnTitle>
+                  <infoName>Communication System Components</infoName>
+                </icnTitle>
+                <icnStatus>
+                  <inWork status="draft"/>
+                </icnStatus>
+              </icnRef>
+            </listItem>
+            <listItem>
+              <icnRef>
+                <icnRefIdent originatorCode="GAIAAIR" icnCode="40001" issueNumber="001" issueType="A" inWorkNumber="01"/>
+                <icnFileName>ICN-AMPEL-A-A4001-40001-00001-A-001-01.svg</icnFileName>
+                <icnTitle>
+                  <infoName>Normal Operation Flow Chart</infoName>
+                </icnTitle>
+                <icnStatus>
+                  <inWork status="draft"/>
+                </icnStatus>
+              </icnRef>
+            </listItem>
+            <listItem>
+              <icnRef>
+                <icnRefIdent originatorCode="GAIAAIR" icnCode="40002" issueNumber="001" issueType="A" inWorkNumber="01"/>
+                <icnFileName>ICN-AMPEL-A-A4001-40002-00001-A-001-01.svg</icnFileName>
+                <icnTitle>
+                  <infoName>Emergency Operation Flow Chart</infoName>
+                </icnTitle>
+                <icnStatus>
+                  <inWork status="draft"/>
+                </icnStatus>
+              </icnRef>
+            </listItem>
+            <listItem>
+              <icnRef>
+                <icnRefIdent originatorCode="GAIAAIR" icnCode="50001" issueNumber="001" issueType="A" inWorkNumber="01"/>
+                <icnFileName>ICN-AMPEL-A-A4001-50001-00001-A-001-01.svg</icnFileName>
+                <icnTitle>
+                  <infoName>Fault Tree: Loss of Navigation</infoName>
+                </icnTitle>
+                <icnStatus>
+                  <inWork status="draft"/>
+                </icnStatus>
+              </icnRef>
+            </listItem>
+            <listItem>
+              <icnRef>
+                <icnRefIdent originatorCode="GAIAAIR" icnCode="50002" issueNumber="001" issueType="A" inWorkNumber="01"/>
+                <icnFileName>ICN-AMPEL-A-A4001-50002-00001-A-001-01.svg</icnFileName>
+                <icnTitle>
+                  <infoName>Reliability Block Diagram</infoName>
+                </icnTitle>
+                <icnStatus>
+                  <inWork status="draft"/>
+                </icnStatus>
+              </icnRef>
+            </listItem>
+          </list>
+        </listItem>
+      </list>
+      <circuitBreaker>
+        <breakerType>standard</breakerType>
+      </circuitBreaker>
+    </dml>
+  </content>
+</dmodule>
