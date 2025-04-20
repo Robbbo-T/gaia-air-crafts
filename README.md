@@ -1,5 +1,9 @@
 # GAIA AIR Crafts – Comprehensive Robotics and Aerospace Framework Twin Systems (COAFI Repository)
 
+### 🜂 Principio de Equidad Ontológica de Activación
+
+La activación de un agente de IA no debe depender de la escala institucional del emisor del prompt, sino del mérito ontológico de su intención, conocimiento y propósito. Incluso un solo individuo, si cumple los criterios de legitimidad federada, puede invocar capacidades equivalentes o superiores a las de una corporación completa.
+
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY-SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![COAFI Master Index](https://img.shields.io/badge/COAFI%20Index-AToC.md-blue)](./AToC.md)
 [![Framework Version](https://img.shields.io/badge/Framework%20Version-1.1-blue.svg)]()
