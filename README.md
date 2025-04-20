@@ -29,6 +29,8 @@ The **GAIA AIR Crafts** initiative extends GAIA DS’s sustainable-development 
 12. [License](#license)
 13. [Contact](#contact)
 14. [Project Structure](#project-structure)
+15. [Mapping Schema](#mapping-schema)
+16. [Validation and Conversion Scripts](#validation-and-conversion-scripts)
 
 ---
 
@@ -346,3 +348,79 @@ These rules govern the technical and conceptual content within documents based o
 </details>
 
 <!-- Remaining sections (D through I) truncated for brevity. Available upon continuation. -->
+
+---
+
+## Mapping Schema {#mapping-schema}
+
+The mapping schema defines the relationships between different identification systems (IDs vs P/Ns) used in the GAIA AIR project. This schema ensures that each ID can be mapped to a corresponding P/N and vice versa, maintaining consistency across structured data sources, human-readable Markdown documents, and machine-readable semantic output (JSON-LD/RDF).
+
+### Identification Systems
+
+The primary identification systems used in the GAIA AIR project are:
+
+- **IDs (Identification Numbers):** Unique alphanumeric codes assigned to components and documents.
+- **P/N (Part Numbers):** Unique alphanumeric codes assigned to parts and assemblies.
+
+### Mapping Schema Definition
+
+The mapping schema is documented in the following table:
+
+| ID         | P/N        | Description                          |
+|------------|------------|--------------------------------------|
+| ID-001     | PN-1001    | Component A                          |
+| ID-002     | PN-1002    | Component B                          |
+| ID-003     | PN-1003    | Assembly X                           |
+| ID-004     | PN-1004    | Assembly Y                           |
+
+### Examples of Mappings
+
+#### Example 1: Component Mapping
+
+- **ID:** ID-001
+- **P/N:** PN-1001
+- **Description:** Component A
+
+#### Example 2: Assembly Mapping
+
+- **ID:** ID-003
+- **P/N:** PN-1003
+- **Description:** Assembly X
+
+### Importance of Maintaining Consistency
+
+Maintaining consistency between different identification systems is crucial for the following reasons:
+
+- **Data Integrity:** Ensures that data remains accurate and reliable across different systems.
+- **Traceability:** Facilitates tracking of components and documents throughout their lifecycle.
+- **Interoperability:** Enables seamless integration between different systems and tools.
+- **Compliance:** Ensures adherence to regulatory and industry standards.
+
+---
+
+## Validation and Conversion Scripts {#validation-and-conversion-scripts}
+
+To ensure consistency and facilitate the conversion of Markdown documents into JSON-LD/RDF format, the following scripts have been implemented:
+
+### Validation Script
+
+The validation script checks for consistency between structured data sources, Markdown documents, and JSON-LD/RDF output. It also generates a report of any inconsistencies found.
+
+To run the validation script, use the following command:
+
+```bash
+npm run validate-mappings
+```
+
+### Conversion Script
+
+The conversion script converts Markdown documents into JSON-LD/RDF format, adhering to the defined mapping schema. It also validates the generated JSON-LD/RDF output.
+
+To run the conversion script, use the following command:
+
+```bash
+npm run convert-to-jsonld
+```
+
+---
+
