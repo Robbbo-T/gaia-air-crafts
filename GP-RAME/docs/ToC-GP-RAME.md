@@ -57,7 +57,7 @@ GP-RAME-[Chapter]-[Specialization]-[Subject]-[InfoCode]-[Revision].[ext]
 ---
 
 <details>
-<summary>### General</summary>
+<summary> General</summary>
 
 *Focus: High-level framework overview, general specifications, cross-domain references, and planning.*
 
@@ -70,7 +70,7 @@ GP-RAME-[Chapter]-[Specialization]-[Subject]-[InfoCode]-[Revision].[ext]
 </details>
 
 <details>
-<summary>### Common Components</summary>
+<summary> Common Components</summary>
 
 *Focus: Documentation for components and resources shared across different RAME systems.*
 
@@ -82,7 +82,7 @@ GP-RAME-[Chapter]-[Specialization]-[Subject]-[InfoCode]-[Revision].[ext]
 </details>
 
 <details>
-<summary>### Integration with Other Systems</summary>
+<summary> Integration with Other Systems</summary>
 
 *Focus: Interface definitions and control documents for connecting RAME with other GAIA AIR domains.*
 
@@ -95,7 +95,7 @@ GP-RAME-[Chapter]-[Specialization]-[Subject]-[InfoCode]-[Revision].[ext]
 </details>
 
 <details>
-<summary>### Aerospace Robotics</summary>
+<summary> Aerospace Robotics</summary>
 
 *Focus: Documentation for robotic systems specifically designed for aerospace applications (assembly, maintenance, inspection).*
 
@@ -114,7 +114,7 @@ GP-RAME-[Chapter]-[Specialization]-[Subject]-[InfoCode]-[Revision].[ext]
 </details>
 
 <details>
-<summary>### Robotic Mechanics</summary>
+<summary> Robotic Mechanics</summary>
 
 *Focus: Documentation for the mechanical design and analysis of robotic systems.*
 
@@ -132,7 +132,7 @@ GP-RAME-[Chapter]-[Specialization]-[Subject]-[InfoCode]-[Revision].[ext]
 </details>
 
 <details>
-<summary>### Electroactuation Systems</summary>
+<summary> Electroactuation Systems</summary>
 
 *Focus: Documentation for the electrical actuation systems used in robotics.*
 
@@ -149,7 +149,7 @@ GP-RAME-[Chapter]-[Specialization]-[Subject]-[InfoCode]-[Revision].[ext]
 </details>
 
 <details>
-<summary>### Control Systems</summary>
+<summary> Control Systems</summary>
 
 *Focus: Documentation for the robotic control architecture and logic.*
 
@@ -161,7 +161,7 @@ GP-RAME-[Chapter]-[Specialization]-[Subject]-[InfoCode]-[Revision].[ext]
 </details>
 
 <details>
-<summary>### Sensor Systems</summary>
+<summary> Sensor Systems</summary>
 
 *Focus: Documentation for the sensor suite used in robotic perception and navigation.*
 
@@ -185,7 +185,7 @@ GP-RAME-[Chapter]-[Specialization]-[Subject]-[InfoCode]-[Revision].[ext]
 </details>
 
 <details>
-<summary>### Testing and Validation</summary>
+<summary> Testing and Validation</summary>
 
 *Focus: Documentation for verifying and validating robotic system performance.*
 
@@ -197,7 +197,7 @@ GP-RAME-[Chapter]-[Specialization]-[Subject]-[InfoCode]-[Revision].[ext]
 </details>
 
 <details>
-<summary>### Research and Advanced Concepts</summary>
+<summary> Research and Advanced Concepts</summary>
 
 *Focus: Documentation for R&D efforts related to future robotic capabilities.*
 
@@ -208,7 +208,7 @@ GP-RAME-[Chapter]-[Specialization]-[Subject]-[InfoCode]-[Revision].[ext]
 </details>
 
 <details>
-<summary>### Robotics Braining Theory</summary>
+<summary> Robotics Braining Theory</summary>
 
 *Focus: Documentation for the theoretical underpinnings of robotic intelligence and learning.*
 
